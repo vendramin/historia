@@ -1,0 +1,76 @@
+\chapter{El número $\pi$}
+
+Bien sabemos que el número $\pi$ es la razón entre la circunsferencia y el
+díametro de cualquier círculo, algo que en nuestra notación escribiríamos como
+\[
+	\pi=\frac{C}{D},
+\]
+donde $C$ es la circunsferencia y $D$ es el diámetro. 
+
+Repasaremos un poco la historia del número $\pi$. Basaremos el capítulo principalmente en el libro~\cite{MR0449960}. 
+
+De los documentos que conocemos puede verse que tanto los babilónicos como los
+egipcios conocían la existencia y algunas propiedades del número $\pi$. Los babilónicos lo aproximaban como
+\[
+	3\frac18=\frac{25}{8}=3,125
+\]
+y los egipcios como 
+\[
+	4\left(\frac89\right)^2=\frac{256}{81}\sim 3,16049\dots
+\]
+
+No sabemos con exactitud cómo fue que ambas civilazaciones llegaron a encontrar
+estas aproximaciones pero no es difícil hacer algunas conjeturas. La idea más
+inocente será dibujar algún círculo, medir su circunsferencia, su diámetro y
+calcular el cociente de estos números. Sin embargo, no debemos olvidarnos que
+en egipto esto se hizo sin tener instrumentos precisos de medición, sin el
+algoritmo de división, sin el sistema de numeración decimal, sin regla, sin
+compás, sin lápiz ni papel. 
+
+Euler fue el primero en utilizar la letra griega $\pi$ para denotar a esta
+famosa constante. 
+
+
+
+En 1761 Lambert demostró que $\pi$ es irracional.  La demostración que dio
+Lambert sobre la irracionalidad de $\pi$ es bastante difícil. En 1941 Niven
+encontró una demostración mucho más sencilla que bien podría darse en cualquier
+curso de cálculo. Exponemos a continuación la demostración de Niven:
+
+\begin{theorem}
+	El número $\pi$ es irracional.	
+\end{theorem}
+
+\begin{proof}
+		
+\end{proof}
+
+En 1760 Lambert y Riccati, en forma independiente, introdujeron las funciones
+hiperbólicas y estudió algunas de sus propiedades. 
+
+\begin{theorem}
+	\[
+	\sum_{n=1}^{\infty}\frac{1}{n^2}=\frac{\pi^2}{6}.
+	\]
+\end{theorem}
+
+\begin{proof}
+	Vamos a calcular la integral 
+	\[
+		I=\int_0^1\int_0^1 \frac{1}{1-xy}dxdy
+	\]
+	de dos formas distintas. Primero escribimos el integrando como una serie y
+	hacemos algunos cálculos sencillos:
+	\begin{align*}
+		I&=\int_0^1\int_0^1 \sum_{n\geq0}(xy)^ndxdy
+		=\sum_{n\geq0}\int_0^1\int_0^1 (xy)^ndxdy\\
+		&=\sum_{n\geq0}\int_0^1x^ndx\int_0^1y^ndy
+		=\sum_{n\geq0}\frac{1}{n+1}\frac{1}{n+1}
+		=\sum_{n\geq1}\frac{1}{n^2}=\zeta(2).
+	\end{align*}
+	Por otro lado, podemos hacer el cambio de variables $u=\frac{x+y}{2}$ y $v=\frac{-x+y}{2}$, tenemos que 
+	\begin{align*}
+		I&=4\int_0^{1/2}\left(\int_0^u\frac{dv}{1-u^2+v^2}\right)du+4\int_{1/2}^1\left(\int_0^{1-u}\frac{dv}{1-u^2+v^2}\right)du\\
+		&=\dots
+	\end{align*}
+\end{proof}

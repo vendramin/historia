@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Hexagonal_Prism_Bicolor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="385" height="315">
+<g stroke="#000" stroke-width="1">
+   <polygon fill="#442" opacity="0.75" points="  4,  58  126,   6  142, 156   28, 220"/>
+   <polygon fill="#884" opacity="0.75" points="126,   6  292,   4  298, 156  142, 156"/>
+   <polygon fill="#CC6" opacity="0.75" points="292,   4  378,  52  378, 224  298, 156"/>
+   <polygon fill="#A66" opacity="0.75" points=" 28, 220  142, 156  298, 156  378, 224  274, 310   74, 306  "/>
+   <polygon fill="#882" opacity="0.75" points="  4,  58   50, 122   74, 306   28, 220"/>
+   <polygon fill="#AA3" opacity="0.75" points=" 50, 122  264, 122  274, 310   74, 306"/>
+   <polygon fill="#661" opacity="0.75" points="264, 122  378,  52  378, 224  274, 310"/>
+   <polygon fill="#A22" opacity="0.75" points="  4,  58  126,   6  292,   4  378,  52  264, 122   50, 122"/>
+</g>
+</svg>

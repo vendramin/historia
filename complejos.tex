@@ -1,0 +1,518 @@
+\chapter{Números complejos}
+
+
+Para repasar algunos aspectos históricos sobre los números complejos nos
+basaremos en el artículo~\cite{MR490654}. 
+En un libro escrito por Herón alrededor del año 75 nos encontramos con un
+cálculo que involucra el número $\sqrt{81-144}$. Para ``resolver'' este cálculo
+Herón hace lo siguiente:
+\[
+	\sqrt{144-81}=\sqrt{63}\sim 7\frac{15}{16}.
+\]
+Observemos que la aproximación racional para $\sqrt{63}$ es bastante buena. No
+sabemos, sin embargo, si el problema de signo que vemos en la raíz es culpa de
+Herón o de la persona a cargo de copiar el libro. En cualquier caso, esta
+parece ser la primera aparición del problema que presenta intentar calcular la
+raíz cuadrada de un número negativo.
+
+En los libros de Diofanto podemos encontrarnos con el siguiente problema. Se
+quiere construir un triángulo rectángulo de área igual a 7 y perímetro igual a
+12. Se quiere resolver entonces 
+\[
+	\frac12 xy=7,\quad
+	x^2+y^2=(12-x-y)^2.
+\]
+Diofanto no resuelve el problema pero observa que tendrá solución solamente si
+$(172/2)^2\geq 24\times 336$.  Un cálculo sencillo nos muestra que
+\[
+	x=\frac{43\pm\sqrt{-167}}{12},
+\]
+por lo que queda más o menos claro que Diofanto vio al menos una parte del
+problema. 
+
+Muchos años después, alrededor del año 1100, nos encontramos con menciones
+explícitas del problema o la imposibilidad de calcular raíces cuadradas de
+números negativos. 
+
+En un libro publicado en 1494 el matemático italiano Luca Pacioli observó que
+la ecuación $x^2+c=bx$ puede resolverse solamente si $\frac14b^2\geq c$, algo
+que deja en claro la imposibilidad de calcular raíces cuadradas de números
+negativos. Más o menos por la misma época, en 1484, el matemático francés
+Chuquet también observó esta imposibilidad en un manuscrito que nunca fue
+publicado.
+
+En su famoso \emph{Ars Magna} de 1545 Cardano utilizó por primera vez cálculos
+con raíces cuadradas de números negativos. Cardano quería resolver el problema
+\[
+	x+y=10,\quad
+	xy=40
+\]
+y para ese propósito hizo manipulaciones algebraicas formales y observó que
+\[
+	x=5+\sqrt{-15},\quad
+	y=5-\sqrt{-15}
+\]
+dan una solución al problema. Intentó entonces verificar que el par
+$x=5+\sqrt{15}$, $y=5-\sqrt{15}$ es también una solución y se encontró con que
+$xy\ne 40$. Como bien remarca Green en su artículo, es conveniente enfatizar
+que Cardano hizo esto con una notación algebraica mucho más precaria que la
+nuestra, por lo que muchos de sus cálculos involucraban complicados argumentos
+geométricos. 
+
+Curiosamente, los números complejos aparecieron con más fuerza al intentar
+resolver ecuaciones cúbicas, un problema de gran importancia para los
+matemáticos en épocas de Cardano. De hecho, Cardano encontró un método para
+resolver 
+\[
+	x^3+ax=b
+\]
+donde $a$ y $b$ son números positivos, que ilustraremos a continuación.
+
+\begin{example}
+	Nos interesa resolver $x^3+9x=24$. Para eso, escribimos $x=u-v$, donde
+	$uv=9/3=3$. Al reemplazar obtenemos $u^3-v^3=24$ y luego 
+	\[
+		u^6-24u^3-27=0. 
+	\]
+	De aquí obtenemos $u^3=12+\sqrt{171}$, $v^3=12-\sqrt{171}$. En
+	consecuencia, 
+	\[
+		x=u-v=\sqrt[3]{12+\sqrt{171}}-\sqrt[3]{12-\sqrt{171}}.
+	\]
+\end{example}
+
+\begin{exercise}
+	Resuelva $x^3+6x=20$.
+\end{exercise}
+
+Es interesante mencionar además que Cardano, ya que igual que sus
+contemporáneos, no aceptaba números negativos, consideraba que las ecuaciones
+$x^3=ax+b$ y $x^3+ax=b$ eran esencialmente distintas, y entonces, para
+resolverlas, se requerían métodos distintos.
+
+\begin{example}
+	Nos interesa resolver $x^3=15x+4$. Para eso, escribimos $x=u+v$, donde
+	$uv=15/3=5$. Tal como hicimos en el ejemplo anterior podremos calcular
+	\[
+		x=\sqrt[3]{2+\sqrt{-121}}+\sqrt[3]{2-\sqrt{-121}}.
+	\]
+
+\end{example}
+
+El ejemplo anterior nos muestra un fenómeno particularmente interesante:
+Incluso si intentamos resolver una ecuación cúbica con tres raíces reales, nos
+aparecen números complejos. Aparentemente Cardano sabía que $x=4$ era solución
+de la ecuación $x^3=15x+4$ y no entendía cómo las soluciones complejas dadas
+por su método podían transformarse en esa solución real tan evidente. Hoy en
+día entendemos perfectamente el problema y podrá resolverse solamente si
+podemos operar con números complejos. 
+
+
+
+%Los números complejos en sus orígenes eran utilizados solamente dentro del
+%álgebra y como si fueran una especie de notación útil que permitía resolver la
+%ecuación cúbica. Se los conocía como \emph{números imposibles}. 
+%
+%Ahora todos sabemos que la unidad imaginaria $i$ es solución de la ecuación
+%$x^2+1=0$, pero en tiempos pretéritos nadie consideraba que todas las
+%cuadráticas deberían tener sí o sí una solución. 
+
+%En la resolución de la ecuación cúbica $y^3=py+q$ 
+%sabemos que 
+%\[
+%	y=\dots
+%\]
+%Observemos que aparecerán los números complejos si 
+%$(q/2)^2-(p/3)^3<0$ y entonces siempre hay al menos una solución. Hay un hecho bastante curioso que debemos mencionar. La ecuación\dots
+%siempre tendrá al menos una solución real pues
+%\dots
+
+%Es natural entonces que nos preguntemos cómo conseguimos una solución real 
+%de la forma
+%\[
+%	\sqrt[3]{a+b\sqrt{-1}}+\sqrt[3]{a-b\sqrt{-1}}.
+%\]
+
+Bombelli fue el primer matemático en considerar seriamente a los números
+complejos.  Esto le permitió ordenar y presentar el trabajo de Cardano de forma
+clara y precisa.  La ecuación
+\[
+x^3=15x+4
+\]
+tiene una solución real $x=4$ que podemos obtener por inspección. Las fórmulas
+de Cardano nos dicen que
+\[
+	x=\sqrt[3]{2+11\sqrt{-1}}+\sqrt[3]{2-11\sqrt{-1}}.
+\]
+Mediante el álgebra de los números complejos podemos demostrar que
+\[
+	\sqrt[3]{2+11\sqrt{-1}}=2+\sqrt{-1},\quad
+	\sqrt[3]{2-11\sqrt{-1}}=2-\sqrt{-1},
+\]
+lo que implica que $x=4$ tal como esperábamos. 
+
+Bombelli fue precisamente el primero en observar lo mencionado en el párrafo
+anterior y fue además el primer matemático capaz de observar que al intentar
+resolver ecuaciones cúbicas mediante el método de Cardano involucraría números
+de la forma $a+\sqrt{b}$ y $a-\sqrt{b}$. Hoy sabemos que este par de números se
+conocen como números complejos \emph{conjugados}, pero esa terminología
+apareció en 1821 en los trabajos de Cauchy. Las observaciones sobre el método
+de Cardano y la utlización de números complejos, hechas posiblemente entre 1557
+y 1560, aparecieron en el libro \emph{Algebra}, publicado en 1572.
+
+\begin{exercise}
+	Demuestre que
+	\[
+		\sqrt[3]{18+26\sqrt{-1}}+\sqrt[3]{18-26\sqrt{-1}}=6.
+	\]
+\end{exercise}
+
+En el libro de Bombelli nos encontramos además con el siguiente ejemplo, que
+dejamos como ejercicio:
+
+\begin{exercise}
+	Resuelva $x^3=7x+6$. 
+\end{exercise}
+
+Ya mencionamos que Cardano no disponía de nuestra notación algebraica. Para dar
+un ejemplo, no disponía del uso de los paréntesis para fijar los órdenes en los
+que pueden hacerse operaciones algebraicas, algo que sí tenía Bombelli. El
+símbolo $\sqrt{-1}$ fue introducido mucho tiempo después por el matemático
+holandés Girard en 1629. Green remarca que otra de delicadas las diferencias de
+la notación era el uso de potencias $n$-ésimas, ya que para Cardano $x^2$ y
+$x^3$ representaban cuadrados y cubos de lado $x$, respectivamente.
+Evidentemente aquella manera de interpretar potencias resulta mucho más difícil
+para manipular que la interpretación abstracta que utilizamos en estos días. 
+
+Decartes fue el primero en considerar las partes real e imaginaria de los
+números complejos. Aquí conviene mencionar que el nombre de los números
+complejos fue concebido por Gauss en 1832. 
+
+En 1673 Wallis fue el primero en intentar encontrar una interpretación
+geométrica para los complejos. No logró su objetivo pero curiosamente estuvo
+muy cerca de lograr encontrar la interpretación que hoy todos conocemos. ¡No
+nos olvidemos que en aquella época incluso hasta los números negativos eran a
+veces un dolor de cabeza!
+
+Leibniz también contribuyó a la teoría de los números complejos. En 1676
+sorprendió a la comunidad matemática al demostrar que
+\[
+	\sqrt{1+\sqrt{-3}}+\sqrt{1-\sqrt{-3}}=\sqrt{6}
+\]
+y factorízó linealmente al polinopmio $x^4+a^4$.  Observó que la suma de dos
+complejos conjugados siempre da como resultado un número real y logró demostrar
+la validez de las fórmulas de Cardano para encontrar raíces de una ecuación
+cúbica.  Sin embargo, Leibniz no fue capaz de encontrar una interpretación
+geométrica para los números complejos. 
+
+En 1714 el matemático inglés Cotes demostró que
+\[
+	\log(\cos\phi+i\sin\phi)=i\phi,
+\]
+fórmula que implica 
+\[
+	\cos\phi+i\sin\phi=e^{i\phi},
+\]
+famosa fórmula que se le atribuye a Euler, así como también la conocida fórmula
+incorrectamente atribuida a de Moivre:
+\begin{equation}
+	\label{eq:deMoivre}
+	(\cos\phi+i\sin\phi)^n=\cos(n\phi)+i\sin(n\phi).
+\end{equation}
+
+Ya vimos que muchos descubrimientos matemáticos llevan el nombre incorrecto. La
+fórmula~\ref{eq:deMoivre} no es una excepción, ya que este matemático nunca
+escribió aquella fórmula sino que encontró una fórmula bastante similar:
+alrededor de 1730 dio una fórmula para calcular $(\cos\phi+i\sin\phi)^{1/n}$.
+De hecho, 
+Euler en 1748 fue el primero en enunciar y demostrar la
+fórmula~\eqref{eq:deMoivre}. Euler también encontró las fórmulas
+\[
+	\sin\phi=\frac{e^{i\phi}-e^{-i\phi}}{2i},\quad
+	\cos\phi=\frac{e^{i\phi}+e^{-i\phi}}{2},
+\]
+y fue el primero en utilizar el símbolo $i$ para denotar a $\sqrt{-1}$ en 1777,
+aunque apareció impreso por primera vez en 1794. El uso de este símbolo fue
+popularizado por Gauss.
+
+\begin{exercise}
+	En 1770 Euler ``demostró'' que $\sqrt{-2}\times\sqrt{-3}=\sqrt{6}$. ¿Cuál
+	es el problema con esa fórmula de Euler?
+\end{exercise}
+
+En 1702 Johnan Bernoulli escribió un trabajo sobre integración y utilizó los
+números complejos para escribir
+\[
+	\frac{1}{1+z^2}=\frac{1/2}{1+zi}+\frac{1/2}{1-zi}
+\]
+y calculó $\arctan z$. 
+
+\begin{exercise}
+	Demuestre que $i^i\in\R$. 
+\end{exercise}
+
+El resultado del ejercicio anterior fue encontrado por Euler 
+en 1746.
+
+La interpretación geométrica que hoy tenemos para los números complejos fue
+descubierta en 1797 por un matemático amateur noruego de apellido Wessel. Esto
+también fue hecho en forma independiente por el matemático suizo Argand en
+1806. Se cree que Gauss también descubrió en forma independiente esta
+interpretación para los números complejos alrededor del año 1800.
+
+\index{Teorema!fundamental del álgebra}
+\index{Teorema!de Bolzano}
+Hoy en día nadie duda de la importancia de los números complejos. De hecho, el
+\emph{teorema fundamental del álgebra} es precisamente ese resultado que afirma
+que todo polinomio posee al menos una raíz compleja. El teorema puede
+enunciarse en forma equivalente de la siguiente manera: todo polinomio de
+$\C[X]$ puede factorizarse linealmente en $\C[X]$. Por ejemplo
+\[
+	X^4+1=(X-1)(X+1)(X+i)(X-i).
+\]
+
+Con la intención de convencernos de que él era el primer matemático que
+presentaba una demostración rigurosa del teorema fundamental del álgebra, Gauss
+afirmo que d'Alambert había intentado en vano demostrar el teorema 1747. Hoy
+sabemos que aquella supuesta demostración rigurosa de Gauss también tenía
+algunos defectos, pero el rigor en matemática siempre tiene sentido dentro de
+un determinado contexto, y esto no debe olvidarse. Curiosamente, hoy nos
+resultaría más o menos fácil tapar los agujeros que tiene la demostración de
+d'Alambert, y esto que debe hacerse utilizando teoremas y técnicas básicas del
+análisis matemático, algo que no sucede con la demostración dada por Gauss, que
+también contiene algunos problemas que no son tan fácilmente reparables.  Ambas
+pruebas se basan en propiedades geométricas de los números complejos y
+requieren el uso de argumentos de continuidad. Ya vimos que interpretar a un
+número complejo $x+iy$ como el punto $(x,y)$ del plano complejo es una idea que
+tardó mucho tiempo en materializarse. Esta es una de las razones por la que la
+prueba de d'Alambert no resulta del todo clara y para comenzar a repararla es
+necesario hacer uso del plano de Argand. Los argumentos de continuidad
+necesarios en ambas demostraciones tampoco estaban del todo claros ni para
+d'Alambert ni para Gauss, aunque Gauss en 1799 fue capaz de reconocer ciertas
+dificultades en relación a la continuidad. Por esa razón, dio en 1816 una
+demostración alternativa, bastante algebraica, del teorema fundamental del
+álgebra donde se minimiza el rol de la continuidad. Básicamente, lo que esa
+segunda demostración encontrada por Gauss utiliza del análisis matemático es un
+caso particular del teorema que hoy se le atribuye a Bolzano: una función
+polinomial $p(x)$ toma todos los valores entre $p(a)$ y $p(b)$ si $x$ se mueve
+entre $a$ y $b$. Bolzano en 1817 hizo explícita la necesidad del concepto de
+continuidad para demostrar el teorema fundamental del álgebra y dio una
+demostración, no del todo satisfactoria, de su famoso teorema. La demostración
+de Bolzano estaba bien encaminada, pero el problema que tenía era medio
+inevitable ya que en aquel momento no existía una buena definición de los
+números reales. En 1874 Weiestrass estableció y demostró las propiedades
+básicas de las funciones continuas y con esas ideas claramente establecidas fue
+capaz de completar aquella segunda prueba de Gauss para el teorema fundamental
+del álgebra y la demostración original de d'Alambert.
+
+%La demostración de d'Alambert es más fácil que las demostraciones de Gauss ya
+%que se basa solamente en propiedades geométricas de los números complejos y de
+%propiedades de las funciones continuas. 
+
+\section*{Cuaterniones y otros sistemas numéricos}
+
+Veamos brevemente cómo podemos demostrar la identidad 
+	\begin{equation*}
+		\begin{aligned}
+			(a_1^2+a_2^2+a_3^2+a_4^2)(b_1^2&+b_2^2+b_3^2+b_4^2)\\
+			=(a_1 b_1 &- a_2 b_2 - a_3 b_3 - a_4 b_4)^2\\
+			&+(a_1 b_2 + a_2 b_1 + a_3 b_4 - a_4 b_3)^2\\
+			&+(a_1 b_3 - a_2 b_4 + a_3 b_1 + a_4 b_2)^2\\
+			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 + a_4 b_1)^2.
+		\end{aligned}
+	\end{equation*}
+que vimos en el capítulo sobre números poligonales, mediante el uso de los
+cuaterniones.  Recordemos que usamos esa fórmula en la demostración del teorema de Lagrange, 
+que afirma que todo número es suma de cuatro cuadrados.
+
+Un \textbf{cuaternión}
+es una matriz de la forma
+\begin{equation}
+	\begin{pmatrix}
+		\alpha & \beta\\
+		-\overline{\beta} & \overline{\alpha}
+	\end{pmatrix}
+\end{equation}
+donde $\alpha$ y $\beta$ son números complejos. 
+
+%Denotaremos por $\mathbb{H}$ al
+%conjunto de cuaterniones.
+%
+%\begin{exercise}
+%	Demuestre que si $x,y\in\mathbb{H}$, entonces $x+y\in\mathbb{H}$ y $xy\in\mathbb{H}$.
+%\end{exercise}
+
+Si para $j\in\{1,2\}$ consideramos los cuaterniones 
+\[
+	q_j=\begin{pmatrix}
+		\alpha_j & \beta_j\\
+		-\overline{\beta_j} & \overline{\alpha_j}
+	\end{pmatrix},
+\]
+y calculamos el determinante $\det(q_1q_2)=\det(q_1)\det(q_2)$, entonces
+obtememos 
+\begin{equation}
+	\label{eq:Gauss}
+	(|\alpha_1|^2+|\beta_1|^2)(|\alpha_2|^2+|\beta_2|^2)=|\alpha_1\alpha_2-\beta_1\overline{\beta_2}|^2+|\alpha_1\beta_2+\beta_1\overline{\alpha_2}|^2.
+\end{equation}
+Se sabe que esta identidad era conocida por Gauss y que posiblemente fue
+descubierta en 1820, mucho antes del descubrimiento de los cuaterniones. 
+
+\begin{exercise}
+	Demuestre que con 
+	\begin{align*}
+		\alpha_1=a_1+d_1\sqrt{-1},
+		&&
+		\alpha_2=a_2+d_2\sqrt{-1},
+		&&
+		\beta_1=b_1+c_1\sqrt{-1}, 
+		&&
+		\beta_2=b_2+c_2\sqrt{-1},
+	\end{align*}
+	la identidad~\eqref{eq:Gauss} se traduce en la identidad de Euler. 
+\end{exercise}
+
+En 1835 Hamilton definió un número complejo como un par ordenado $(a,b)$ de
+números reales y dio reglas para sumar y multiplicar números complejos.
+Hamilton reconoció la importancia de tener bien definidas una suma y una
+multiplicación, aunque es evidente que encontrar una buena multiplicación es
+realmente la parte difícil del problema, la suma se hará coordenada a
+coordenada. 
+
+Hamilton, Peacock, De Morgan y Graves intentaron extender el concepto de
+número. Todos tenían en mente las inclusiones
+\[
+	\N\subseteq\Q\subseteq\R\subseteq\C
+\]
+y ciertas condiciones que los sistemas numéricos debían verificar:
+asociatividad, conmutatividad, propiedades distributivas, etcétera. Estas
+condiciones se materializaron con la definición de cuerpo dada por Dedekind en
+1871, noción que había sido dada independientemente por Galois en 1830.
+Hamilton, en cambio, tenía en mente una propiedad extra: la existencia de una
+norma multiplicativa, es decir una función $x\mapsto |x|$ tal que $|x|\geq0$ si
+$x\ne 0$ y $|xy|=|x||y|$ para todo $x,y$.  Desde 1830 hasta 1843 Hamilton intentó en
+vano encontrar un buena forma de multiplicar ternas, algo que sabemos no puede existir en
+virtud del teorema de Legendre sobre la suma de tres cuadrados: no existe 
+una identidad de la forma
+\[
+	(a^2+b^2+c^2)(d^2+e^2+f^2)=x^2+y^2+z^2
+\]
+pues, por ejemplo, como el número $15$ no es suma de tres cuadrados, basta
+considerar las ternas $(a,b,c)=(1,1,1)$ y $(d,e,f)=(0,1,2)$. Hamilton nunca
+estudió teoría de números y no conocía ni el teorema de Legendre ni la fórmula
+de Euler que se utiliza para demostrar que todo número es suma de cuatro
+cuadrados, no sabemos qué hubiera pasado si hubiera tenido acceso a estos
+resultados.  El caso es que aquellos experimentos llevaron a Hamilton a
+encontrar, en octubre de 1843, la regla fundamental que define a los
+cuaterniones. Un cuaternión es un número de la forma 
+\[
+	a+bi+cj+dk,
+\]
+donde $a,b,c,d\in\R$ y la multiplicación de cuaterniones se basa en las
+fórmulas 
+\[
+	i^2=j^2=k^2=ijk=-1.
+\]
+La clave detrás de los cuaterniones está en observar (y aceptar) que el producto de
+cuaterniones no es conmutativo. 
+
+La representación matricial para los cuaterniones que dimos al principio de la
+sección fue encontrada por Cayley en 1858. 
+
+En 1843 Graves le escribió a Hamilton y le comunicó que había descubierto a los
+octoniones, un sistema numérico que involucraba $8$-uplas y cuyo producto no
+solo no era conmutativo sino tampoco asociativo. En 1845 Cayley también
+descubrió independientemente a los octoniones. En 1914 Dickson describió a los
+octoniones como pares ordenados $(a,b)$ de cuaterniones con el producto dado por
+\[
+	(a_1,b_1)(a_2,b_2)=(a_1a_2-\overline{b_2}b_1,b_1a_1+b_1\overline{a_2}),
+\]
+donde 
+\[
+	\overline{a+bi+cj+dk}=a-bi-cj-dk
+\]
+denota el conjugado del número
+$a+bi+cj+dk$. Es interesante observar que la misma fórmula permite obtener a
+los complejos a partir de los reales y a los cuaterniones a partir de los
+números complejos. 
+
+\index{Teorema!de Frobenius}
+\index{Teorema!de Weiestrass}
+\index{Teorema!de Hurwitz}
+Naturalmente estos descubrimientos tentaron a muchos matemáticos a buscar
+$n$-uplas de números reales que junto con la suma usual de $\R^n$, una
+multiplicación distributiva y una norma multiplicativa, dieran lugar a nuevos
+sistemas numéricos. En 1884 Weiestrass demostró que los números complejos
+resultan ser el único sistema numérico con multiplicación conmutativa.  En 1878
+Frobenius demostró que los únicos sistemas numéricos cuya multplicación es
+asociativa son los números reales, los complejos o los cuaterniones.  En 1898
+Hurwitz demostró que si se tiene una identidad de la forma
+\[
+	(a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)
+	=c_1^2+c_2^2+\cdots+c_n^2,
+\]
+donde las $c_i$ son funciones bilineales en las $a_j$ y las $b_k$, entonces
+$n\in\{1,2,4,8\}$. 
+El teorema de Hurwitz tiene una linda aplicación: 
+
+\begin{quote}
+Sea $V$ un espacio vectorial real con producto interno con $\dim V\geq3$.
+Supongamos que existe una función $V\times V\to\R$, $(v,w)\mapsto v\times w$,
+bilineal y tal que $v\times w$ es ortogonal al espacio generado por $v$ y $w$,
+y además 
+\[
+	\|v\times w\|^2=\|v\|^2\|w\|^2-\langle v,w\rangle^2,
+\]
+donde $\|v\|^2=\langle v,\rangle$. Entonces $n\in\{3,7\}$. 
+\end{quote}
+
+La demostración de este resultado es bastante sencilla si disponemos del
+teorema de Hurwitz, y por eso la exponemos a continuación.  Consideremos el espacio vectorial $W=V\oplus\R$
+con el producto escalar dado por 
+\[
+	\langle (v_1,r_1),(v_2,r_2)\rangle = \langle v_1,v_2\rangle+r_1r_2.
+\]
+Primero observemos que
+\begin{align*}
+\langle v_1\times &v_2+r_1v_2+r_2v_1,v_1\times v_2+r_1v_2+r_2v_1\rangle\\
+&=\|v_1\times v_2\|^2+r_1^2\|v_2\|^2+2r_1r_2\langle v_1,v_2\rangle+r_2^2\|v_1\|^2.
+\end{align*}
+Luego 
+\begin{align*}
+(\|v_1\|^2+r_1^2)&(\|v_2\|^2+r_2)\\
+&= \|v_1\|^2\|v_2\|^2+r_2^2\|v_1\|^2+r_1^2\|v_2\|^2+r_1^2r_2^2\\
+&=\|v_1\times v_2+r_1v_1+r_2v_2\|^2-2r_1r_2\langle v_1,v_2\rangle+\langle v_1,v_2\rangle^2+r_1^2r_2^2\\
+&=\|v_1\times v_2+r_1v_1+r_2v_2\|^2+(\langle v_1,v_2\rangle-r_1r_2)^2\\
+&=z_1^2+\cdots+z_{n+1}^2,
+\end{align*}
+donde las $z_k$ son funciones bilineales en $(v_1,r_1)$ y $(v_2,r_2)$. El
+teorema de Hurwitz implica entonces que $n+1\in\{4,8\}$ y luego $n\in\{3,7\}$.
+
+En caso en que el espacio vectorial $V$ sea de dimensión tres, el resultado nos
+da el producto vectorial usual. Si, en cambio, $\dim V=7$, consideramos el
+espacio vectorial 
+\[
+        W=\{(v,k,w):v,w\in V,k\in\R\}
+\]
+con el producto interno dado por
+\[
+        \langle (v_1,k_1,w_1),(v_2,k_2,w_2)\rangle = \langle v_1,v_2\rangle+k_1k_2+\langle w_1,w_2\rangle.
+\]
+Queda como ejercicio demostrar que entonces la operación 
+\begin{multline*}
+        (v_1,k_1,w_1)\times (v_2,k_2,w_2)\\
+        =(k_1w_2-k_2w_1+v_1\times v_2-w_1\times w_2,
+        \\-\langle v_1,w_2\rangle+\langle v_2,w_1\rangle, 
+        k_2v_1-k_1v_2-v_1\times w_2-w_1\times v_2)
+\end{multline*}
+cumple las propiedades del resultado que enunciamos como aplicación del teorema
+de Hurwitz. 
+
+
+Para más información acerca de la historia detrás de expresiones similares a la
+fórmula de Euler referimos a~\cite{MR1502549,MR1502566}.  Existen identidades
+que involucran sumar 16 cuadrados pero, como sabemos por el teorema de Hurwitz,
+debe abandonarse la condición de bilinealidad; una de estas identidades es la
+identidad de Pfister. 
+
+

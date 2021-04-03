@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" x="0px" y="0px" width="200px" height="187px" viewBox="0 0 200 187">
+<title>
+
+</title>
+<desc>
+<Title/>
+<Creator>FreeHEP Graphics2D Driver</Creator>
+<Producer>geogebra.d.U Revision: 1.11 </Producer>
+<Source/>
+<Date>Mittwoch, 5. Dezember 2012 06:03 Uhr MEZ</Date>
+</desc>
+<g stroke-linejoin="miter" stroke-dashoffset="0.0000" stroke-dasharray="none" stroke-width="1.0000" stroke-miterlimit="10.000" stroke-linecap="square">
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip1">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip1)">
+<g fill-opacity="1.0000" fill-rule="nonzero;" stroke="none" fill="#ffffff">
+  <path d="M 0.0000 0.0000 L 353.00 0.0000 L 353.00 331.00 L 0.0000 331.00 L 0.0000 0.0000 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip1 -->
+</g> <!-- transform -->
+<g id="misc">
+</g><!-- misc -->
+<g id="layer0">
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip2">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip2)">
+<g stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 317.18 158.00 C 317.18 237.08 253.08 301.18 174.00 301.18 C 94.925 301.18 30.822 237.08 30.822 158.00 C 30.822 78.925 94.925 14.822 174.00 14.822 C 253.08 14.822 317.18 78.925 317.18 158.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip2 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip3">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip3)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 58.574 73.284 L 38.769 205.04"/>
+</g> <!-- drawing style -->
+</g> <!-- clip3 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip4">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip4)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 307.32 105.79 L 58.574 73.284"/>
+</g> <!-- drawing style -->
+</g> <!-- clip4 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip5">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip5)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 233.17 288.38 L 307.32 105.79"/>
+</g> <!-- drawing style -->
+</g> <!-- clip5 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip6">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip6)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 38.769 205.04 L 233.17 288.38"/>
+</g> <!-- drawing style -->
+</g> <!-- clip6 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip7">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip7)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 58.574 73.284 L 233.17 288.38"/>
+</g> <!-- drawing style -->
+</g> <!-- clip7 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip8">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip8)">
+<g stroke-linejoin="round" stroke-width="1.5000" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 38.769 205.04 L 307.32 105.79"/>
+</g> <!-- drawing style -->
+</g> <!-- clip8 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip9">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip9)">
+<g fill-opacity="1.0000" fill-rule="nonzero;" stroke="none" fill="#000000">
+  <path d="M 42.000 205.00 C 42.000 206.66 40.657 208.00 39.000 208.00 C 37.343 208.00 36.000 206.66 36.000 205.00 C 36.000 203.34 37.343 202.00 39.000 202.00 C 40.657 202.00 42.000 203.34 42.000 205.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip9 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip10">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip10)">
+<g stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 42.000 205.00 C 42.000 206.66 40.657 208.00 39.000 208.00 C 37.343 208.00 36.000 206.66 36.000 205.00 C 36.000 203.34 37.343 202.00 39.000 202.00 C 40.657 202.00 42.000 203.34 42.000 205.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip10 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip11">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip11)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 16.000, 233.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">A</text>
+</g> <!-- transform -->
+</g> <!-- clip11 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip12">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip12)">
+<g fill-opacity="1.0000" fill-rule="nonzero;" stroke="none" fill="#000000">
+  <path d="M 236.00 288.00 C 236.00 289.66 234.66 291.00 233.00 291.00 C 231.34 291.00 230.00 289.66 230.00 288.00 C 230.00 286.34 231.34 285.00 233.00 285.00 C 234.66 285.00 236.00 286.34 236.00 288.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip12 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip13">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip13)">
+<g stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 236.00 288.00 C 236.00 289.66 234.66 291.00 233.00 291.00 C 231.34 291.00 230.00 289.66 230.00 288.00 C 230.00 286.34 231.34 285.00 233.00 285.00 C 234.66 285.00 236.00 286.34 236.00 288.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip13 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip14">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip14)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 237.00, 312.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">B</text>
+</g> <!-- transform -->
+</g> <!-- clip14 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip15">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip15)">
+<g fill-opacity="1.0000" fill-rule="nonzero;" stroke="none" fill="#000000">
+  <path d="M 310.00 106.00 C 310.00 107.66 308.66 109.00 307.00 109.00 C 305.34 109.00 304.00 107.66 304.00 106.00 C 304.00 104.34 305.34 103.00 307.00 103.00 C 308.66 103.00 310.00 104.34 310.00 106.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip15 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip16">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip16)">
+<g stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 310.00 106.00 C 310.00 107.66 308.66 109.00 307.00 109.00 C 305.34 109.00 304.00 107.66 304.00 106.00 C 304.00 104.34 305.34 103.00 307.00 103.00 C 308.66 103.00 310.00 104.34 310.00 106.00 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip16 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip17">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip17)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 311.00, 100.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">C</text>
+</g> <!-- transform -->
+</g> <!-- clip17 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip18">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip18)">
+<g fill-opacity="1.0000" fill-rule="nonzero;" stroke="none" fill="#000000">
+  <path d="M 62.000 73.000 C 62.000 74.657 60.657 76.000 59.000 76.000 C 57.343 76.000 56.000 74.657 56.000 73.000 C 56.000 71.343 57.343 70.000 59.000 70.000 C 60.657 70.000 62.000 71.343 62.000 73.000 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip18 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip19">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip19)">
+<g stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-opacity="1.0000" stroke="#000000">
+  <path d="M 62.000 73.000 C 62.000 74.657 60.657 76.000 59.000 76.000 C 57.343 76.000 56.000 74.657 56.000 73.000 C 56.000 71.343 57.343 70.000 59.000 70.000 C 60.657 70.000 62.000 71.343 62.000 73.000 z"/>
+</g> <!-- drawing style -->
+</g> <!-- clip19 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip20">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip20)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 48.000, 60.000)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">D</text>
+</g> <!-- transform -->
+</g> <!-- clip20 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip21">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip21)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 113.00, 269.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">AB</text>
+</g> <!-- transform -->
+</g> <!-- clip21 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip22">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip22)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 277.00, 215.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">BC</text>
+</g> <!-- transform -->
+</g> <!-- clip22 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip23">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip23)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 178.00, 79.000)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">CD</text>
+</g> <!-- transform -->
+</g> <!-- clip23 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip24">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip24)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 53.000, 149.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">AD</text>
+</g> <!-- transform -->
+</g> <!-- clip24 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip25">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip25)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 208.00, 163.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">AC</text>
+</g> <!-- transform -->
+</g> <!-- clip25 -->
+</g> <!-- transform -->
+<g transform="matrix(.56693, 0.0000, 0.0000, .56693, 0.0000, 0.0000)">
+<clipPath id="clip26">
+  <path d="M 0.0000 0.0000 L 0.0000 331.00 L 353.00 331.00 L 353.00 0.0000 z"/>
+</clipPath>
+<g clip-path="url(#clip26)">
+<g transform="matrix(1.0000, 0.0000, 0.0000, 1.0000, 122.00, 134.00)">
+<text fill-opacity="1.0000" font-style="normal" font-family="Helvetica" font-weight="normal" stroke="none" fill="#000000" font-size="18.000" x="0" y="0">BD</text>
+</g> <!-- transform -->
+</g> <!-- clip26 -->
+</g> <!-- transform -->
+</g><!-- layer0 -->
+<defs>
+<font id="Helvetica">
+<font-face font-family="Helvetica" font-weight="normal" font-style="normal" font-size="100.00" units-per-em="100.00" ascent="100.53711" desscent="21.972656"/>
+<missing-glyph horiz-adv-x="50.000" d=""/>
+<glyph unicode="D" horiz-adv-x="72.217" d="M 7.7188 -0.0000 L 7.7188 71.578 L 32.375 71.578 Q 40.719 71.578 45.125 70.562 Q 51.266 69.141 55.609 65.438 Q 61.281 60.641 64.086 53.195 Q 66.891 45.750 66.891 36.188 Q 66.891 28.031 64.992 21.734 Q 63.094 15.438 60.109 11.305 Q 57.125 7.1719 53.586 4.8047 Q 50.047 2.4375 45.047 1.2188 Q 40.047 -0.0000 33.547 -0.0000 L 7.7188 -0.0000 z M 17.188 8.4531 L 32.469 8.4531 Q 39.547 8.4531 43.578 9.7656 Q 47.609 11.078 50.000 13.484 Q 53.375 16.844 55.250 22.531 Q 57.125 28.219 57.125 36.328 Q 57.125 47.562 53.438 53.594 Q 49.750 59.625 44.484 61.672 Q 40.672 63.141 32.234 63.141 L 17.188 63.141 L 17.188 8.4531 z"/>
+<glyph unicode="C" horiz-adv-x="72.217" d="M 58.797 25.094 L 68.266 22.703 Q 65.281 11.031 57.547 4.9062 Q 49.812 -1.2188 38.625 -1.2188 Q 27.047 -1.2188 19.797 3.4922 Q 12.547 8.2031 8.7656 17.141 Q 4.9844 26.078 4.9844 36.328 Q 4.9844 47.516 9.2578 55.836 Q 13.531 64.156 21.414 68.477 Q 29.297 72.797 38.766 72.797 Q 49.516 72.797 56.836 67.328 Q 64.156 61.859 67.047 51.953 L 57.719 49.750 Q 55.219 57.562 50.484 61.133 Q 45.750 64.703 38.578 64.703 Q 30.328 64.703 24.781 60.742 Q 19.234 56.781 16.992 50.117 Q 14.750 43.453 14.750 36.375 Q 14.750 27.250 17.406 20.438 Q 20.062 13.625 25.680 10.258 Q 31.297 6.8906 37.844 6.8906 Q 45.797 6.8906 51.320 11.477 Q 56.844 16.062 58.797 25.094 z"/>
+<glyph unicode="B" horiz-adv-x="66.699" d="M 7.3281 -0.0000 L 7.3281 71.578 L 34.188 71.578 Q 42.391 71.578 47.344 69.406 Q 52.297 67.234 55.102 62.719 Q 57.906 58.203 57.906 53.266 Q 57.906 48.688 55.422 44.633 Q 52.938 40.578 47.906 38.094 Q 54.391 36.188 57.883 31.594 Q 61.375 27.000 61.375 20.750 Q 61.375 15.719 59.250 11.398 Q 57.125 7.0781 54.000 4.7344 Q 50.875 2.3906 46.164 1.1953 Q 41.453 -0.0000 34.625 -0.0000 L 7.3281 -0.0000 z M 16.797 41.500 L 32.281 41.500 Q 38.578 41.500 41.312 42.328 Q 44.922 43.406 46.750 45.898 Q 48.578 48.391 48.578 52.156 Q 48.578 55.719 46.875 58.430 Q 45.172 61.141 41.992 62.141 Q 38.812 63.141 31.109 63.141 L 16.797 63.141 L 16.797 41.500 z M 16.797 8.4531 L 34.625 8.4531 Q 39.203 8.4531 41.062 8.7969 Q 44.344 9.3750 46.539 10.742 Q 48.734 12.109 50.148 14.719 Q 51.562 17.328 51.562 20.750 Q 51.562 24.750 49.516 27.711 Q 47.469 30.672 43.828 31.867 Q 40.188 33.062 33.344 33.062 L 16.797 33.062 L 16.797 8.4531 z"/>
+<glyph unicode="A" horiz-adv-x="66.699" d="M -.14062 -0.0000 L 27.344 71.578 L 37.547 71.578 L 66.844 -0.0000 L 56.062 -0.0000 L 47.703 21.688 L 17.781 21.688 L 9.9062 -0.0000 L -.14062 -0.0000 z M 20.516 29.391 L 44.781 29.391 L 37.312 49.219 Q 33.891 58.250 32.234 64.062 Q 30.859 57.172 28.375 50.391 L 20.516 29.391 z"/>
+</font>
+
+</defs> <!-- font definitions -->
+</g> <!-- default stroke -->
+</svg>
+<!-- bounding box -->

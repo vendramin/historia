@@ -1,0 +1,482 @@
+\chapter{El infinito}
+
+Según dicen Rey Pastor y Babini en~\cite{BabiniReyPastor2}, las consideraciones
+de índole infinitesimal son casi tan antiguas como la matemática, ya que
+podremos encontrar rastros del uso de los métodos infinitesimales en todas las
+etapas de la evolución matemática. A lo largo de este capítulo, entonces,
+intentaremos mostrar algunas de las distintas manifestaciones que hace el
+infinito en el pensamiento matemático.
+
+Ya vimos que los griegos no estaban del todo cómodos con la idea del infinito y
+que vieron necesario evitarlo y lograron establecer ciertas bases que les
+permitieran tratar el infinito de forma más o menos rigurosa. Vimos que el
+descubrimiento de los irracionales generó graves problemas en el pensamiento
+matemático de aquella época. 
+
+\index{Paradoja!de Zenón}
+Por Aristóteles conocemos las paradojas de Zenón, aproximadamente del año 450
+a.  C. Estas paradojas son argumentos contra algunas ideas pitagóricas, ya que
+muestran que la concepción de los cuerpos como suma de puntos, o del tiempo
+como suma de instantes, lleva a contradicciones. 
+
+Una de las paradojas, la de Aquiles y la tortuga, nos muestra que el veloz
+corredor nunca alcanzará a la lenta tortuga, sin importar qué tan escasa sea la
+distancia que los separe, ya que cuando el corredor haya recorrido aquella
+distancia y llegue donde estaba la tortuga, esta habrá ya avanzado un poco. Y
+cuando el corredor llegue allí, la tortuga habrá avanzado incluso un poco más,
+y cuando el corredor\dots y así sucesivamente. 
+
+Otra de las paradojas de Zenón, la paradoja de la dicotomía, nos muestra que
+para que alguien pueda caminar desde un lugar a otro, deberá recorrer primero
+la mitad de la distancia entre estos dos lugares, pero antes de recorrer la
+mitad de esta distancia deberá recorrer un cuarto de esta distancia, pero antes
+deberá recorrer una octava parte de esta distancia\dots y así sucesivamente. 
+
+La tercera de las paradojas, conocida como la paradoja de la flecha, se nos
+presenta una flecha en vuelo y se nos hace observar que en cada instante de
+tiempo no se produce movimiento alguno. Si todo está inmóvil en cada instante y
+el tiempo está compuesto de instantes, entonces el movimiento es imposible. 
+
+Sin entrar en detalles vemos claramente que el manejo poco cuidadoso del
+infinito es algo muy peligroso. Quizá estos argumentos de Zenón hicieron
+entonces que algunos de los matemáticos griegos posteriores intentaran evitar
+toda manipulación más o menos inocente que involucrara el infinito.
+
+En 1906 se encontró un tratado de Arquímedes donde podemos ver cómo es que
+Arquímedes logró descubrir muchos de sus teoremas. El método muestra que muchos
+de los profundos resultados de Arquímedes fueron encontrados gracias al uso de
+argumentos dudosamente rigurosos que involucraban al infinito; las
+demostraciones rigurosas de aquellos resultados venían después. El método de
+Arquímedes es más o menos similar a esa idea que hoy conocemos como el princpio
+de Cavallieri.
+
+Eudoxo fue uno de los matemáticos griegos que trabajó para que pudiera
+comprenderse y utilizarse correctamente la idea del infinito. Su teoría de las
+proporciones, aproximadamente del año 350 a.C. y explicada en el libro V de los
+Elementos de Euclides, permite tratar, gracias al uso de números racionales,
+como números a cantidades geométricas tales como longitudes de segmentos. Como
+vimos, los griegos no aceptaban números irracionales pero sí aceptaban
+cantidades geométricas irracionales. Sorprendentemente, la idea de Eudoxo puede
+usarse para definir números irracionales pero la matemática tardó unos dos mil
+años en desarrollar rigurosamente a los números reales. Por ejemplo, $\sqrt{2}$
+quedará determinado por dos conjuntos de números racionales positivos,
+$\{r\in\Q_{>0}:r^2<2\}$ y $\{r\in\Q_{>0}:r^2>2\}$. Dedekind definió entonces en
+1872 al número $\sqrt{2}$ como este par de conjuntos. Como nos dice Stillwell,
+la idea de las cortaduras de Dedekind es una ``vuelta de tuerca'' de aquella
+idea de Eudoxo. 
+
+Más tarde Eudoxo concibió una generalización de su teoría de las proporciones,
+hoy conocida como el método exhaustivo. En el libro XII de los Elementos de
+Euclides nos encontramos con aproximaciones por polígonos para el círculo y
+aproximaciones para una pirámide. 
+
+Arquímedes llevó el método de exhaustivo de Eudoxo hacia el máximo nivel de
+madurez y logró calcular volumen y área de la esfera y el área debajo de un
+segmento parabólico. Para el área debajo de la parábola la idea de Arquímedes 
+se basa en la construcción de una sucesión infinita de triángulos cuya suma 
+de áreas es igual a 
+\[
+	1+\frac14+\frac{1}{16}+\frac{1}{64}+\cdots=\frac43.
+\]
+Este es además el primer ejemplo del cálculo de la suma de una serie infinita.
+%es la siguiente.  Primero se divide la región cuya área se quiere calcular en
+%triángulos $\Delta_1$, $\Delta_2$, $\Delta_3$\dots y luego se observa que valen
+%las siguientes fórmulas
+%\begin{align*}
+%	&\Delta_3=\frac18\Delta_1,\\
+%	&\Delta_2=\Delta_3,\\
+%	&\Delta_2+\Delta_3=\frac14\Delta_1,\\
+%	&\Delta_4+\Delta_5+\Delta_6+\Delta_7=\frac{1}{16}\Delta_1
+%\end{align*}
+%Luego el área es igual a 
+%\[
+%	\Delta\left(1+\frac14+\frac{1}{4^2}+\cdots\right)=\frac43\Delta_1
+%\]
+Arquímedes, sin embargo, no usó series infinitas, aunque las series aparezcan
+de alguna forma en el libro IX de Euclides en su teorema sobre números
+perfectos. 
+
+El método de Arquímedes no funciona siempre. Por ejemplo, no puede usarse para
+calcular el área debajo de la curva $\frac{1}{x}$. Hoy sabemos que esto se debe
+a que la función $\log(x)$ no puede expresarse mediante funciones elementales.
+
+Si bien las series infinitas aparecieron en Grecia, hay que mencionar que en
+aquellos tiempos se pretendía trabajar con sumas finitas arbitrarias 
+\[
+	a_1+a_2+a_3+\cdots+a_n
+\]
+y no con sumas infinitas como 
+\[
+	a_1+a_2+a_3+\cdots
+\]
+En la matemática griega aparecen algunas sumas infinitas tales como
+\[
+	\sum_{n=1}^\infty\frac{1}{2^n}=1
+\]
+en los trabajos de Zenón y  
+\[
+	\sum_{n=0}^\infty\frac{1}{4^n}=\frac43
+\]
+en el cálculo de Arquímedes del área bajo un segmento parabólico. Ambas
+expresiones son casos particulares de la fórmula para la serie geométrica, 
+\[
+	\sum_{n=0}^\infty ar^n=\frac{a}{1-r},
+\]
+válida para todo $r$ tal que $|r|<1$. 
+
+En 1350 aparece por primera vez una serie infinita no geométrica, donde Suiseth
+considera la fórmula
+\[
+	\sum_{n=1}^\infty\frac{n}{2^n}=2,
+\]
+Esta fórmula fue encontrada independientemente y demostrada geométricamente por
+Oresme, también en 1350. Ese mismo año Oresme demostró que la serie 
+\[
+	\sum_{n=1}^\infty\frac1n
+\]
+diverge. La demostración de Oresme es precisamente esa bonita demostración que
+hoy vemos en nuestros cursos de cálculo:
+\begin{align*}
+	1&+\frac12+\left(\frac13+\frac14\right)+\left(\frac15+\frac16+\frac17+\frac18\right)+\cdots\\
+	&>1+\frac12+\left(\frac14+\frac14\right)+\left(\frac18+\frac18+\frac18+\frac18\right)+\cdots\\
+	&=1+\frac12+\frac12+\frac12+\cdots
+\end{align*}
+
+En el siglo XVI el matemático portugués Tomas calculó con exactitud la suma de
+algunas series convergentes tales como 
+\begin{align*}
+	1+\frac74\frac12+\frac{11}{8}\frac14+\frac{19}{16}\frac18+\cdots = \frac52, && 
+	1+\frac42\frac12+\frac76\frac14+\frac{13}{12}\frac18+\cdots=\frac{20}{9}.
+\end{align*}
+Aproximó además otras series convergentes. Mostró, por ejemplo, que la suma
+\[
+	1+\frac21\frac12+\frac32\frac14+\frac43\frac18+\cdots
+\]
+es un número acotado entre 2 y 4. El valor real de esta suma puede calcularse y
+es igual a $2+\log 2=2,693\dots$ 
+
+Unos años más tarde comenzaron a considerarse series de potencias. Mercator
+encontró en 1668 la fórmula
+\[
+	\log(1+x)=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\]
+Obtuvo esa fórmula al integrar término a término 
+la expresión
+\[
+	\frac{1}{1+x}=1-x+x^2-x^3+\cdots
+\]
+
+
+El cálculo\dots
+
+Para Newton, el cálculo es el álgebra de los polinomios infinitos. Para Leibniz, el álgebra de los infinitesimales. De hecho,
+la derivada 
+\[
+	\dfrac{dy}{dx}
+\]
+es el cociente entre el infinitesimal $dy$ y el infinitesimal $dx$ y la integral 
+\[
+	\int f(x)dx
+\]
+es la suma de los infinitesimales $f(x)dx$. 
+
+El cálculo fue extremadamente exitoso ya que permitió reemplazar complicados
+cálculos que involucran el método exhaustivo por cálculos de rutina más o menos
+sencillos. 
+
+La idea de integración aparece al intentar aproximar el área debajo de las curvas $y=x^k$ 
+por rectángulos. Los árabes, cerca del año 1000, lograron calcular la suma
+\[
+	1^k+2^k+3^k+\cdots+n^k
+\]
+para $k\in\{1,2,3,4\}$ y con esto pudieron calcular el volumen de un cierto sólido de revolución. 
+Cavalieri extendió estos resultados hasta $k=9$ en el año 1635 y con esto logró calcular
+\[
+	\int_0^a x^kdx=\frac{a^{k+1}}{k+1}
+\]
+para todo $k\in\{1,\dots,9\}$, resultado que lo indujo a conjeturar que la
+fórmula era válida para todo entero positivo $k$. Fermat, Descartes y Rooberval
+demostraron aquella conjetura de Cavalieri alrededor de 1630. Fermat incluso
+observó que aquella fórmula era válida incluso si $k$ era un número racional.
+Cavalieri introdujo lo que hoy llamamos el \emph{principio de Cavalieri}, que
+suele verse en nuestros cursos de cálculo. La idea de este principio es similar
+a la idea de Arquímedes encontrada recién en 1906. Curiosamente, Torricelli,
+contemporáneo de Cavalieri, especulaba que la idea detrás del principio de
+Cavalieri, era ya conocida por los griegos. Con esta idea, en 1644, calculó el
+área de una parábola esencialmente de la misma forma en que lo había hecho
+Arquímedes. Demostró en 1643 que la superficie de revolución obtenida al rotar
+$y=1/x$ alrededor del eje $x$, con $x>1$, tiene volumen finito y superficie
+infinita.\framebox{dibujito}
+
+La diferenciación vino después, aunque hoy en día, en los cursos de cálculo
+suele verse antes, ya que se considera más fácil de entender que la
+integración.  Arquímedes calculó la recta tangete de la espiral que vemos en la
+figura\dots\framebox{espiral} pero este es el único ejemplo de un cálculo de
+esos que hoy expresaríamos como
+\[
+	\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x},
+\]
+cálculo introducido por Fermat en 1629, y publicados muchoh tiempo después, en
+1679, en el caso en que $f(x)$ es un polinomio y utilizado para encontrar
+extremos y tangentes de las curvas definidas por polinomios. Stillwell nos
+muestra con un ejemplo cómo hacía Fermat para calcular la pendiente de la recta
+tangente a la curva $y=x^2$ es igual a $2x$. Primero debe considerarse la
+cuerda que une los puntos $(x,x^2)$ y $(x+E,(x+E)^2)$, donde $E$ es una
+cantidad no determinada, un ``elemento infinitesimal'' que cuando sea necesario
+será igual a cero. 
+Se calcula entonces
+\[
+	\frac{(x+E)^2-x^2}{E}=\frac{2xE+E^2}{E}=2x+E.
+\]
+En aquellos tiempos aquel argumento generó mucha controversia, ya que se asumía que
+$2x+E=2x$ y simultáneamente $E\ne 0$. Hoy sabemos que lo que pasa es que 
+\[
+	\lim_{E\to 0}(2x+E)=2x,
+\]
+algo que en aquellos tiempos no se sabía. El método funcionaba perfectamente
+para polinomios de una variable y pudo adaptarse para curvas dadas por la
+ecuación $p(x,y)=0$, donde $p(x,y)$ es un polinomio de dos variables. 
+
+Nos toca hablar del cálculo de Newton y Leibniz. Inevitablemente entonces nos encontraremos 
+con series infinitas. 
+
+En 1593 Vieta publicó la primera expresión convergente de un producto
+infinito que involucra al número $\pi$:
+\begin{align}
+	\label{eq:Vieta}
+	\frac{2}{\pi}&=\cos(\pi/4)\cos(\pi/8)\cos(\pi/16)\cdots
+\end{align}
+Vieta parte de la expresión
+del perímetro $p$ de un polígono regular de $2^{n-1}$ lados.  Gracias
+a la fórmula 
+\begin{equation}
+	\label{eq:sin(2x)}
+	\sin x=2\sin(x/2)\cos(x/2), 
+\end{equation}
+observa que
+\[
+	\frac{4}{p}=\cos(\pi/4)\cos(\pi/8)\cos(\pi/16)\cdots\cos(\pi/2^{n-1}).
+\]
+Al pasar del polígono a la circunferencia, se obtiene la fórmula que buscamos.
+Euler generalizó esta expresión al observar que la fórmula~\eqref{eq:sin(2x)}
+implica que 
+\[
+	\dfrac{\sin x}{2^n\sin\left(\dfrac{x}{2^n}\right)}
+	=\cos\left(\dfrac{x}{2}\right)\cos\left(\dfrac{x}{4}\right)\cdots\cos\left(\dfrac{x}{2^n}\right).
+\]
+algo que a su vez implica que 
+\[
+	\frac{\sin x}{x}
+	=\cos\left(\dfrac{x}{2}\right)\cos\left(\dfrac{x}{4}\right) \cos\left(\dfrac{x}{8}\right)\cdots
+\]
+Al evaluar esta última fórmula en $x=\pi/4$ obtenemos la fórmula~\eqref{eq:Vieta}. 
+
+\begin{exercise}
+	Demuestre que la fórmula~\eqref{eq:Vieta} puede reescribirse como aquella
+	fórmula que vimos en la página~\pageref{Vieta}:
+	\[
+		\frac{2}{\pi}
+		=\dfrac{\sqrt{2}}{2}\dfrac{\sqrt{2+\sqrt{2}}}{2}\dfrac{\sqrt{2+\sqrt{2+\sqrt{2}}}}{2}\cdots
+		%=\left(\dfrac12\right)^{1/2}\left(\dfrac12\left(1+\sqrt{\dfrac12}\right)\right)^{1/2}\left(\frac12\left(1+\sqrt{\frac12\left(1+\frac12\right)}\right)\right)^{1/2}\cdots
+	\]
+\end{exercise}
+
+Wallis escribió en 1655 un libro de texto donde intentó sistematizar el cálculo
+de áreas y volúmenes. Demostró, por ejemplo, que 
+\[
+	\int_0^1 x^pdx=\frac{1}{p+1}
+\]
+para $p$ un entero positivo, al observar 
+que 
+\[
+	\lim_{n\to\infty}\frac{0^p+1^p+\cdots+n^p}{n^p+n^p+\cdots+n^p}=\frac{1}{p+1}.
+\]
+Calculó además
+\[
+	\int_0^1 x^{m/n}dx
+\]
+con nuevas técnicas. Su forma de trabajar con los infinitesimales era algo
+ambigua y este no era el único problema que nuestro rigor matemático
+encontraría en el trabajo de Wallis. Su uso de la inducción era algo
+deficiente, ya que Wallis se contentaba con mostrar que una cierta propiedad
+era válida en los primeros casos. Otra de las fórmulas demostradas por Wallis
+es la siguiente:
+\begin{equation}
+	\label{eq:Wallis}
+	\frac{\pi}{4}=\frac23\frac43\frac45\frac65\cdots
+\end{equation}
+En el libro de Wallis aparece una consecuencia de la fórmula~\eqref{eq:Wallis}
+encontrada por Brouncker:
+\begin{equation}
+	\label{eq:Brouncker}
+	\frac{4}{\pi}=1+\dfrac{2}{2+\dfrac{3^2}{2+\dfrac{5^2}{2+\dfrac{7^2}{2+\cdots}}}}
+\end{equation}
+Euler observó que a partir de la fórmula 
+\begin{equation}
+	\label{eq:Leibniz}
+	\frac{\pi}{4}=1-\frac13+\frac15-\frac17+\cdots,
+\end{equation}
+que vimos en la página~\pageref{LeibnizGregory} podemos obtener 
+la fracción continua~\eqref{eq:Brouncker}. Primero observemos que vale la siguiente fórmula
+\[
+	\dfrac{1}{a_1}-\dfrac{1}{a_2}=\dfrac{1}{a_1+\dfrac{a_1^2}{a_2-a_1}}.
+\]
+Esta misma fórmula implicará entonces que vale la siguiente fórmula 
+\[
+	\dfrac{1}{a_1}-\dfrac{1}{a_2}+\dfrac{1}{a_3}=\dfrac{1}{a_1+\dfrac{a_1^2}{a_2-a_1+\dfrac{a_2^2}{a_3-a_2}}}
+\]
+Al continuar con este procedimiento obtendremos una expresión que nos permitirá
+reemplazar a nuestra suma alternada por una fracción continua. 
+
+\begin{theorem}[Leibniz]
+	\index{Teorema!de Leibniz}
+	\[
+	\frac{\pi}{4}=1-\frac13+\frac15-\frac17+\cdots
+	\]
+\end{theorem}
+
+\begin{proof}
+	Partimos de la fórmula 
+	\[
+		\frac{1-t^n}{1-t}=1+t+\cdots+t^{n-1},
+	\]
+	que puede escribirse como
+	\[
+		\frac{1}{1-t}=1+t+\cdots+t^{n-1}+\frac{t^n}{1-t}.
+	\]
+	Esta fórmula en el caso $t=-x^2$ nos dice que 
+	\[
+		\frac{1}{1+x^2}=1-x^2+x^4-x^6+\cdots+(-1)^{n-1}x^{2n-2}+(-1)^n\frac{x^{2n}}{1+x^2}.
+	\]
+	Integramos esta igualdad entre $0$ y $1$ y obtenemos
+	\[
+		\frac{\pi}{4}=\int_0^1\frac{dx}{1+x^2}=1-\frac13+\frac15-\frac17+\frac19-\cdots+(-1)^{n-1}\frac{1}{2n-1}+T_n,
+	\]
+	donde 
+	\[
+		T_n=(-1)^n\int_0^1\frac{x^{2n}}{1+x^2}dx.
+	\]
+
+	Para terminar la demostración debemos ver que 
+	$\displaystyle{\lim_{n\to\infty}|T_n|=0}$. Para eso primero
+	observamos que, como $0\leq x\leq 1$, entonces 
+	\[
+		\frac{x^{2n}}{1+x^2}\leq x^{2n}.
+	\]
+	Al integrar esta última desigualdad, tenemos
+	\[
+		|T_n|=\int_0^1\frac{x^{2n}}{1+x^2}dx\leq\int_0^1x^{2n}dx=\frac{1}{2n+1},
+	\]
+	y entonces $|T_n|\to 0$ si $n\to\infty$. 
+\end{proof}
+
+El cálculo de Newton dependía principalmente de la manipulación de series
+infinitas. Si entendemos al cálculo como el álgebra de las series infinitas,
+entonces Newton es sin duda uno de sus fundadores.  Mercator demostró en 1668
+que 
+\[
+	\int_0^x\dfrac{dt}{1+t}=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+\]
+Newton descubrió esa misma fórmula independientemente en 1665 junto con
+expresiones similares para $\arctan x$, $\sin x$ y $\cos x$.  Para realizar
+estos cálculos primero expresaba la función como una serie para luego integrar
+esta serie término a término. Veamos un ejemplo:
+
+%\begin{example}
+%	\begin{align*}
+%	&\int_0^x \dfrac{dt}{1+t}=\int_0^x(1-t+t^2-t^3+\cdots)dt=x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+%\end{align*}
+%\end{example}
+%\begin{example}
+\begin{align*}
+	\arctan x&=\int_0^x \dfrac{dt}{1+t^2}\\
+	&=\int_0^x(1-t^2+t^4-t^6+\cdots)dt\\
+	&=x-\frac{x^3}{3}+\frac{x^5}{5}+\cdots
+\end{align*}
+%\end{example}
+
+Gracias a ser capaz de invertir series infinitas, Newton también logró encontrar la expresión
+\[
+	\log(1+x)=\int_0^x\dfrac{dt}{1+t}=x-\frac{x^2}{2}+\frac{x^3}{3}-\cdots
+\]
+Este procedimiento fue correctamente justificado por De Moivre en 1698.  
+En 1669 Newton encontró una fórmula aún más sorprendente:
+\dots
+
+Leibniz publicó el primer trabajo sobre el cálculo en 1684. Los trabajos de Newton fueron inicialmente rechazados para su publicación\dots
+Disputa entre Newton y Leibniz. No queremos meternos en este asunto y referiremos a \dots para el lector interesado 
+en conocer más sobre aquella pelea. 
+
+Según Stillwell no hay duda: ambos descubrieron el cálculo en forma
+independiente. La notación utilizada por Leibniz era amejor que aquella de
+Newton y eso hizo que\dots Leibniz introdujo la notación que hoy en día
+utilizamos para derivadas y para integrales y encontró las reglas para calcular
+la derivada de una suma, un producto y un cociente de funciones. Demostró
+además lo que hoy conocemos como el teorema fundamental del cálculo, que
+Leibniz escribía como
+\[
+	\frac{d}{dx}\int f(x)dx=f(x).
+\]
+Newton ya conocía este resultado. Más aún, al menos de forma geométrica, este resultado era también
+conocido por Barrow, uno de los profesores de Newton. 
+
+Leibniz prefería expresiones cerradas para las series infinitas y para evaluar la integral 
+de una función $f(x)$ necesitaba una función cuya derivada fuera la función $f(x)$. 
+
+Johann Bernoulli hizo aportes significativos al cálculo de Newton y Leibniz. En 1696 publicó el primer libro de texto sobre el tema, aunque 
+el libro fue publicado bajo el nombre de su estudiante L'Hopital, se cree que 
+para agradecerle la ayuda económica que L'Hopital le había brindado. Bernoulli y Leibniz conocían la diferenciación parcial pero
+mantuvieron ese resultado en secreto por unos veinte años, ya que lo consideraban un arma secreta que les permitía atacar problemas sobre curvas. 
+Encontró la expresión
+\[
+	\int_0^1 x^xdx=1-\frac{1}{2^2}+\frac{1}{3^3}-\frac{1}{4^4}+\cdots
+\]
+
+Los métodos poco rigurosos que involucran la manipulación de series hoy pertenecen a la teoría de funciones generatrices. Este concepto 
+fue introducido por De Moivre en 1730 (1728 bernoulli)
+y fue utilizado para encontrar una fórmula cerrada para la sucesión de Fibonacci. Recordemos que la sucesión de Fibonacci
+se define recursivamente mediante 
+\[
+	F_0=0,\quad
+	F_1=1,\quad
+	F_{n+2}=F_{n+1}+F_n\quad\text{para $n\geq 0$}.
+\]
+Sin preocuparnos por la convergencia, 
+consideremos la serie infinita
+\begin{align*}
+	f(x)&=F_0+F_1x+F_2x^2+\cdots
+\end{align*}
+Como $xf(x)=F_0x+F_1x^2+\cdots$ y además $x^2f(x)=F_0x^2+F_1x^3+\cdots$, podemos escribir
+\[
+	f(x)(1-x-x^2)=F_0+F_1x-F_0x+(F_2-F_1-F_0)x^2+\cdots
+\]
+Pero como los coeficientes de la serie que vemos en el miembro de la derecha son todos cero salvo el primero, nos queda
+que
+\[
+	f(x)=\frac{x}{1-x-x^2}.
+\]
+Al observar que
+\[
+	1-x-x^2=(-1)\left(x-\frac{1+\sqrt{5}}{2}\right)\left(x-\frac{1-\sqrt{5}}{2}\right)
+\]
+podemos obtener una fórmula cerrada para en $n$-ésimo término de la sucesión de Fibonacci:
+\[
+	F_n=\frac{1}{\sqrt{5}}\left( \left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right).
+\]
+
+\begin{exercise}
+	Demuestre que 
+	\[
+		\lim_{n\to\infty}\frac{F_{n+1}}{F_n}=\frac{1+\sqrt{5}}{2}.
+	\]
+\end{exercise}
+
+\begin{exercise}
+	Utilice la fórmula
+	\[
+		\dfrac{1}{1+\dfrac{F_n}{F_{n+1}}}=\dfrac{F_{n+1}}{F_{n+2}}
+	\]
+	para encontrar una fracción continua para el número $\dfrac{1+\sqrt{5}}{2}$. 
+\end{exercise}
+
+

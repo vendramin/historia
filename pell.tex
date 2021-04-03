@@ -1,0 +1,251 @@
+\chapter{La ecuación de Pell}
+
+\index{Ecuación!de Pell}
+En este capítulo veremos un poco de historia sobre una ecuación diofántica muy
+famosa, la ecuación de Pell:
+\begin{equation}
+	\label{eq:Pell}
+	x^2-Ny^2=1.
+\end{equation}
+Nos interesan las soluciones enteras, es decir soluciones $(x,y)\in\Z\times\Z$.
+Hay soluciones triviales, son $(x,y)=(1,0)$ y $(x,y)=(-1,0)$. Una solución
+$(x,y)$ de la ecuación~\eqref{eq:Pell} se dirá positiva si $x>0$ e $y>0$. 
+
+\begin{exercise}
+	Demuestre que si $N$ no es un cuadrado, la ecuación~\eqref{eq:Pell} solo
+	tiene soluciones triviales.
+\end{exercise}
+
+Curiosamente, el matemático inglés Pell nada tiene que ver con esta ecuación.
+Este error se le atribuye a Euler, que creyó que un cierto método que permite
+resolver~\eqref{eq:Pell} era de Pell cuando en realidad había sido descubierto
+por el matemático inglés Brouncker.  La historia de la ecuación de Pell es muy
+rica e interesante. Aquí veremos solamente algunos puntos importantes y algunos
+resultados básicos. El lector interesado en más detalles puede consultar el
+libro de Weil~\cite{MR734177} o el segundo volumen del tratado de
+Dickson~\cite{MR0245500}.
+
+El método para resolver~\eqref{eq:Pell} de Brouncker es similar 
+al que ya conocían los matemáticos indios del siglo X; Euler reformuló el
+método en términos de fracciones continuas.  Se cree que Fermat tenía una
+demostración de que la ecuación de Pell siempre tiene solución en los enteros
+positivos; de hecho, en una carta desafió a otros matemáticos a que intentaran
+al menos resolver las ecuaciones de Pell con $N=61$ y $N=109$.  En 1768
+Lagrange fue el primero en demostrar que la ecuación de Pell tiene soluciones
+no triviales siempre que $N$ no sea un cuadrado perfecto. 
+
+\begin{example}
+	Los números que son simultáneamente cuadrados y triangulares se
+	corresponden con soluciones de la ecuación $x^2-2y^2=1$. En efecto, si $n$
+	es triangular y es además un cuadrado, podemos escribir 
+	\[
+		\frac{k(k+1)}{2}=l^2
+	\]
+	para $k,l\in\N$, y esta última fórmula es equivalente a
+	$(2k+1)^2-2(2l)^2=1$.
+\end{example}
+
+\begin{exercise}
+Demuestre que de la misma forma puede relacionarse la ecuación de Pell
+$x^2-6y^2=1$ con números que son simultáneamente triangulares y pentagonales.
+\end{exercise}
+
+Fermat sabía que la ecuación $x^2-61y^2=1$ es particularmente difícil de
+resolver. La solución $(x,y)$ con el menor $y$ positivo es
+\[
+(x,y)=(1766319049, 226153980).
+\]
+
+Veamos cómo fue que los matemáticos indios pudieron resolver esta ecuación.  En
+el año 628 Brahmagupta resolvió la ecuación de Pell para muchos $N$  pero no
+para todos. En el siglo IX Jayadeva mejoró el método de Brahmagupta y concibió
+el ``método cíclico''. Este método fue perfeccionado en el siglo XII por
+Bhaskara II. 
+
+El ``método cíclico'' funciona de la siguiente manera. 
+Diremos que $(a,b,N)$ es una \textbf{terna de Pell}
+si $a^2-Nb^2=1$. La identidad de Brahmagupta, 
+\begin{equation}
+	\label{eq:brahmagupta}
+	(x_1^2-Ny_1^2)(x_2^2-Ny_2^2)=(x_1x_2+Ny_1y_2)^2-N(x_1y_2+x_2y_1)^2,
+\end{equation}
+entonces, nos permite combinar las ternas $(x_1,y_1,k_1)$ y $(x_2,y_2,k_2)$ en
+una nueva terna $(x_1x_2+Ny_1y_2,x_1y_2+x_2y_1,k_1k_2)$ para todo $N$. En
+particular, si $(a,b,k)$ es una terna de Pell, podemos combinarla con cualquier
+$(m,1,m^2-N)$ para obtener la ternas de Pell de la forma
+$(am+Nb,a+bm,k(m^2-N))$.
+
+\begin{exercise}
+	Demuestre la identidad~\ref{eq:brahmagupta} de Brahmagupta.
+\end{exercise}
+
+Sea $(a,b)$ una solución de $x^2-Ny^2=k$, donde $a$ y $b$ son coprimos y $k$ es
+algún número entero cualquiera. Elegiremos este $k$ de forma que sea fácil
+conseguir $a$ y $b$. Lo que dijimos antes implica que
+\begin{equation}
+	\label{eq:Pell_inductive}
+	\left(\frac{am+Nb}{k}\right)^2-N\left(\frac{a+bm}{k}\right)^2=\frac{m^2-N}{k}
+\end{equation}
+para todo $m\in\N$. 
+Si elegimos $m$ para que $\frac{a+bm}{k}$ sea un entero y que minimice la
+expresión $m^2-N$, tenemos una nueva solución a otra ecuación de Pell. Podemos
+entonces repetir este procedimiento tantas veces como sea necesario hasta
+obtener una ecuación de Pell de la forma $a^2-Nb^2=1$. ¡Resolvimos entonces la ecuación original!
+
+\begin{exercise}
+	Encuentre soluciones para $x^2-61y^2=1$ con el método cíclico. 
+\end{exercise}
+
+%Veamos cómo este método nos permite resolver eficientemente la ecuación
+%$x^2-61y^2=1$.  Comencemos con la ecuación $x^2-61y^2=3$. A simple vista puede
+%verse que $(8,1)$ es una solución no trivial, y entonces tenemos la terna de
+%Pell $(8,1,3)$. Si componemos esta terna con alguna terna de Pell de la forma
+%$(m,1,m^2-61)$, obtenemos la terna de Pell $(8m+61,8+m,3(m^2-61))$. Al dividir,
+%tenemos la terna de Pell
+%\[
+%	\left(\frac{8m+61}{3},\frac{8+m}{3},\frac{m^2-61}{3}\right).
+%\]
+%Tenemos que elegir $m$ para que $\frac{m^2-61}{3}\in\Z$ y que minimice
+%$m^2-61$, y basta con tomar $m=7$. Así es que tenemos entonces la terna de Pell
+%$(39,5,-4)$, que al combinar con $(m,1,m^2-61)$ nos permite construir la terna 
+%\[
+%	\left(\frac{}{},\frac{}{},\frac{}{}\right),
+%\]
+%que es la terna~\eqref{eq:Pell_inductive} con $a=39$, $b=5$, $k=-4$, $m=7$ y $N=61$. 
+Otro método que permite resolver la ecuación de Pell es el método de Lagrange, 
+que fue reformulado por Euler en términos de fracciones continuas. 
+Si queremos resolver $x^2-61y^2=1$ con el método de las fracciones continuas, necesitamos 
+calcular la representación del número irracional $\sqrt{61}$ como fracción
+continua: 
+\[
+	\sqrt{61}=7+\cfrac{1}{1+\cfrac{1}{4+\cfrac{1}{3+\cdots}}}
+\]
+
+\begin{exercise}
+	Calcule la fracción continua que representa a $\sqrt{61}$. ¿Cuál es su período?
+	Podemos ver esta representación en la sucesión \verb+A010145+.
+\end{exercise}
+
+Veamos cómo funciona el método por fracciones continuas en el caso
+\begin{equation}
+	\label{eq:Pell14}
+	x^2-14y^2=1.
+\end{equation}
+Primero calculamos la fracción continua que representa a $\sqrt{14}$, que será
+periódica con período igual a cuatro:
+\[
+	\sqrt{14}=3+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1+\cfrac{1}{3+\sqrt{14}}}}}.
+\]
+El método explica cómo proceder en caso de que el período sea par o impar. En nuestro caso, debemos
+trucar esta aproximación al final del primer período. Obtenemos así 
+una buena aproximación racional para $\sqrt{14}$, 
+\[
+	\sqrt{61}\sim 3+\cfrac{1}{1+\cfrac{1}{2+\cfrac{1}{1}}}=\cfrac{15}{4}.
+\]
+Esta fracción nos da además la solución $(x_1,y_1)=(15,4)$ de la
+ecuación~\eqref{eq:Pell14}.  Podemos conseguir otras soluciones al calcular
+\[
+	x_n+y_n\sqrt{14}=(x_1+y_1\sqrt{14})^n.
+\]
+
+Hoy en día, para resolver la ecuación de Pell $x^2-Ny^2=1$, se considera
+el cuerpo $\Q(\sqrt{N})$, es decir el conjunto
+de números complejos de la forma
+\[
+	a+b\sqrt{N}
+\]
+donde $a$ y $b$ son números racionales. Cada elemento $\alpha=a+b\sqrt{N}$
+tiene una norma dada por $N(\alpha)=a^2-Nb^2$ y esta norma es una función
+multiplicativa, es decir
+\[
+	N(\alpha\beta)=N(\alpha)N(\beta)
+\]
+para todo $\alpha,\beta\in\Q(\sqrt{N})$. Encontrar entonces soluciones a la
+ecuación de Pell equivale a encontrar los elementos $\alpha=a+b\sqrt{N}$ con
+$a,b\in\Z$ y tal que $N(\alpha)=1$. 
+
+%La identidad de Brahmugupta en el caso $N=-1$ nos da una fórmula para escribir
+%el producto de dos sumas de cuadrados como una suma de cuadrados. De hecho,
+%esta fórmula tiene puede expresarse simplemente así
+%\[
+%	|z_1z_2|^2=|z_1|^2|z_2|^2,\quad z_1,z_2\in\C.
+%\]
+
+\section*{Inducción matemática}
+
+\index{Inducción!matemática}
+\index{Inducción!demostrativa}
+El método de Bhaskara nos sugiere cierta conexión con la inducción matemática
+que comunmente utilizamos en algunas demostraciones.  Y ya que mencionamos la
+inducción matemática, este parece ser un buen momento para hacer algunos
+comentarios sobre las demostraciones por inducción. 
+
+Nos basaremos en el
+artículo~\cite{MR1519060}. 
+
+Las demostraciones por inducción aparecen
+independiente en trabajos de Pascal, Fermat y Maurolycus, aunque no siempre
+presente de la forma en la que hoy la conocemos. Por ejemplo, en los trabajos
+de Fermat aparece bajo una técnica que hoy conocemos como ``método del descenso''. 
+%la técnica de Fermat consiste básicamente
+%en asumir que si una cierta propiedad es válida para $n$, entonces será válida para $n-n_1$ y luego para $n-n_1-n_2$
+Un proceso similar al descenso de Fermat había sido usado por Campanus en su
+demostración de la irracionalidad del número $\frac{1+\sqrt{5}}{2}$ en su
+edición de los elementos de Euclides del año 1260. Ninguno de los matemáticos
+que utilzaron técnicas de demostración similares a la inducción consideraron
+necesario asignarle un nombre especial. Wallis es uno de los primeros
+matemáticos en utilizar frases como ``proceder por inducción'', aunque usaba
+una inducción incompleta. Por ejemplo, en su libro de 1656, para demostrar que
+\[
+	\frac{1+4+9+\cdots+n^2}{(n+1)n^2}>\frac13
+\]
+calcula los primeros seis casos y afirma que esos casos son suficiententes para
+entender qué pasa para otros valores de $n$. Jakob Bernoulli intenta en 1686
+mejorar la técnica de Wallis y considera necesario agregar el argumento que
+permite pasar del caso $n$ al caso $n+1$. Bernoulli no consideró necesario
+asignarle un nombre especial a este procedimiento. En un libro póstumo
+publicado en 1713 demuestra el teorema del binomio por inducción y lo hace con
+las mejoras que introdujo anteriormente. Durante muchos de los años siguientes
+los matemáticos utilizaron las técnicas de inducción de Wallis y de Bernoulli
+indistintamente. A principios del siglo XVII varios diccionarios hablan de la
+inducción en matemática y mencionan el teorema del binomio como un ejemplo de
+aplicación.  En un diccionario matemático publicado en 1814 Barlow da una
+definición formal del proceso de inducción:
+\begin{quote}
+	Induction is a term used by mathematicians to denote those of any law, or
+	form, is inferred cases in which the generality from observing it to have
+	obtained in several cases. Such inductions, however, are very deceptive,
+	and ought to be admitted with the greatest cautio
+\end{quote}
+En 1830, el matemático inglés Peacock considera la inducción tal como fue
+concebida por Bernoulli y la llama ``inducción demostrativa''. A partir de ese
+momento la comunidad matemática poco a poco comienza a aceptar la noción de
+inducción dada Bernoulli y olvida la inducción incompleta de Wallis.  En 1838,
+De Morgan publicó un artículo sobre la inducción y la denominó ``inducción
+matemática''. Muchos autores de libros de texto popularizaron estos nombres.
+El famoso tratado sobre álgebra de Chrystal, por ejemplo, utiliza ``inducción
+matemática''. Con el tiempo, esta terminología ganó terreno y poco a poco la
+comunidad olvidó el nombre sugerido por Peacock. 
+
+
+%\section*{El teorema de unidades de Dirichlet}
+%
+%En 1837 Dirichlet publicó una fórmula explícita para algunos ecuaciones de Pell. Por ejemplo, 
+%para $N=13$, 
+%\[
+%	\eta^2=x_1+y_1\sqrt{13},
+%\]
+%donde 
+%\[
+%	\eta=\frac{\sin (2\pi/13) \sin(5\pi/13)\sin(6\pi/13)}{\sin(\pi/13)\sin (3\pi/13)\sin(4\pi/13)}\in\Q(\sqrt{13}).
+%\]
+%Resolver la ecuación de Pell en enteros positivos puede verse como un caso
+%particular del teorema de las unidades de Dirichlet, demostrado en 1846. El teorema
+%en el caso particular que mencionamos describe el grupo de unidades del anillo 
+%de enteros algebraicos $\Z[\sqrt{N}]$. 
+%
+%En 1863 Kronecker publicó una expresión en términos de funciones elípticas. \framebox{?}
+%
+%
+%
+%

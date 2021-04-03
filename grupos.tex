@@ -1,0 +1,344 @@
+\chapter{Teoría de grupos}
+
+¿Qué son los grupos? ¿Cómo y dónde aparecen? 
+
+\index{Teorema!de Fermat}
+\index{Teorema!del binomio}
+El pequeño teorema de Fermat afirma que si $p$ es un número primo y $a\in\Z$ es
+coprimo con $p$, entonces $a^{p-1}\equiv 1\bmod p$. No sabemos bien cuál fue la
+demostración que encontró Fermat, pero Weil sugiere que fue la siguiente.
+Primero se demuestra el resultado el en caso en que $a=2$ de la siguiente
+forma: el teorema del binomio nos permite escribir
+\[
+	2^p=(1+1)^p=\sum_{k=0}^p\binom{p}{k}=1+1+\binom{p}{1}+\binom{p}{2}+\cdots+\binom{p}{p-1}
+\]
+y luego solamente debemos observar que, como los números binomiales
+$\binom{p}{k}$ son todos divisibles por $p$ si $k\in\{1,\dots,p-1\}$, entonces
+\[
+	2^p-2=\binom{p}{1}+\cdots+\binom{p}{p-1}
+\]
+es también divisible por $p$. 
+Ahora debemos utilizar el resultado ya probado en el caso $a=2$
+y demostrar el caso $a=3$ ya que gracias al teorema del binomio podemos
+escribir 
+\[
+	3^p=(2+1)^p=3+pm
+\]
+para algún $m$. Más generalmente, si sabemos que el resultado es válido para un
+cierto $a$, entonces, nuevamente gracias al teorema del binomio, podemos
+escribir 
+\begin{align*}
+	&(a+1)^p = (a+1)+pm,
+\end{align*}
+para algún entero $m$, y demostrar que el resultado es también válido para
+$a+1$. 
+
+Para ver que el primo $p$ siempre divide a los binomiales $\binom{p}{k}$ con $k\in\{1,\dots,p-1\}$ 
+simplemente hay que utilizar la fórmula
+\[
+	\binom{n}{k}=\frac{n!}{k!(n-k)!}.
+\]
+Fermat no conocía esta fórmula, pero sí sabía que vale la fórmula
+\[
+	n\binom{n+m-1}{m-1}=m\binom{n+m-1}{m}
+\]
+y que esta fórmula alcanza para demostrar lo que se necesita.
+
+\begin{exercise}
+	\index{Teorema!multinomial}
+	Enuncie y demuestre el teorema multinomial. Una demostración
+	probabilística puede verse en \cite{MR3453544}.
+\end{exercise}
+
+Otra forma de demostrar el pequeño teorema de Fermat es la siguiente:  
+Un argumento similar al anterior pero donde el teorema del
+binomio es reemplazado por el teorema multinomial, nos permitirá escribir 
+\[
+	(1+1+\cdots+1)^p=1^p+1^p+\cdots+1^p+pm
+\]
+para algún entero $m$. De aquí el teorema de Fermat se seguirá
+inmediatamente. 
+
+% esta prueba parece que es la primera que apareció y la encontró Leibniz (eso dice Davenport). 
+% Ivori en 1806 dio una prueba distinta, que es la que permite extender el teorema al teorema
+% de Euler. Ver Davenport pag 46
+
+\index{Teorema!de Euler}
+En 1758 Euler generalizó el resultado de Fermat de la siguiente forma: si $a\in\Z$ y
+$n\in\N$, entonces $a^{\varphi(n)}\equiv 1\bmod n$, donde 
+\[
+	\varphi(n)=\#\{k:1\leq k\leq n-1\text{ y además }(k,n)=1\}
+\]
+es la función de Euler. Por ejemplo, $\varphi(5)=4$ y $\varphi(8)=4$.
+
+\begin{exercise}
+	Demuestre el teorema de Euler.
+\end{exercise}
+
+Los elementos del conjunto $\{1,2,\dots,n-1\}$ que son coprimos con $n$ forman una estructura
+algebraica de cardinal $\varphi(n)$ que es cerrada por la multiplicación módulo $n$. Veamos un ejemplo concreto en
+el caso $n=5$. La tabla de multiplicación viene dada por 
+\begin{table}
+\begin{center}
+	\begin{tabular}{c|cccc}
+	  & 1 & 2 & 3 & 4 \\
+	  \hline
+	1 & 1 & 2 & 3 & 4 \\
+	2 & 2 & 4 & 1 & 3 \\
+	3 & 1 & 1 & 4 & 2 \\
+	4 & 4 & 3 & 2 & 1
+\end{tabular}
+\end{center}
+\end{table}
+
+Esta tabla tiene propiedades muy interesantes: a) es cerrada por
+multiplicación, b) la multiplicación es asociativa, c) existe un elemento
+neutro, y por último d) cada elemento admite un inverso multiplicativo:
+\[
+	1^{-1}=1,\quad
+	2^{-1}=3,\quad
+	3^{-1}=2,\quad
+	4^{-1}=4.
+\]
+
+En lenguaje moderno, simplemente diremos que el conjunto de enteros módulo $5$
+forma un grupo con la multiplicación.
+
+\begin{exercise}
+	Construya la tabla de multiplicación de enteros impares módulo 8.
+\end{exercise}
+
+La teoría de grupos no fue concebida originalmente como una generalización de
+la aritmética módulo $n$ sino como herramienta fundamental para resolver el
+problema de encontrar soluciones de ecuaciones. El problema era intentar
+resolver la ecuación
+\[
+	a_5X^5+a_4X^4+\cdots+a_1X+a_0=0
+\]
+mediante fórmulas que involucraran radicales. 
+%Por ejemplo: ¿es posible
+%encontrar una solución para la ecuación\dots
+
+Lagrange entendió que era importante estudiar el grupo generado por las
+permutaciones de las raíces. Así surgieron los grupos de permutaciones.
+
+Gauss sin saberlo había considerado grupos\dots?
+
+Cauchy, Jordan, Abel, Cayley, Klein, Lie, Dyck\dots
+
+Las funciones biyectivas forman otro ejemplo muy importante de grupos. Hagamos un caso sencillo, el de las funciones 
+$\{1,2,3\}\to\{1,2,3\}$ que son biyectivas. El conjunto $\Sym_3$ de funciones
+biyectivas $\{1,2,3\}\to\{1,2,3\}$ forma un grupo con la composición de funciones. Podemos escribir
+a los elementos de $\Sym_3$ como
+\[
+	\Sym_3=\{\id,(12),(13),(23),(123),(132)\}
+\]
+
+Escribir como matrices de $3\times 3$. 
+Por ejemplo
+$(123)$ puede representarse por la matriz
+\[
+	P=\begin{pmatrix}
+		0 & 0 & 1\\
+		1 & 0 & 0\\
+		0 & 1 & 0
+	\end{pmatrix}
+\]
+Luego $P(x,y,z)=\dots$. 
+
+El signo de una permutación puede verse como el determinante de esta matriz de permutación. 
+
+Calcular subgrupos de $\Sym_3$.
+
+El teorema de Lagrange afirma que si $H$ es un subgrupo de un grupo finito $G$,
+entonces $|H|$ divide a $|G|$. 
+
+\begin{example}
+	En el caso del grupo simétrico $\Sym_3$, que tiene orden seis, vimos que los subgrupos
+	pueden tener $1$, $2$, $3$ o $6$ elementos, tal como predice el teorema de Lagrange.
+\end{example}
+
+Cayley demostró que si $G$ es un grupo finito, entonces
+$G$ es esencialmente un subgrupo de algún $\Sym_n$. 
+
+
+No podemos hacer un estudio exhaustivo de la historia de la teoría de los
+grupos finitos, pero sí debemos mencionar algunos resultados muy importantes
+dentro del desarrollo de la matemática del siglo XX.  Mencionamos que la noción
+de resolubilidad es aquella que nos permite estudiar soluciones por radicales
+de ecuaciones. De hecho, sabemos que en general no podremos encontrar una
+fórmula para resolver la ecuación de grado $5$ por radicales pues el grupo
+$\Sym_5$ no es resoluble.  En \dots Burnside demostró que todo grupo de orden
+$p^a q^b$ es resoluble y conjeturó que todo grupo de orden impar es resoluble.
+Esto fue demostrado en \dots por Feit y Thompson. La demostración es muy
+difícil y ocupa un volumen completo del Pacific Journal of Mathematics.  Este
+teorema es uno de los pasos fundamentales hacia una clasificación de los grupos
+simples finitos.  Recientemente este teorema fue verificado formalmente
+por\dots en Coq\dots
+
+\section*{Representaciones}
+
+
+
+\section*{La clasificación de grupos simples finitos}
+
+Sin duda uno de los resultados más profundos de la matemática moderna es la
+clasificación de los grupos simples finitos. Repasaremos un poco de la historia
+básica de este notable teorema. El lector interesado en obtener información más
+detallada puede consultar los artículos de Solomon~\cite{MR1824893,MR3854074}. 
+
+Los grupos simples más fáciles de describir son los cíclicos con un número
+primo de elementos. Por ejemplo
+\[
+	\Z/2=\{0,1\},\quad
+	\Z/3=\{0,1,2\},\quad
+	\Z/5=\{0,1,2,3,4\}\dots
+\]
+Están también los grupos simples alternados. El menor de estos grupos suele
+denotarse $\Alt_5$, tiene orden 60 y fue descubierto por Galois en sus trabajos
+sobre la resolubilidad por radicales. Tenemos además grupos simples análogos
+finitos a ciertos grupos geométricos que aparecen en la teoría de Lie. Algunos
+de estos grupos eran ya conocidos por Galois y por Jordan. Hay además cinco
+grupos descubiertos por Mathieu en 1861 y 1873 que resultan ser los grupos de
+las simetrías de ciertas geometrías finitas que ahora nos resultaría un poco
+complicado explicar. 
+
+Gran parte de los análogos finitos de grupos de Lie fueron descubiertos en el
+siglo XX, primero por Dickson en algunos casos particulares y luego por
+Chevalley, Steinberg, Suzuki y Ree en forma más sistemática. Tenemos entonces,
+digámoslo vagamente, una lista de grupos simples finitos: a) los grupos
+cíclicos de orden primo, b) los grupos alternados de grado $\geq 5$, c) los
+grupos de tipo Lie, y por último d) los grupos de Mathieu. 
+
+En 1963 Feit y Thompson demostraron que todo grupo de orden impar es resoluble,
+resultado que había sido conjeturado por Burnside en 1906. La demostración un
+volumen completo de la revista \emph{Pacific Journal of Mathematics} de casi
+trescientas páginas. A partir de este resultado y de las técnicas desarrolladas
+por Feit y Thompson, fue posible construir nuevos grupos simples, grupos que en
+general hoy llevan el nombre de sus descubridores: Janko, Highman, Sims,
+MacLaughlin, Suzuki, Conway, Held, Fischer, Lyons, O'Nan, Rudavalis. En muchos
+casos, para demostrar la existencia de tales grupos fue necesario recurrir a
+complicados cálculos computacionales. En algún momento los especialistas en
+teoría de grupos encontraron evidencia de la existencia de un nuevo grupo
+simple, esta vez mostruosamente grande, de orden 
+\[
+	2^{46}\times 3^{20}\times 5^9\times 7^6\times 11^2\times 13^3\times 17\times 19\times 23\times 29\times 31\times 41\times 47\times 59\times 71. 
+\]
+Es fácil entender por qué a este grupo se lo conoce como ``el monstruo''.  A
+diferencia de lo que había pasado con los grupos mencionados en el párrafo
+anterior, semejante cantidad de elementos hacía imposible siquiera pensar en
+utilizar una computadora para demostrar la existencia. En 1982 Griess demostró
+la existencia del monstruo al observar que podía verse como el grupo de
+simetrías de un cierto espacio de dimensión 196883. 
+
+El enunciado del teorema de la clasificación de grupos simples estaba ahí y
+solo era necesario agregar 26 excepciones a las familias que mencionamos
+anteriormente. Entre estas excepciones está el monstruo.  En 1972 Gorenstein
+propuso un programa para demostrar esta clasificación. 
+
+Para algunos, la clasificación estaba completa en 1974. No para toda la
+comunidad matemática, sin embargo. En 1976, por ejemplo, Brauer menciona que
+muchos matemáticos creen que tener completa la clasificación depende únicamente
+del tiempo, y para fundamentar su comentario cita a Alperin y pone énfasis en
+que quizá se necesiten unos cinco años en completar los detalles que falen,
+aunque luego sean necesarios muchos años más para poder ordenar y escribir
+prolija y precisamente cado uno de los pasos necesarios de aquella demostración. 
+
+Gracias a los trabajos de varios matemáticos tales como Aschbacher, Mason y
+Griess, donde casos difíciles eran tratados exitosamente, Gorenstein declaró en
+1981 que la clasificación de los grupos simples estaba completa. Los trabajos
+de Aschbacher y Griess fueron sometidos a referato y luego publicados, pero no
+así el de Mason, que ocupaba unas ochocientas páginas.  En 1989, Aschbacher
+observó que aquel trabajo estaba incompleto y que quedaban allí varios casos
+sin resolverse. En 1992 Aschbacher anunció que había logrado completar con
+éxito los detalles faltantes en el trabajo de Mason, aunque esto tampoco fue
+publicado. En 1996 Aschbacher y Smith comenzaron a trabajar en la demostración 
+estos resultados, esto fue publicado en dos volúmenes en 2004. Gracias
+de este resultado, la comunidad matemática acepta a la clasificación de los
+grupos simples. 
+
+%Sin embargo, hasta el día de la fecha, cada trabajo donde se
+%demuestra un teorema que depende de la clasificación contiene alguna fuerte
+%indicación de que el resultado depende de la clasificación de los grupos
+%simples.
+
+
+
+Las primeras constribuciones a la clasificación de grupos simples son los
+trabajos de Galois de 1830, el tratado de Jordan de 1870 y un teorema de
+Burnside de 1899 donde se clasifica una familia infinita de grupos simples. El
+último resultado necesario para la clasificación de grupos simples fue
+el que publicaron Aschbacher y Smith en 2004. Hoy en día, la
+comunidad matemática considera que el teorema de clasificación de los grupos
+simples es un hecho demostrado, aunque no haya quizá nadie que conozca todos
+los pasos de la demostración, que involucra el trabajo de cientos de
+matemáticos a lo largo de más de cien años y más de diez mil páginas de
+revistas científicas. 
+
+
+La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
+importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
+libro posee una modesta lista con infinitos grupos simples. En un trabajo
+publicado en 1892, H\"older remarca que sería de gran interés disponer de la
+clasificación de grupos simples. Eso hizo que poco tiempo después Cole
+determinara todos los grupos simples de tamaño $\leq600$, y en particular
+demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
+igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
+Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
+el famoso principio del palomar, 
+extendieron estos trabajos y lograron construir todos los grupos
+simples de orden $\leq2001$. 
+
+En 1895 Burnside y Frobenius demostraron independientemente que
+los únicos grupos simples no abelianos cuyos órdenes poseen a lo sumo cinco factores primos
+son los grupos $\PSL_2(p)$ para $p\in\{5,7,11,13\}$. 
+
+En 1900 Burnside demostró que si $G$ es un grupo no abeliano y simple de orden
+impar, entonces el orden de $G$ es producto de al menos siete primos. 
+
+En 1893 Frobenius demostró que un grupo simple de orden libre de cuadrados
+resulta ser cíclico de orden primo. Dos años después Burnside extendió el
+resultado de Frobenius.
+
+En 1896 Dedekind le escribió una carta a Frobenius donde le proponía el
+problema de factorizar el determinante de una cierta matriz cuyos coeficientes
+dependían de un grupo simple. Un año después Frobenius encontró no solamente la
+solución al problema de Dedekind sino que lo hizo gracias al desarrollo de la
+teoría de caracteres. 
+
+En 1900 Burnside utilizó las ideas de Frobenius y pudo demostrar varios
+resultados que sugieren la no existencia de grupos simples no abelianos con una
+cantidad impar de elementos, conjetura que escribió formalmente en 1911. En
+1904 demostró que todo grupo de orden $p^aq^b$ es resoluble. 
+
+En 1900 Dickson encontró nuevas familias de grupos simples y lo hizo inspirado en
+las teorías de Killing y Cartan sobre grupos de Lie. 
+
+Curiosamente Dickson declaró en 1920 que la teoría de grupos finitos había muerto. 
+
+La teoría de grupos finitos avanzó mucho durante el siglo XX gracias a los
+trabajos de muchos matemáticos. Por la relevancia que estos trabajos tienen en
+la clasificación de los grupos simples mencionaremos a Schur, Hall, Zassenhaus,
+Fitting.
+
+Después de la segunda guerra mundial algunos algebristas comenzaron a mostrar gran interés por el problema de la clasificación de grupos simples. Zassenhaus, por ejemplo, 
+lo consideró el problema más importante. Zassenhaus creía posible atacar esta problema utilizando los métodos geométricos de Killing y Cartan pertenecientes a la teoría de Lie. La idea
+era buena: de esa forma Chevalley construyó nuevos grupos simples. Steinberg y Ree también construyeron familias de grupos simples basados en la teoría de Lie. 
+
+Se habían construido varias familias de grupos simples, pero 
+se estaba lejos de una clasificación. Ni siquiera existía una estrategia posible para obtener la clasificación. 
+
+En su tesis de doctorado Thompson demostró una conjetura de Frobenius.
+
+Los resultados sobre la estructura de grupos finitos ocpaban más de mil quinientas páginas de publicaciones científicas. En 1971 Gorenstein propuso un programa para la clasificación de los grupos simples. 
+Ese programa fue refinado en 1972 y consistía en atacar 16 pasos. La comunidad no creía que la clasificación fuera posible.
+
+El teorema de Feit--Thompson fue publicado en 1963 y afirma que todo grupo de orden impar es resoluble. Si bien es un enunciado muy fácil de reproducir, la demostración es muy difícil y ocupa casi trescientas páginas. 
+El primer teorema donde se clasifica una familia infinita de grupos simples 
+es de Burnside y fue publicado en 1899. El último teorema necesario en la demostración rigurosa de la clasificación de grupos simples fue publicado en 2004 
+y fue demostrado por Aschbacher y Smith; son dos volúmenes que ocupan más de mil páginas. 
+
+
+\section*{Formalización}
+
+hablar de Coq o equivalentes y mencionar qué teoremas fueron demostrados y cuáles son los objetivos

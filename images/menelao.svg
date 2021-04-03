@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="5 9 195 92">
+<title>Illustration of Menelao's Theorem</title>
+<g style="stroke:black;stroke-width:1;fill:none">
+	<path d="M10,90 H200 M10,90 L40,20 L120,90"/>
+	<path d="M15,30 L200,100" stroke="magenta"/>
+</g>
+<text style="stroke:none;fill:black;font-size:10" font-family="DejaVu Serif">
+	<tspan x="5" y="100">A</tspan><tspan x="115">B</tspan><tspan x="170">F</tspan>
+	<tspan x="20" y="45">E</tspan><tspan x="37" y="18">C</tspan><tspan x="85" y="55">D</tspan>
+</text>
+</svg>

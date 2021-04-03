@@ -1,0 +1,1124 @@
+\chapter{Números y aritmética}
+
+\index{Número!poligonal}
+Para los griegos los números tenían propiedades místicas. De hecho, le dieron
+mucha importancia --quizá demasiada-- a los números poligonales.  El ejemplo
+más famoso de número poligonal es el de los cuadrados. El $25$ es un cuadrado
+pues se representa con el siguiente objeto geométrico:
+\[
+\begin{array}{ccccc}
+	\bullet & \bullet & \bullet & \bullet & \bullet\\
+	\textcolor{orange}{\bullet} & \textcolor{orange}{\bullet} & \textcolor{orange}{\bullet} & \textcolor{orange}{\bullet} & \bullet\\
+	\textcolor{green}{\bullet} & \textcolor{green}{\bullet} & \textcolor{green}{\bullet} & \textcolor{orange}{\bullet} & \bullet\\
+	\textcolor{blue}\bullet & \textcolor{blue}{\bullet} & \textcolor{green}{\bullet}     & \textcolor{orange}{\bullet} & \bullet\\
+	\textcolor{red}{\bullet} & \textcolor{blue}{\bullet} & \textcolor{green}{\bullet}    & \textcolor{orange}{\bullet} & \bullet
+\end{array}
+\]
+Al observar los colores que usamos en los puntos que forman nuestro cuadrado,
+vemos además que podemos escribir al $25$ como $25=1+3+5+7+9$. Esta observación
+es un hecho general: la suma de los primeros impares consecutivos siempre será
+un cuadrado. Nuestra notación nos permite traducir esta observación en la
+identidad 
+\[
+	1+3+5+\cdots+(2n+1)=(n+1)^2,
+\]
+que fácilmente puede demostrarse por inducción. 
+
+Similarmente podemos considerar números triangulares: 1, 3, 6, 10\dots
+\begin{align*}
+	\bullet
+	&&
+	\begin{array}{cc}
+		\bullet\\
+		\bullet & \bullet 
+	\end{array}
+	&&
+	\begin{array}{ccc}
+		\bullet\\
+		\bullet & \bullet \\
+		\bullet & \bullet & \bullet
+	\end{array}
+	&&
+	\begin{array}{cccc}
+		\bullet\\
+		\bullet & \bullet \\
+		\bullet & \bullet & \bullet\\
+		\bullet & \bullet & \bullet & \bullet
+	\end{array}
+\end{align*}
+Observermos que para calcular el $n$-ésimo núnero triangular $T_n$ lo que
+hacemos es sumar los primeros $n$ números: 
+\[
+	T_n=1+2+3+\cdots+n.
+\]
+El siguiente gráfico nos permite deducir otra expresión para la fórmula general
+que tendrá un número triangular:
+\[
+	\begin{array}{ccccc}
+		\bullet & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet}\\
+		\bullet & \bullet & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet}\\
+		\bullet & \bullet & \bullet & \textcolor{blue}{\bullet} & \textcolor{blue}{\bullet} \\
+		\bullet & \bullet & \bullet & \bullet & \textcolor{blue}{\bullet}
+	\end{array}
+\]
+Como el número triangular $T_4$ verifica la ecuación $2T_4=4\times 5$, entonces
+$T_4=\frac{4\times 5}{2}$. En general, este mismo argumento nos permite
+demostrar que
+\[
+	T_n=\frac{n(n+1)}{2}
+\]
+
+\begin{exercise}
+	Calcule $T_{100}$. 
+\end{exercise}
+
+Uno de los resultados más interesantes sobre números poligonales es el teorema
+de Lagrange. Este teorema tiene sus orígenes en los trabajos del matemástico
+griego Diofanto. Esto motivó a que en 1621 el francés Bachet mientras trabajaba
+en una traducción de uno de los libros de Diofanto, conjeturara (o afirmara)
+que todo número puede escribirse como suma de a lo sumo cuatro cuadrados. La
+primera demostración de este teorema fue dada por Lagrange en 1770.
+
+\begin{theorem}[Lagrange]
+	\index{Teorema!de Lagrange}
+	\index{Teorema!de los cuatro cuadrados}
+	Todo número entero positivo es suma de (a lo sumo) cuatro cuadrados.	
+\end{theorem}
+
+\begin{proof}
+	Como todo entero es producto de números primos, 
+	la identidad 
+	\begin{equation}
+		\begin{aligned}
+			\label{eq:Euler}
+			(a_1^2+a_2^2+a_3^2+a_4^2)(b_1^2&+b_2^2+b_3^2+b_4^2)\\
+			=(a_1 b_1 &- a_2 b_2 - a_3 b_3 - a_4 b_4)^2\\
+			&+(a_1 b_2 + a_2 b_1 + a_3 b_4 - a_4 b_3)^2\\
+			&+(a_1 b_3 - a_2 b_4 + a_3 b_1 + a_4 b_2)^2\\
+			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 + a_4 b_1)^2.
+		\end{aligned}
+	\end{equation}
+	implica que solamente necesitamos demostrar el teorema para los números
+	primos. El caso $p=2$ es trivial pues $2=1^2+1^2+0^2+0^2$. Tenemos que
+	demostrar entonces el teorema para todo primo impar $p$. 
+
+	\begin{claim}
+		Existen $a,b\in\{0,\dots,\frac{p-1}{2}\}$ tales que
+		$a^2+b^2+1\equiv0\bmod{p}$. 
+	\end{claim}
+
+	Para demostrar la afirmación consideramos los conjuntos 
+	\begin{align*}
+		A&=\{a^2:a=0,1,\dots,(p-1)/2\},\\
+		B&=\{-b^2-1:b=0,1,\dots,(p-1)/2\}.
+	\end{align*}
+	Como los elementos de $A$ son todos distintos módulo $p$ y los elementos de
+	$B$ son también todos distintos módulo $p$, tenemos que $|A|=|B|=(p+1)/2$.
+	En consecuencia, $A\cap B=\emptyset$. Existen entonces $a\in A$ y $b\in B$
+	tales que $0\leq a,b\leq (p-1)/2$ y $a^2=-1-b^2\bmod p$.
+
+	\medskip
+	Gracias a la afirmación anterior, sabemos que existe un entero $n\geq1$ tal
+	que $a^2+b^2+1=np$. Entonces
+	\[
+		p\leq np=a^2+b^2+1=a^2+b^2+1^2+0^2.
+	\]
+	es suma de cuatro cuadrados. Sea $m$ el menor entero positivo tal que $mp$
+	es suma de cuatro cuadrados, digamos
+	\[
+		mp=x_1^2+x_2^2+x_3^2+x_4^2.
+	\]
+	Entonces $1\leq m\leq n<p$. En efecto, si $n\geq p$, como $a$ y $b$ son
+	$\leq(p-1)/2$, entonces $(p+1)^2\leq 2$, una contradicción. 
+
+	Queremos demostrar que $m=1$. Supongamos
+	entonces que $1<m<p$. Si $m$ es par, el número 
+	\[
+		\frac{m}{2}p=\left(\frac{x_1+x_2}{2}\right)^2
+		+\left(\frac{x_1-x_2}{2}\right)^2
+		+\left(\frac{x_3+x_4}{2}\right)^2
+		+\left(\frac{x_3-x_4}{2}\right)^2
+	\]
+	es suma de cuatro cuadrados, una contradicción a la minimalidad de $m$. 
+	
+	Sean ahora $y_1,\dots,y_4$ tales que $x_i\equiv y_i\bmod m$
+	y $-m/2<y_i\leq m/2$ para todo $i\in\{1,\dots,4\}$. Como
+	\[
+		y_1^2+\cdots+y_4^2\equiv x_1^2+\cdots x_4^2= mp\equiv 0\bmod m,
+	\]
+	existe un entero $r\geq1$ tal que $mr=y_1^2+\cdots+y_4^2$. 
+	
+	\begin{claim}
+		$r\in\{1,\dots,m-1\}$. 
+	\end{claim}
+
+	Si $r=0$, entonces $y_1=y_2=y_3=y_4=0$. Luego $m$ divide a cada $x_i$ y
+	entonces $m^2$ divide a cada $x_i^2$. En consecuencia, 
+	\[
+		m^2\mid x_1^2+\cdots+x_4^2=mp,
+	\]
+	una contradicción pues $m\nmid p$. Como entonces $r\geq 1$, 
+	\[
+		mr=y_1^2+\cdots+y_4^2\leq 4\left(\frac{m}{2}\right)^2=m^2
+	\]
+	y luego $r\leq m$. Para ver que $r\ne m$ basta observar que si $r=m$, 
+	entonces 
+	\[
+		m^2=y_1^2+\cdots+y_4^2\leq (m/2)^2+(m/2)^2+(m/2)^2+(m/2)^2=m^2,
+	\]
+	y luego cada $y_j$ tomará el máximo valor posible, es decir
+	$y_1=y_2=y_3=y_4=m/2$. En particular, $m$ es un número par, una contradicción. 
+
+	\medskip
+	La identidad de Euler nos permite escribir
+	\[
+		m^2rp=(mp)(mr)=(x_1^2+\cdots+x_4^2)(y_1^2+\cdots+y_4^2)=z_1^2+\cdots+z_4^2.
+	\]
+	Como $x_i\equiv y_i\bmod m$ para todo $i\in\{1,\dots,4\}$, entonces 
+	$z_i\equiv 0\bmod m$ para todo $i\in\{1,\dots,4\}$. Para cada $i\in\{1,\dots,4\}$ sea
+	$w_i=z_i/m\in\Z$. Entonces 
+	\[
+		rp=w_1^2+w_2^2+w_3^2+w_4^2,
+	\]
+	una contradicción a la minimalidad de $m$.
+\end{proof}
+
+La identidad~\eqref{eq:Euler} fue descubierta por Euler; figura en una carta
+que le escribió a Goldbach el 4 de mayo de 1748. Puede demostrarse la
+identidad~\eqref{eq:Euler} con a un cálculo directo. La identidad fue
+redescubierta por Hamilton en 1843 en sus trabajos sobre cuaterniones. Una
+manera sencilla y elegante de demostrar esta identidad se basa en que el
+determinante es una multiplicación multiplicativa y que vale además la
+siguiente fórmula:
+\[
+	(x_1^2+x_2^2+x_3^2+x_4^2)^2=\det\begin{pmatrix}
+		x_1 & x_2 & x_3 & x_4\\
+		-x_2 & x_1 & -x_4 & x_3\\
+		-x_3 & x_4 & x_1 & -x_2\\
+		-x_4 & -x_3 & x_2 & x_1
+	\end{pmatrix}.
+\]
+Alrededor de 1840 Graves y Cayley descubieron independientemente una identidad
+similar que involucra suma de ocho cuadrados. 
+
+\begin{exercise}
+	Demuestre que todo número $n>169$ puede escribirse como suma de exactamente
+	cinco cuadrados.
+\end{exercise}
+
+\index{Fórmula!de Jacobi}
+En 1828 Jacobi dio una fórmula sorprendente que permite calcular con exactitud
+la cantidad $r_{4}(n)$ de representaciones del entero $n$ como suma de cuatro
+cuadrados:
+\[
+	r_{4}(n)=8(2+(-1)^n)\sum_{\substack{d\mid n\\2\nmid d}}d.
+\]
+
+\index{Suma!de tres cuadrados}
+\index{Teorema!de Legendre}
+No todo número puede representarse como suma de tres cuadrados.  Los primeros
+numeros que pueden representarse como suma de exactamente cuatro cuadrados son 
+\[
+	7, 15, 23, 28, 31, 39, 47, 55, 60, 63, 71\dots
+\]
+La sucesión de tales números lleva el código \verb+A004215+.  En 1798 Legendre
+demostró que un entero positivo $n$ puede representarse como suma de tres
+cuadrados si y sólo si no es de la forma $n=4^a(8b+7)$. Este resultado de
+Legendre puede utilizarse para demostrar el teorema de Lagrange: Si $n$ es un
+entero positivo, escribimos $n=4^{\alpha}m$, donde $m$ es un entero no
+divisible por $4$. Si $m\equiv k\bmod 8$ para algún $k\in\{1,2,3,5,6\}$,
+entonces $m$ es suma de tres cuadrados y el resultado queda demostrado. En caso
+contrario, $m-1$ es también suma de tres cuadrados y luego $m$ es suma de
+cuatro cuadrados. 
+
+% otra demo con geometría de números?
+
+
+% Escribimos $n-169=x_1^2+\cdots+x_4^2$ como suma de cuatro cuadrados, donde
+% podemos suponer sin perder generalidad que $x_1\geq x_2\geq x_3\geq x_4\geq
+% 0$. Si todos los $x_j$ son positivos, no hay nada para demostrar pues
+% $169=13^2$. Si $x_4=0$, entonces escribimos $169=5^2+12^2$ y el resultado
+% queda también demostrado. Si $x_3=x_4=0$, entonces usamos que
+% $169=12^2+4^2+3^2$. Por último, si $x_2=x_3=x_4=0$, usamos que
+% 169=10^2+8^2+2^2+1^2$. 
+
+El teorema de Legendre también permite además demostrar fácilmente el siguiente
+teorema de Gauss:
+
+\begin{theorem}[Gauss]
+	\index{Teorema!de Gauss}
+	Todo entero positivo es suma de tres números triangulares.
+\end{theorem}
+
+\begin{proof}
+	Por el teorema de Legendre, todo entero de la forma $8n+3$ puede expresarse
+	como suma de tres cuadrados, digamos $8n+3=a_1^2+a_2^2+a_3^2$. Como los
+	cuadrados módulo ocho son 0, 1 y 4, cada $a_i$ es un número impar. Como 
+	\begin{align*}
+		8n+3&=(2x+1)^2+(2y+1)^2+(2z+1)^2
+		=4(x(x+1)+y(y+1)+z(z+1))+3,
+	\end{align*}
+	entonces tenemos que 
+	\[
+		n=\frac{x(x+1)}{2}+\frac{y(y+1)}{2}+\frac{z(z+1)}{2}.\qedhere
+	\]
+\end{proof}
+
+Este teorema aparece en los diarios de Gauss con fecha del 10 de julio de 1796
+y su demostración fue publicada en \emph{Disquisitiones Arithmeticae}.  Este
+teorema de Gauss y el teorema de Lagrange sobre suma de cuatro cuadrados son
+casos particulares de un resultado más general, conjeturado por Fermat en 1638
+y demostrado por Cauchy en 1813.  Puede demostrarse que los números
+$(m+2)$-poligonales se definen mediante la fórmula
+\[
+	p_m(k)=\frac{mk(k-1)}{2}+k.
+\]
+
+En el caso $m=1$ la fórmula da números triangulares pues
+\[
+	p_1(k)=\frac{k(k+1)}{2}.
+\]
+En cambio, si 
+$m=2$, la fórmula da los números cuadrados pues
+\[
+p_2(k)=k(k-1)+k=k^2
+\]
+
+\begin{exercise}
+	Demuestre que los números pentagonales son de la forma
+	$\displaystyle{\frac{3k^2-k}{3}}$. 
+\end{exercise}
+
+Cauchy demostró en 1813 que para todo $m\geq3$ todo entero positivo puede
+expresarse como una suma de $m+2$ números $(m+2)$-poligonales. Una demostración
+breve y sencilla del teorema de Cauchy fue descubierta por Nathanson en
+1987~\cite{MR866422}.
+
+Otro resultado interesante sobre números poligonales es teorema de Euler sobre
+números pentagonales. En 1750 Euler demostró que
+\[
+	\prod_{n=1}^\infty(1-x^n)=1+\sum_{k=1}^\infty (-1)^k\left(x^{(3k^2-k)/2}+x^{(3k^2+k)/2}\right).
+\]
+El teorema de Lagrange sobre cuatro cuadrados y esta fórmula de Euler son ahora
+parte de la teoría de funciones theta que desarrolló Jacobi en 1830. 
+
+%\begin{theorem}[Cauchy]
+%	\index{Teorema!de Cauchy}
+%	Todo entero positivo puede escribirse como suma de $n$ números
+%	$n$-poligonales.
+%\end{theorem}
+%
+
+\section*{El problema de Waring}
+
+El teorema de Lagrange admite varias direcciones generalizaciones posibles. En
+1770 Waring afirmó en sus \emph{Meditationes Algebraic\ae} que todo número es
+suma de $\leq 4$ cuadrados, $\leq 9$ cubos, $\leq 19$ potencias cuartas, y, en
+general, $\leq g(k)$ potencias $k$-ésimas, donde $g(k)$ depende únicamente de
+$k$ y no del número que se está representando. Waring no tenía una demostración
+sino que hizo esas afirmaciones únicamente basado en limitada evidencia
+numérica. 
+
+Si existe $s\in\N$ tal que todo número es suma de $\leq s$ potencias
+$k$-ésimas, entonces también valdrá que todo número es suma de $\leq t$
+potencias $k$-ésimas para todo $t\geq s$. Tiene sentido entonces definir $g(k)$
+como el menor $s\in\N$ tal que 
+\[
+	x_1^k+\cdots+x_s^k=n
+\]
+admite solución en los enteros positivos para todo $n\in\N$. El siguiente
+resultado fue demostrado en 1772 por Johannes Euler, hijo del famoso
+matemático: 
+
+\begin{theorem}[Euler]
+	\index{Teorema!de Euler}
+	$g(k)\geq 2^k+\lfloor (3/2)^k\rfloor-2$. 
+\end{theorem}
+
+\begin{proof}
+	Primero observemos que para escribir al entero $n=2^k\lfloor
+	(3/2)^k\rfloor-1$ como suma de potencias $k$-ésimas, necesitamos al menos
+	$2^k+\lfloor (3/2)^k\rfloor-2$ sumandos. En efecto, si $q=\lfloor
+	(3/2)^k\rfloor$, entonces
+	\[
+		n=2^kq-1\leq 2^k(3/2)^k-1<3^k.
+	\]
+	Si $n=x_1^k+\cdots+x_{g(k)}^k$, entonces $x_j\in\{0,1,2\}$ para todo
+	$j\in\{1,\dots,g(k)\}$ y además 
+	\[
+		n=2^kq-1=\underbrace{(2^k+\cdots+2^k)}_{q\text{-veces}}-1=\underbrace{(2^k+\cdots+2^k)}_{(q-1)\text{-veces}}+2^k-1.
+	\]
+	Como además 
+	\[
+		2^k-1=\underbrace{1^k+\cdots+1^k}_{(2^k-1)\text{-veces}},
+	\]
+	se tiene la cota que buscamos.
+\end{proof}
+
+La constante 
+\[
+	I(k)=2^k+\lfloor (3/2)^k\rfloor-2 
+\]
+tiene interés en el estudio del problema de Waring. En 1853 Bretschneider
+conjeturó que $g(k)=I(k)$ para todo $k\geq2$.
+
+\begin{exercise}
+	\index{Teorema!de Lagrange}
+	Demuestre que $g(2)=4$. 
+\end{exercise}
+
+Entre 1909 y 1912 Wieferich y Kempner demostraron que $g(3)=I(3)=9$.  La
+primera demostración de este resultado fue de Wieferich, pero contenía algunos
+errores que posteriormente fueron reparados por Kempner. En 1940 Pillai
+demostró que $g(6)=I(6)=73$ y en 1964 Jing--Jung Chen demostró que
+$g(5)=I(5)=37$.  El caso de los bicuadrados es bastante más difícil: entre 1986
+y 1992 Balasubramanian, Deshouillers y Dress demostraron que $g(4)=I(4)=19$.
+Entre 1936 y 1990 varios matemáticos contribuyeron a calcular el valor exacto
+de $g(k)$ para $7\leq k\leq 471000000$. En todos estos casos, $g(k)=I(k)$.
+Veamos algunos de estos valores:
+\begin{align*}
+	&g(7)=I(7)=143,
+	&&g(8)=I(8)=279,
+	&&g(9)=I(9)=548.
+\end{align*}
+Otros valores de $g(k)$ pueden encontrarse en la sucesión \verb+A002804+.
+%
+%
+%\begin{center}
+%\begin{table}
+%	\begin{tabular}{|c|ccccccccc|}
+%		\hline
+%		$k$ & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\tabularnewline
+%		\hline
+%		$g(k)$ & 4 & 9 & 19 & 37 & 73 & 143 & 279 & 548 & 1079\tabularnewline
+%		\hline
+%	\end{tabular}
+%	\caption{Algunos valores para $g(k)$.}
+%\end{table}
+%\end{center}
+
+En general es muy difícil calcular con exactitud el valor de $g(k)$. Nos
+contentaremos con mostrar algunas cotas en ciertos casos particulares, que en
+realidad es lo único que se necesita si se quiere demostrar algún caso
+particular del problema de Waring.
+
+\begin{theorem}[Liouville]
+	\index{Teorema!de Liouville}
+	$g(4)\leq 53$.
+\end{theorem}
+
+\begin{proof}
+	Es fácil demostrar que
+	\begin{equation}
+		\label{eq:Lucas}
+		6(x_1^2+x_2^2+x_3^2+x_4^2)^2=\sum_{1\leq i<j\leq 4}(x_i+x_j)^4+\sum_{1\leq i<j\leq 4}(x_i-x_j)^4
+	\end{equation}
+	Dado $n\in\N$ escribimos $n=6q+r$ con $0\leq r\leq 5$. Por el teorema de Lagrange podemos
+	escribir a $q$ como suma de cuatro cuadrados:
+	\[
+		n=6(x_1^2+x_2^2+x_3^2+x_4^2)+r=6x_1^2+6x_2^2+6x_3^2+6x_4^2+r.
+	\]
+	La identidad~\eqref{eq:Lucas} nos dice que todo número de la forma $6y^2$
+	es suma de doce potencias cuartas, y entonces $n-r$ es suma de 48 potencias
+	cuartas. Como $0\leq r\leq 5$, vemos que $r$ es suma de $\leq 5$ potencias
+	cuartas, se concluye que para escribir al entero $n$ vamos a necesitamos
+	$\leq 48+5=53$ potencias cuartas.
+\end{proof}
+
+\index{Identidad!de Lucas}
+\index{Identidad!de Liouville}
+La identidad~\eqref{eq:Lucas} fue descubierta por Lucas en 1876, la identidad
+usada por Liouville para demostrar que $g(4)\leq53$ es un poco más complicada y
+es la identidad que se obtiene de~\eqref{eq:Lucas} con $x_1=y_1+y_2$,
+$x_2=y_1-y_2$, $x_3=y_3+y_4$, $x_4=y_3-y_4$.
+
+No es difícil convencerse de que las identidades como la que vimos
+en~\eqref{eq:Lucas} son importantes para atacar el problema de Waring. Se hace
+necesario tener una mejor notación. Escribiremos entonces 
+\[
+	(x_1\pm x_2\pm\cdots\pm x_m)^k=\sum(x_1+\epsilon_2x_2+\cdots+\epsilon_mx_m)^k
+\]
+donde la suma se toma sobre todas las posibles elecciones de  
+$\epsilon_j\in\{-1,1\}$ para $2\leq j\leq m$. Por ejemplo:
+\[
+	(x_1\pm x_2)^4=(x_1+x_2)^4+(x_1-x_2)^4.
+\]
+La identidad~\eqref{eq:Lucas} que usamos para demostrar que $g(4)\leq 53$ puede
+escribirse entonces abreviadamente como
+\[
+	6(x_1^2+x_2^2+x_3^2+x_4^2)^2=\sum_{i<j}(x_i\pm x_j)^4,
+\]
+donde además resultará de utilidad recordar que la suma involucrada tiene
+además ocho términos.
+
+El problema de Waring comenzó a acercarse a una solución definitiva cuando 
+en 1908 Hurwitz observó que la existencia de una identidad polinomial
+de la forma
+\[
+	p(x_1^2+\cdots+x_4^2)^k=\sum_{i=1}^N p_i(a_{1i}x_1+a_{2i}x_2+a_{3i}x_3+a_{4i}x_4)^{2k}
+\]
+donde $p,p_1,p_2,p_3,p_4\in\N$ y $(a_{ij})\in\Z^{N\times 4}$, permite
+demostrar que 
+\[
+	g(2k)\leq g(k)(p_1+\cdots+p_N)+p-1,
+\]
+de donde evidentemente se obtiene que si $g(k)$ es finito, también lo será
+$g(2k)$. 
+
+\begin{theorem}[Hurwitz]
+	\index{Teorema!de Hurwitz}
+	$g(8)\leq 44793$. 
+\end{theorem}
+
+\begin{proof}
+	Vamos a utilizar la identidad polinomial
+	\begin{equation}
+	\label{eq:Hurwitz}
+	\begin{aligned}
+		5040(x_1^2+x_2^2+x_3^2+x_4^2)^4= \sum_{1\leq i\leq 4}6x_i^8
+		&+\sum_{1\leq i<j\leq 4}60(x_i\pm x_j)^8\\
+		&+ \sum_{1\leq i<j<k\leq 4}(2x_i\pm x_j\pm x_k)^{8}\\
+		&+\sum_{1\leq i<j<k<l\leq 4}6(x_i\pm x_j\pm x_k\pm x_l)^{8}.
+	\end{aligned}
+	\end{equation}
+	Observemos que la primera suma del miembro derecho tiene cuatro términos,
+	la segunda tiene doce términos, la tercera tiene 48 términos y la cuarta
+	tiene ocho términos.  La identidad~\eqref{eq:Hurwitz} nos dice entonces que
+	todo número de la forma $5040q^4$ es suma de 
+	\[
+		6\times 4+12\times 60+48+8\times 6=840
+	\]
+	potencias octavas. Como además demostramos que todo número es suma de
+	$g(4)\leq 53$ potencias cuartas, tenemos que todo $n\geq 5040$ puede
+	escribirse como suma de $840\times g(4)\leq 840\times 53=44520$ potencias
+	cuartas. Por otro lado, si $n<5040$, entonces siempre podremos escribir a
+	$n$ como suma de $\leq 273$ potencias octavas (pues $3^8=6561>5039)$. Luego 
+	$g(8)\leq 840g(4)+273\leq 44793$.
+\end{proof}
+
+\index{Teorema!de Hilbert--Waring}
+En 1909 Hilbert demostró que aquellas identidades propuestas por Hurwitz
+siempre existen. Con eso logró entonces obtener una demostración completa al
+problema de Waring.  Muchos matemáticos simplificaron la complicada demostración
+original de Hilbert: Haursdoff, Stridsberg, Hurwitz, Remak y Frobenius. En la
+demostración de Hilbert no aparecen cotas explícitas para $g(k)$. En 1953
+Rieger usó las ideas de Hilbert y logró demostrar que 
+\[
+	g(k)\leq (2k+1)^{260(k+3)^{3k+8}}.
+\]
+
+Hoy en día la demostración que dio Hilbert en 1909 no es sino apenas una
+curiosidad. Es cierto que después de hacer algunas modificaciones a los
+argumentos de Hilbert tales como las que hizo Rieger uno puede obtener cotas
+para $g(k)$, pero mucho mejores cotas pueden obtenerse gracias a métodos
+analíticos. Un método analítico muy poderoso con el que puede resolverse
+el problema de Waring fue divisado por Hardy y Littlewood en 1920 y se conoce
+como el \emph{método del círculo} de Hardy--Litlewood. 
+
+\section*{Números perfectos}
+
+\index{Número!perfecto}
+Otros números que tuvieron cierto interés en épocas pasadas fueron los números
+perfectos. Un entero positivo se dice \textbf{perfecto} si es igual a la suma
+de sus divisores propios positivos. Veamos algunos ejemplos:
+\begin{align*}
+	6 &= 1+2+3,\\
+	28 &= 1+2+4+7+14,\\
+	496 &= 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248.
+\end{align*}
+Otros ejemplos de números perfectos aparecen en la sucesión \verb+A000396+.  
+
+En el libro IX Euclides demostró que si $p$ es un número primo tal que $2^p-1$
+es primo, entonces $n=2^{p-1}(2^p-1)$ es un número perfecto. 
+
+\begin{exercise}
+	Demuestre el teorema de Euclides sobre números perfectos.
+\end{exercise}
+
+En el siglo XVIII
+Euler demostró el recíproco del resultado de Euclides: cada número perfecto par
+$n$ es de la forma $n=2^{p-1}(2^p-1)$ donde $p$ y $2^{p}-1$ son números primos. 
+
+\begin{exercise}
+	Demuestre el teorema de Euler sobre números perfectos.
+\end{exercise}
+
+\begin{exercise}
+	Demuestre que un número perfecto par es siempre un número triangular. 
+\end{exercise}
+
+\begin{exercise}
+	Demuestre que un número perfecto par es siempre un número binomial.
+\end{exercise}
+
+Hasta el siglo XV se conocían muy pocos números perfectos.  En 1603 el
+matemático italiano Pietro Cataldi encontró los siguientes números perfectos: 
+\[
+	2^{16}(2^{17} - 1) = 8 589 869 056,\quad
+	2^{18}(2^{19} - 1)= 137 438691 328. 
+\] 
+
+Al momento se conocen únicamente 51 números perfectos. El mayor de los
+perfectos conocidos hasta el momento\footnote{Septiembre de 2019} es un número
+de 49724095 dígitos:
+\[
+	2^{82 589 932} (2^{82 589 933} - 1)
+\]
+y fue encontrado en diciembre de 2018.
+
+No se sabe si existen finitos números perfectos y no se conocen números
+perfectos impares.  En 2012, Ochem y Rao demostraron que no existen números
+perfectos impares de orden $<10^{1500}$. 
+
+\section*{Números primos}
+
+Como bien señala Weil en~\cite{MR734177}, el amor del hombre por los números es
+quizá aún más antiguo que la teoría de números.  
+
+\index{Número!primo}
+Los griegos consideraban a los números primos como números que no admiten
+representaciones rectangulares.  Los primeros números primos son
+\[
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79\dots
+\]
+La sucesión de números primos es \verb+A000040+. 
+
+El teorema fundamental de la aritmética afirma que todo número puede escribirse
+como producto de números primos y esa escritura es esencialmente única. Este
+resultado no aparece explícitamente en los libros de Euclides, aunque hay
+muchos resultados del libro VII que son casi equivalentes. Tampoco aparece en
+\emph{Essai sur la Théorie des Nombres}, famoso tratado escrito por Legendre de
+1798 sobre teoría de números. La primera aparición precisa junto con una
+demostración rigurosa figura en el famoso \emph{Disquisitiones arithmeticae} de
+Gauss de 1801. 
+
+Euclides demostró en la proposición 20 del libro IX que existen infinitos
+números primos. 
+
+\begin{quote}
+	Hay más números primos que cualquier cantidad propuesta de números primos.
+\end{quote}
+La demostración es bien conocida y no la reproduciremos aquí. Sí mencionaremos,
+en cambio, que la demostración de Euclides revela que la existencia de una
+sucesión de enteros positivos coprimos dos a dos, implicará la infinitud de los
+números primos. En efecto, si $a_1,a_2,\dots$ es una sucesión de enteros
+coprimos dos a dos y para cada $j$ se toma un primo $p_j$ que divide al
+elemento $a_j$, entonces los $p_j$ serán todos distintos.
+
+Recordemos que los números de Fermat son los enteros de la forma
+\[
+	F_n=s^{2^n}+1.
+\]
+En un una carta que Goldbach le escribió a Euler en julio de 1730, se demuestra
+que los números de Fermat son coprimos dos a dos. Este resultado da entonces
+una demostración alternativa de la infinitud de los números primos.
+
+\begin{theorem}(Goldbach)
+	\index{Teorema!de Goldbach}
+	Los numeros de Fermat son coprimos dos a dos.
+\end{theorem}
+
+\begin{proof}
+	Se demuestra fácilmente por inducción que $F_n-2=F_0F_1\cdots F_{n-1}$ vale
+	para todo $n\in\N$. Si $m<n$, entonces $F_m$ divide a $F_n-2$. Si $p$ es un
+	número primo tal que $p\mid F_n$ y $p\mid F_m$, entonces $p\mid F_n-2$ y
+	luego $p\mid 2$, una contradicción pues $F_m$ es un número impar. 
+\end{proof}
+
+Veamos otra demostración muy breve y elegante, aparentemente encontrada por Hermite:
+
+\begin{quote}
+Para cada $n\geq0$ sea $q_n$ el menor número primo que divide a $n!+1$. Como
+$q_n>n$, se concluye que el conjunto $\{q_n:n\geq1\}$ contiene infinitos elementos.
+\end{quote}
+Esta demostración es particularmente interesante. Calculemos algunos
+términos de la sucesión $(q_n)$:
+\[
+	2,2,3,7,5,11,7,71,61,19\dots
+\]
+Es la sucesión \verb+A051301+. 
+
+\begin{exercise}
+	Demuestre que todo número primo pertenece a la sucesión $(q_n)$.
+\end{exercise}
+
+%Es interesante mencionar que al día de hoy no se sabe la sucesión $n!+1$
+%contiene infinitos números primos. Los primos de esta forma son 
+%\[
+% 1, 2, 3, 4, 6, 7, 11, 12, 14\dots
+%\]
+%y 
+%aparecen en la sucesión \verb+A088054+.
+
+Existen muchas otras demostraciones de la infinitud de los números primos. 
+Euler dio varias demostraciones distintas de este hecho. Demostró la infinitud
+de los primos al observar, por ejemplo, que el producto
+\[
+	\prod_{p}\frac{p}{p-1}
+\]
+es infinito. La ``demostración'' de Euler es más o menos así: sea
+\[
+	x=1+\frac12+\frac13+\frac14+\cdots
+\]
+Calculamos 
+\[
+	\frac{x}{2}=\frac12+\frac14+\frac16+\cdots
+\]
+y restamos para obtener
+\[
+	\frac{x}{2}=1+\frac13+\frac15+\frac17+\frac19+\cdots
+\]
+Hacemos ahora algo similar: dividimos por tres y restamos par obtener:
+\[
+	\frac12\frac23x=1+\frac15+\frac17+\cdots=\sum_{\substack{n\geq1\\(n:6)=1}}\frac1n,
+\]
+donde la suma se toma sobre todos los enteros positivos coprimos con seis. Al
+continuar con este procedimiento, Euler obtiene la expresión
+\[
+	\prod_p\frac{p}{p-1}
+	=\frac{(1\cdot 2\cdot 4\cdot 6\cdot 10\cdots)}{(2\cdot 3\cdot 5\cdot 7\cdot 11\cdots)}x=1
+\]
+y concluye entonces que, como $x$ es infinito (pues la serie armónica diverge),
+el producto $\prod p/(p-1)$ también debe ser infinito. En conclusión, existen
+infinitos números primos. La demostración de Euler carece del rigor necesario,
+aunque hay que mencionar que los problemas que presenta pueden arreglarse. De
+hecho, entre 1875 y 1876 Kronecker arregló esta demostración de Euler y la
+expuso en sus clases sobre la teoría de los números primos.
+
+En 1737 Euler dio una demostración alternativa de la infinitud de los números
+primos. Lo hizo al demostrar que la serie
+\[
+	\frac12+\frac13+\frac15+\frac17+\frac{1}{11}+\frac{1}{13}+\frac{1}{17}+\cdots=\sum_{p}\frac{1}{p},
+\]
+donde la suma se toma sobre todos los números primos, diverge. La falta de
+rigor en la demostración original de Euler puede arreglarse fácilmente. Daremos
+la demostración de este resultado encontrada por Clarkson en 1966:
+
+\begin{theorem}[Euler]
+	\index{Teorema!de Euler}
+	La serie $\sum_{p}\frac{1}{p}$ diverge. 
+\end{theorem}
+
+\begin{proof}
+	Supongamos que la serie fuera convergente. Existe entonces un entero positivo $k$ tal que 
+	\[
+		\sum_{m=k+1}^{\infty}\frac{1}{p_m}<\frac12.
+	\]
+	Sea $Q=p_1\cdots p_k$. Para cada $n\geq1$ consideramos el número $1+nQ$.
+	Como ningún primo $p_j$ con $j\in\{1,\dots,k\}$ divide a $1+nQ$, los
+	factores primos de $1+nQ$ están todos en el conjunto $\{p_{k+1},p_{k+2}\dots\}$. Para cada $N\geq1$, 
+	\[
+		\sum_{n=1}^N\frac{1}{1+nQ}\leq \sum_{t=1}^\infty\left(\sum_{m=k+1}^{\infty}\frac{1}{p_m}\right)^t
+	\]
+	pues la suma del miembro derecho contiene a todos los términos que aparecen
+	en la suma del miembro izquierdo. Como además 
+	\[
+		\sum_{n=1}^N\frac{1}{1+nQ}\leq \sum_{t=1}^\infty\left(\sum_{m=k+1}^{\infty}\frac{1}{p_m}\right)^t<\sum_{t=1}^\infty\left(\frac12\right)^t<\infty,
+	\]
+	obtenemos la convergencia de la serie 
+	\[
+		\sum_{n=1}^{\infty}\frac{1}{1+nQ}\geq\sum_{n=1}^\infty\frac{1}{n(1+Q)}=\frac{1}{1+Q}\sum_{n=1}^\infty\frac{1}{n},
+	\]
+	una contradicción, pues sabemos que la serie $\sum_{n=1}^\infty\frac{1}{n}$ diverge.
+\end{proof}
+
+Hasta el momento, los siete mayores números primos conocidos son primos de Mersenne. 
+Desde 1997 todos los primos de Mersenne descubiertos se hicieron dentro del
+proyecto GIMPS. Este proyecto de cálculo distribuido fue creado por George
+Woltman en 1996 y tiene como objetivo buscar números primos de Mersenne. GIMPS
+es uno de los primeros proyectos de cálculo distribuido y es notablemente
+exitoso: de los 50 primos de Mersenne conocidos, los últimos 17 encontrados
+fueron dentro de este proyecto.  El mayor primo de Mersenne conocido hasta el
+momento es 
+\[
+	2^{82589933}-1
+\]
+y tiene 24862048 dígitos; fue descubierto en diciembre de 2018. Este número es
+además el mayor número primo que se conoce. 
+
+Hoy en día los números primos son importantes no solo en matemática pura sino
+en la criptografía. Muchos de los algoritmos de encriptación utilizados se
+basan en el uso de números primos. 
+
+Desde mucho tiempo atrás existe un profundo interés en conocer cómo se
+distribuyen los números primos. Basados en una tabla de primos $\leq10^6$
+similar a la que vemos en la tabla~\ref{tab:pi}.
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Algunos valores para $\pi(x)$.}
+    \label{tab:pi}
+    \begin{tabular}{r|r|r|r} 
+	  \hline
+	  $x$ & $\pi(x)$ & $x/\log x$ & $\pi(x)/(x/\log x)$\\
+      \hline
+	  $10$ & 4 & 4,3 & 0,93\\
+	  $10^2$ & 25 & 21,5 & 1,15\\
+	  $10^3$ & 168 & 144,9 & 1,16\\
+	  $10^4$ & 1229 & 1086 & 1,11\\
+	  $10^5$ & 9592 & 8686 & 1,10\\
+	  $10^6$ & 78498& 72464 & 1,08\\
+	  \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+Gauss y Legendre conjeturaron independientemente el teorema del número primo.
+La fórmula de Legendre para aproximar a la cantidad $\pi(x)$ de primos $\leq x$
+es la siguiente:
+\[
+	\pi(x)\sim \frac{x}{\log x},
+\]
+que quiere decir que 
+\[
+	\lim_{n\to\infty} \frac{\pi(x)}{(x/\log x)}=1.
+\]
+La fórmula de Gauss es equivalente, aunque bastante mejor que la de Legendre: 
+\[
+	\pi(x)\sim\operatorname{Li}(x)=\int_2^x\frac{dt}{\log t}.
+\]
+Por ejemplo:
+\[
+	\pi(10^7)=664579,\quad
+	\pi(10^7)-\frac{10^7}{\log(10^7)}=44158,\quad
+	\pi(10^7)-\operatorname{Li}(10^7)=339.
+\]
+Veamos otro ejemplo, aún más sorprendente: 
+\begin{align*}
+	&\pi(10^{10})=455052511,\\
+	&\pi(10^{10})-\frac{10^{10}}{\log (10^{10})}=20758029,\\
+	&\pi(10^{10})-\operatorname{Li}(10^{10})=3104.
+\end{align*}
+
+
+Durante muchos años los matemáticos intentaron en vano demostrar estos
+resultados sobre la distribución de los números primos.  En 1859, Riemann atacó
+el problema con métodos analíticos y encontró una sorprendente conexión entre
+los números primos y la función de variable compleja 
+\[
+\zeta(s)=\sum_{n\geq1}1/n^{s}. 
+\]
+Esta función hoy se conoce como la \textbf{función zeta de Riemann} y es de
+fundamental importancia en la matemática moderna. De hecho, uno de los
+problemas más importantes de la matemática, que se conoce como la hipótesis de
+Riemann, es una conjetura sobre la distribución de los ceros de la función
+$\zeta(s)$. 
+
+El teorema del número primo fue demostrado independiente por de la Valle
+Poussin y por Hadamard en 1896; en ambos casos, la demostración se basa en el
+estudio de propiedades analíticias de la función de variable compleja
+$\zeta(s)=\sum_{n\geq1}1/n^{s}$. En 1949, Selberg e Erd\"os encontraron,
+independientemente, una demostración elemental del teorema del número primo.
+Esta demostración elemental generó mucho revuelo en la comunidad matemática y
+muchas discusiones entre Erd\"os y Selberg, ya que ambos, de alguna forma,
+consideraban merecer el crédito de haber encontrado una demostración elemental
+del teorema del número primo.  Cabe aclarar que cuando nos referimos a una
+demostración elemental, nos referimos a una demostración que solamente utiliza
+técnicas básicas, aunque en general sean demostraciones muy difíciles de
+entender. Es importante recordar lo siguiente: demostración elemental no quiere
+significa sencilla y fácil de entender. 
+
+Uno de los resultados más importantes de la teoría de números durante el siglo
+XIX es el siguiente teorema, demostrado por Dirichet entre 1837 y 1839: Si $k$
+y $l$ son enteros coprimos, entonces existen infinitos números primos
+congruentes a $l$ módulo $k$. 
+Este resultado fue enunciado en forma explícita por Euler en 1785 en el caso
+$l=1$ y por Legendre en 1798 en el caso general. La segunda edición del libro
+de Legendre sobre teoría de números, publicada en 1808, incluye una
+demostración incorrecta de este resultado sobre números primos. El error está
+en creerse que un cierto lema es fácil de demostrar, tal como afirmaba
+Legendre.  Dirichlet fue uno de los primeros en observar que aquel lema no era,
+en realidad, fácil de demostrar. En 1858 Dupré demostró que aquel lema de
+Legendre era en realidad falso.
+
+Existe además una versión del teorema del número primo para progresiones
+aritméticas: la cantidad de primos $p\leq x$ congruentes a $l$ módulo $k$ es
+asintóticamente igual a 
+\[
+	\frac{1}{\phi(k)}\pi(x).
+\]
+
+En la teoría de los números primos podemos encontranos con muchos resultados
+que son consecuencia de propiedades matemáticas muy profundas, y
+simultáneamente podemos también encontrarnos que resultados que difícilmente
+puedan interpretarse como algo más que una curiosidad.  En la correspondencia
+entre Euler y Goldbach podemos encontrarnos con el siguiente hecho notable: El
+polinomio 
+\[
+	x^2-x+41
+\]
+da un número primo para todo $x\in\{0,\dots,40\}$. Similarmente, el polinomio
+\[
+	x^2-79x+1601
+\]
+da un número primo para todo $x\in\{0,\dots,79\}$. En 1752 Goldbach demostró,
+aunque con algunas deficiencias fácilmente reparables, el siguiente resultado:
+
+\begin{theorem}[Goldbach]
+	\index{Teorema!de Goldbach}
+	No existe $f\in\Z[X]$ de grado $n\geq1$ tal que $f(n)$ es primo para todo
+	$n\in\N$.
+\end{theorem}
+
+\begin{proof}
+	Sea $f\in\Z[X]$ no constante tal que $f(n)$ es un número primo para todo
+	$n\in\N$. Fijemos $x_0\in\N$. Como $f(x_0)\not\in\{-1,0,1\}$, existe
+	entonces un primo $p$ tal que $p$ divide a $f(x_0)$. Como
+	\[
+		f(x_0+mp)\equiv f(x_0)\equiv 0\bmod p
+	\]
+	para todo $m\in\Z$, se tiene entonces que $f(x_0+mp)\in\{-p,p\}$ para todo
+	$m\in\Z$, una contradicción.
+\end{proof}
+
+Entre las curiosidades matemáticas que involucran números primos tenemos, por
+supuesto, las fórmulas explícitas. 
+
+\begin{exercise}
+	\index{Teorema!de Wilson}
+	Demuestre que un entero $p$ es primo si y sólo si
+	$(p-1)!\equiv -1\mod p$. 
+\end{exercise}
+
+El resultado del ejercicio anterior se conoce como el teorema de Wilson.
+Aparentemente, el resultado era conocido por el matemático árabe Alhazen,
+alrededor del año 1000. Waring conocía el enunciado, y también Wilson, su
+estudiante. Sin embargo, ninguno de los dos pudo demostrarlo. La primera
+demostración es de 1771 y fue encontrada por Lagrange. Es posible de Leibniz
+conociera este resultado, pero nunca lo publicó.
+
+% Una demostración de Gauss bien fácil utiliza el teorema de Fermat. La saqué de Davenport, página 4X. 
+
+
+\begin{exercise}
+	Demuestre que la función 
+	\[
+		n\mapsto \left\lfloor\frac{n!\bmod (n+1)}{n}\right\rfloor (n-1)+2.
+	\]
+	genera todos los números primos. 
+\end{exercise}
+
+Estos dos ejercicios nos muestran que existen fórmulas para encontrar números
+primos, pero son absolutamente ineficientes y no pueden usarse en aplicaciones
+serias. En esta misma dirección, mencionaremos un resultado demostrado por
+Mills en 1946:
+
+\begin{theorem}[Mills]
+	Existe un número real $A$ tal que $\lfloor A^{3^n}\rfloor$ es un número
+	primo para todo $n\in\N$.	
+\end{theorem}
+
+\begin{proof}
+	Para la demostración necesitamos utilizar el siguiente resultado demostrado
+	por Ingham en 1937: Si $p_n$ denota al $n$-ésimo número primo, existe una
+	constante $K$ tal que 
+	\[
+		p_{n+1}-p_n\leq Kp_n^{5/8}.
+	\]
+
+	\begin{claim}
+		Si $N>K^8$, entonces existe un primo $p$ tal que $N^3<p<(N+1)^3-1$. 
+	\end{claim}
+
+	Para demostrar esta afirmación, sea $p_n$ el mayor número primo mayor que
+	$N^3$. Como $N>K^8$, entonces $N^{1/8}>K$ y luego
+	\[
+		N^3<p_{n+1}<p_n+Kp_n^{5/8}<N^3+KN^{15/8}<N^3+N^2<(N+1)^3-1.
+	\]
+
+	Sea $P_0$ un número primo tal que $P_0>K^8$. La afirmación anterior nos
+	permite construir una sucesión $P_0,P_1,P_2\dots$ de primos tales que
+	\[
+		P_n^3<P_{n+1}<(P_n+1)^3-1.
+	\]
+	Sean 
+	\[
+		u_n=P_n^{3^{-n}},\quad
+		v_n=(P_n+1)^{3^{-n}}.
+	\]
+	Vamos a demostrar que la sucesión $u_1,u_2\dots$ converge. Para eso veremos que es monótona y acotada. 
+	Primero observamos que, como 
+	\begin{align*}
+		&u_{n+1}=P_{n+1}^{3^{-n-1}}>P_n^{3^{-n}}=u_n,
+	\end{align*}
+	la sucesión $(u_n)_{n\in\N}$ tiene límite pues es monótona y acotada. 
+	Sea $A=\lim_{n\to\infty}u_n$. Como además 
+	\begin{align*}
+		&v_n=(P_n+1)^{3^{-n}}>P_n^{3^{-n}}=u_n,\\
+		&v_{n+1}=(P_{n+1}+1)^{3^{-n-1}}<(P_n+1)^{3^{-n}}=v_n,
+	\end{align*}
+	se tiene que
+	$u_n<A<v_n$ para todo $n$. Luego $P_n<A^{3^n}<P_n+1$ para todo $n$ y el
+	teorema queda demostrado al tomar parte entera pues $\lfloor
+	A^{3^n}\rfloor=P_n$. 
+\end{proof}
+
+El resultado anterior no tiene aplicaciones prácticas. No se conoce el valor
+real de la constante $A$ del teorema; de hecho, ni siquiera se sabe si $A$ es
+un número racional. Sin embargo, si se asume la veracidad de la hipótesis de
+Riemann, puede demostrarse que $A$ es aproximadamente igual a
+\[
+	1.3063778838630806904686144926\dots
+\]
+Tampoco se conocen los primos que produce la función de Mills. Si se asume la
+veracidad de la hipótesis de Riemann puede demostrarse que los primeros primos
+producidos por la función de Mills son
+\[
+    2,11,1361,2521008887, 16022236204009818131831320183\dots
+\]
+Estos números son los elementos de la sucesión \verb+A051254+.  
+
+Es natural preguntarse si puede demostrarse algún resultado similar al de Mills
+pero sin apelar al profundo teorema de Ingham. 
+
+\begin{exercise}
+	Si existen constantes $\beta<1$, $A$ y $c$ tales que para cualesquiera dos primos
+	consecutivos $p_{n-1}<p_n$ tales que $A<p_{n-1}$ se tiene que
+	$p_n-p_{n-1}<cp_{n-1}^\beta$, entonces para todo $\alpha>\frac{1}{1-\beta}$
+	existe un número real $\theta$ tal que 
+	\[
+		\lfloor \theta^{\alpha^n}\rfloor 
+	\]
+	es primo para todo $n\in\N$.
+\end{exercise}
+
+En 1845 Bertrand conjeturó que dado $n\geq1$ siempre existe un número primo $p$
+tal que $n<p<2n$.  Si bien Bertrand pudo comprobar que la conjetura era cierta
+para todo $n\leq 3\times 10^6$, no pudo demostrarlo para todo $n$. La conjetura
+fue demostrada completamente por Chebyshev en 1852. Ramanujan encontró una
+demostración más sencilla que la encontrada por Chebyshev en 1919.  En 1932
+Erd\"os dio una demostración incluso más sencilla y completamente elemental que
+utiliza solamente propiedades de los números combinatorios. 
+
+En 1951 Wright demostró que existe $\alpha\in\R$ tal que si $g_0=\alpha$ y
+$g_{n+1}=2^{g_n}$, entonces $\lfloor g_n\rfloor$ es siempre un número primo. La
+demostración de este resultado puede consultarse en~\cite{MR43805}; es similar
+a la demostración que hicimos del teorema de Mills, aunque el teorema de Ingham
+será reemplazado por el teorema de Bertrand--Chebyshev.
+
+
+\section*{La conjetura de Goldbach}
+
+\index{Constante!de Brun}
+\index{Pentium FDIV bug}
+\index{Nicely, Thomas}
+\index{Teorema!de Brun}
+La \textbf{conjetura de Goldbach} afirma que todo entero par mayor que dos
+puede expresarse como suma de dos primos. Por ejemplo:
+\[
+	10=3+7,\quad
+	18=5+13,\quad
+	20=7+13,\quad
+	90=43+47.
+\]
+Una versión de esta conjetura aparece en una carta del 7 de junio de 1742 que
+Goldbach le escribió a Euler. Aparentemente esta conjetura era conocida desde
+tiempo antes; en los trabajos póstumos de Descartes puede encontrarse una
+afirmación similar a la conjetura de Goldbach: no está demostrado pero todo
+número puede escribirse como suma de uno, dos o tres números primos.
+
+A pesar de los esfuerzos de muchos matemáticos, la conjetura permanece abierta. 
+
+Gracias a cálculos computacionales se sabe que la conjetura es verdadera para
+números menores que $4\times 10^{17}$. En 1937 Vinogradov demostró que todo
+número impar suficientemente grande es suma de tres números primos. En 1948
+Rényi demostró que existe un entero $M$ tal que cada número impar $n$
+suficientemente grande es suma de un primo y otro número que tiene a lo sumo
+$M$ factores primos. Si alguien pudiera demostrar que $M=1$, se tendría
+entonces la veracidad de la conjetura de Goldbach. En 1966 Jing-Run demostró
+que $M\leq 2$. 
+
+Recientemente pudo demostrarse una versión débil de la conjetura de Goldbach:
+Todo número impar mayor que cinco puede expresarse como suma de tres números
+primos.  Esta conjetura es la \textbf{conjetura débil de Goldbach}. Es fácil
+demostrar que la veracidad de la conjetura de Goldbach implicaría la veracidad
+de la versión débil de la conjetura.  La conjetura débil apareció publicada sin
+demostración por primera vez en 1770 en el tratado \emph{Meditationes
+algebraicae}, escrito por el matemático inglés Edward Waring. Fue demostrada
+por el matemático peruano Harald Helfgott en 2013. 
+
+\section*{La infinitud de los primos gemelos}
+
+Dos números primos $p$ y $q$ son números \textbf{primos gemelos} si $|p-q|=2$.
+Los primeros ejemplos son
+\[
+	(3, 5), (5, 7), (11, 13), (17, 19), (29, 31), (41, 43),\dots
+\]
+La sucesión de primos gemelos es \verb+A077800+.  
+En 2009 se demostró que los números 
+\[
+	65516468355\times 2^{333333}+1,
+	\quad
+	65516468355\times 2^{333333}-1,
+\]
+son primos gemelos; cada uno de estos números tiene 100355 dígitos.  Hasta
+ahora no se descubrieron primos gemelos mayores. Este par de primos se encontró
+dentro del proyecto de cálculo distribuido PrimeGrid, desarrollado por Rytis
+Slatkevi\v{c}ius.  Se tardó más de dos años en encontrar este par de primos y
+en esta tarea colaboraron 18661 personas. Según el reporte oficial, una única
+computadora de escritorio hubiera tardado cerca de dos siglos en encontrar
+estos números.
+
+\begin{exercise}
+	Utilice el teorema de Wilson y 
+	demuestre que los enteros $n$ y $n+2$ son primos gemelos si y sólo si
+	\[
+		4( (n-1)!+1)\equiv -n\bmod{n(n+1)}.
+	\]
+\end{exercise}
+
+Desde hace mucho tiempo se conjetura que existen infinitos primos gemelos. 
+
+En 1919 Brun demostró que la serie
+\[
+	\sum\left(\frac1p+\frac1{p+2}\right)=\left(\frac13+\frac15\right)+\left(\frac15+\frac17\right)+\left(\frac1{11}+\frac1{13}\right)+\cdots,
+\]
+donde la suma se toma sobre todos los primos $p$ tales que $p+2$ es también un
+número primo, es convergente. En 1994, mediante el cálculo de los primos
+gemelos menores que $10^{14}$ el matemático estadounidense Thomas Nicely
+determinó que la serie converge a 
+\[
+1,9021605777\dots,
+\]
+número que hoy se conoce
+como la \textbf{constante de Brun}. Fue durante este cálculo que Nicely
+descubrió un problema en los procesadores Pentium, hoy conocido como el
+``Pentium FDIV bug''. La prestigiosa revista Science publicó un artículo en
+1995 que describe la importancia de los problemas de teoría de números para
+descubrir problemas como el que encontró Nicely.  Después del incidente Intel,
+acabó cooperando con Nicely para testear los nuevos microprocesadores.
+
+En 2013 Zhang demostró que existe un entero $N$ tal que existen infinitos pares
+de primos cuya diferencia es $N$; el entero $N$ es aproximadamente igual a
+$70\times10^6$.  Este trabajo tuvo gran repercusión, ya que no se conocían
+resultados de este tipo desde tiempos de Euclides.  Después de la publicación
+del trabajo de Zhang, Terence Tao propuso trabajar en conjunto dentro un
+proyecto Polymath para intentar optimizar la cota de setenta millones
+encontrada por Zhang. En 2014 un grupo de matemáticos logró reducir la cota a
+246. Tao y Maynard, independientemente, lograron reducir estas cotas
+notablemente si ciertas conjeturas de la teoría de números fueran verdaderas. 
+
+\subsection*{Is massively collaborative mathematics possible?}
+
+En 2009 el matemático inglés Tim Gowers anunció en su blog que llevaría acabo
+un experimento que hasta ese momento no existía en matemática. Inspirado en
+muchos de los proyectos abiertos que existen en internet, sugirió que se
+trabajara en conjunto para intentar resolver algún problema muy difícil de la
+matemática. El blog de Gowers es: \verb+https://gowers.wordpress.com/+ 
+
+Gowers eligió un problema que fuera acorde para ser atacado con esta idea
+colaborativa. El experimento fue un éxito: pocas semanas después del anuncio
+del experimento, la comunidad matemática supo que el problema que se había
+elegido estaba esencialmente resuelto. Proyectos como este son conocidos como
+\textbf{proyectos Polymath}. Un proyecto Polymat es entonces un cierto tipo de
+colaboración entre matemáticos con la objetivo de resolver algún problema
+difícil. 
+
+En general, los trabajos realizados bajo esta modalidad se firman con el
+seudónimo D. H. J. Polymath. Sin embargo, el cuarto proyecto Polymath fue
+firmado por Tao, Croot y Helfgott, porque los editores de la revista
+\emph{Mathematics of Computation} pidieron que en la versión final del trabajo
+figuraran los nombres reales de los autores. 
+
+
+

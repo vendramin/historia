@@ -1,0 +1,303 @@
+\chapter{Números primos}
+
+Como bien señala Weil en~\cite{MR734177}, el amor del hombre por los números es
+quizá aún más antiguo que la teoría de números.  
+
+\index{Número!primo}
+Los griegos consideraban a los
+números primos como números que no admiten representaciones rectangulares.  Los
+primeros números primos son
+\[
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79\dots
+\]
+La sucesión de números primos es \verb+A000040+. 
+
+El teorema fundamental de la aritmética afirma que todo número puede escribirse
+como producto de números primos y esa escritura es esencialmente única. Este
+resultado no aparece explícitamente en los libros de Euclides, aunque hay
+muchos resultados del libro VII que son casi equivalentes. Tampoco aparece en
+\emph{Essai sur la Théorie des Nombres}, famoso tratado escrito por Legendre de
+1798 sobre teoría de números. La primera aparición precisa junto con una
+demostración rigurosa figura en el famoso \emph{Disquisitiones arithmeticae} de
+Gauss de 1801. 
+
+Euclides demostró en la proposición 20 del libro IX que existen infinitos
+números primos. 
+
+\begin{quote}
+	Hay más números primos que cualquier cantidad propuesta de números primos.
+\end{quote}
+La demostración es bien conocida y revela que la existencia de una sucesión de
+enteros positivos coprimos dos a dos, implicará la infinitud de los números
+primos. En efecto, si $a_1,a_2,\dots$ es una sucesión de enteros coprimos dos a
+dos y para cada $j$ se toma un primo $p_j$ que divide al elemento $a_j$,
+entonces los $p_j$ serán todos distintos.
+
+Recordemos que los números de Fermat son los enteros de la forma
+\[
+	F_n=s^{2^n}+1.
+\]
+En un una carta que Goldbach le escribió a Euler en julio de 1730, se demuestra
+que los números de Fermat son coprimos dos a dos. Este resultado da entonces
+una demostración alternativa de la infinitud de los números primos.
+
+\begin{theorem}(Goldbach)
+	\index{Teorema!de Goldbach}
+	Los numeros de Fermat son coprimos dos a dos.
+\end{theorem}
+
+\begin{proof}
+	Se demuestra fácilmente por inducción que $F_n-2=F_0F_1\cdots F_{n-1}$ vale
+	para todo $n\in\N$. Si $m<n$, entonces $F_m$ divide a $F_n-2$. Si $p$ es un
+	número primo tal que $p\mid F_n$ y $p\mid F_m$, entonces $p\mid F_n-2$ y
+	luego $p\mid 2$, una contradicción pues $F_m$ es un número impar. 
+\end{proof}
+
+Desde 1997 todos los primos de Mersenne descubiertos se hicieron dentro del
+proyecto GIMPS. Este proyecto de cálculo distribuido fue creado por George
+Woltman en 1996 y tiene como objetivo buscar números primos de Mersenne. GIMPS
+es uno de los primeros proyectos de cálculo distribuido y es notablemente
+exitoso: de los 50 primos de Mersenne conocidos, los últimos 17 encontrados
+fueron dentro de este proyecto.  El mayor primo de Mersenne conocido hasta el
+momento es 
+\[
+	2^{82589933}-1
+\]
+y tiene 24862048 dígitos; fue descubierto en diciembre de 2018. Este número es
+además el mayor número primo que se conoce. 
+
+Hoy en día los números primos son importantes no solo en matemática pura sino
+en la criptografía. Muchos de los algoritmos de encriptación utilizados se
+basan en el uso de números primos. 
+
+Existen muchas demostraciones distintas de la infinitud de los números primos. 
+En\dots Euler demostró que existen infinitos primos al considerar la divergencia de la serie
+\[
+	\sum\frac{1}{p},
+\]
+donde la suma se toma sobre el conjunto de números primos. 
+
+Desde tiempos de Gauss $\pi(x)$ es la cantidad de primos $\leq x$. Gauss
+conjeturó que
+\[
+	\pi(x)\sim \frac{x}{\log x}.
+\]
+Durante muchos años los matemáticos intentaron en vano demostrar aquella
+conjetura. En 1859, Riemann atacó el problema con métodos analíticos y encontró
+una sorprenden conexión entre los números primos y la función de variable
+compleja 
+\[
+\zeta(s)=\sum_{n\geq1}1/n^{s}. 
+\]
+Esta función hoy se conoce como la \textbf{función zeta de Riemann} y es de
+fundamental importancia en la matemática moderna. De hecho, uno de los
+problemas más importantes de la matemática, que se conoce como la hipótesis de
+Riemann, es una conjetura sobre la distribución de los ceros de la función
+$\zeta(s)$. 
+
+El teorema del número primo fue demostrado independiente por de la Valle
+Poussin y por Hadamard en 1896; en ambos casos, la demostración se basa en el
+estudio de propiedades analíticias de la función de variable compleja
+$\zeta(s)=\sum_{n\geq1}1/n^{s}$. En 1949, Selberg e Erd\"os encontraron,
+independientemente, una demostración elemental del teorema del número primo.
+Esta demostración elemental generó mucho revuelo en la comunidad matemática y
+muchas discusiones entre Erd\"os y Selberg, ya que ambos, de alguna forma,
+consideraban merecer el crédito de haber encontrado una demostración elemental
+del teorema del número primo.  Cabe aclarar que cuando nos referimos a una
+demostración elemental, nos referimos a una demostración que solamente utiliza
+técnicas básicas, aunque en general sean demostraciones muy difíciles de
+entender. Es importante recordar lo siguiente: demostración elemental no quiere
+significa sencilla y fácil de entender. 
+
+Existen fórmulas para encontrar números primos pero son absolutamente
+ineficientes y no pueden usarse en aplicaciones serias. Mencionaremos un resultado
+demostrado por Mills en 1946:
+
+\begin{theorem}[Mills]
+	Existe un número real $A$ tal que $\lfloor A^{3^n}\rfloor$ es un número
+	primo para todo $n\in\N$.	
+\end{theorem}
+
+\begin{proof}
+	Para la demostración necesitamos utilizar el siguiente resultado demostrado
+	por Ingham en 1937: Si $p_n$ denota al $n$-ésimo número primo, existe una
+	constante $K$ tal que 
+	\[
+		p_{n+1}-p_n\leq Kp_n^{5/8}.
+	\]
+
+	\begin{claim}
+		Si $N>K^8$, entonces existe un primo $p$ tal que $N^3<p<(N+1)^3-1$. 
+	\end{claim}
+
+	Para demostrar esta afirmación, sea $p_n$ el mayor número primo mayor que
+	$N^3$. Como $N>K^8$, entonces $N^{1/8}>K$ y luego
+	\[
+		N^3<p_{n+1}<p_n+Kp_n^{5/8}<N^3+KN^{15/8}<N^3+N^2<(N+1)^3-1.
+	\]
+
+	Sea $P_0$ un número primo tal que $P_0>K^8$. La afirmación anterior nos
+	permite construir una sucesión $P_0,P_1,P_2\dots$ de primos tales que
+	\[
+		P_n^3<P_{n+1}<(P_n+1)^3-1.
+	\]
+	Sean 
+	\[
+		u_n=P_n^{3^{-n}},\quad
+		v_n=(P_n+1)^{3^{-n}}.
+	\]
+	Vamos a demostrar que la sucesión $u_1,u_2\dots$ converge. Para eso veremos que es monótona y acotada. 
+	Primero observamos que, como 
+	\begin{align*}
+		&u_{n+1}=P_{n+1}^{3^{-n-1}}>P_n^{3^{-n}}=u_n,
+	\end{align*}
+	la sucesión $(u_n)_{n\in\N}$ tiene límite pues es monótona y acotada. 
+	Sea $A=\lim_{n\to\infty}u_n$. Como además 
+	\begin{align*}
+		&v_n=(P_n+1)^{3^{-n}}>P_n^{3^{-n}}=u_n,\\
+		&v_{n+1}=(P_{n+1}+1)^{3^{-n-1}}<(P_n+1)^{3^{-n}}=v_n,
+	\end{align*}
+	se tiene que
+	$u_n<A<v_n$ para todo $n$. Luego $P_n<A^{3^n}<P_n+1$ para todo $n$ y el
+	teorema queda demostrado al tomar parte entera pues $\lfloor
+	A^{3^n}\rfloor=P_n$. 
+\end{proof}
+
+El resultado anterior no tiene aplicaciones prácticas. No se conoce el valor
+real de la constante $A$ del teorema; de hecho, ni siquiera se sabe si $A$ es
+un número racional. Sin embargo, si se asume la veracidad de la hipótesis de
+Riemann, puede demostrarse que $A$ es aproximadamente igual a
+\[
+	1.3063778838630806904686144926\dots
+\]
+Tampoco se conocen los primos que produce la función de Mills. Si se asume la veracidad de la hipótesis de Riemann
+puede demostrarse que los primeros primos producidos por la función de Mills son
+\[
+    2,11,1361,2521008887, 16022236204009818131831320183\dots
+\]
+Estos números son los elementos de la sucesión \verb+A051254+.  
+
+Es natural preguntarse si puede demostrarse algún resultado similar al de Mills
+pero sin apelar al profundo teorema de Ingham. 
+
+En 1845 Bertrand conjeturó que
+dado $n\geq1$ siempre existe un número primo $p$ tal que $n<p<2n$.  Si bien
+Bertrand pudo comprobar que la conjetura era cierta para todo $n\leq 3\times
+10^6$, no pudo demostrarlo para todo $n$. La conjetura fue demostrada
+completamente por Chebyshev 1n 1852. Ramanujan encontró una demostración más
+sencilla que la encontrada por Chebyshev en 1919.  En 1932 Erd\"os dio una
+demostración incluso más sencilla y completamente elemental que utiliza
+solamente propiedades de los números combinatorios. 
+
+En 1951 Wright demostró que existe $\alpha\in\R$ tal que si $g_0=\alpha$ y $g_{n+1}=2^{g_n}$, entonces
+$\lfloor g_n\rfloor$ es siempre un número primo. La demostración de este resultado puede consultarse en~\cite{MR43805}; 
+es similar a la demostración 
+que hicimos del teorema de Mills, aunque el teorema de Ingham será reemplazado por el teorema de Bertrand--Chebyshev.
+
+
+\section*{La conjetura de Goldbach}
+
+\index{Constante!de Brun}
+\index{Pentium FDIV bug}
+\index{Nicely, Thomas}
+\index{Teorema!de Brun}
+La \textbf{conjetura de Goldbach} afirma que todo entero par mayor que dos
+puede expresarse como suma de dos primos. Por ejemplo:
+\[
+	10=3+7,\quad
+	18=5+13,\quad
+	20=7+13,\quad
+	90=43+47.
+\]
+Una versión de esta conjetura aparece en una carta del 7 de junio de 1742 que
+Goldbach le escribió a Euler. Aparentemente esta conjetura era conocida desde
+tiempo antes; en los trabajos póstumos de Descartes puede encontrarse una
+afirmación similar a la conjetura de Goldbach: no está demostrado pero todo
+número puede escribirse como suma de uno, dos o tres números primos.
+
+A pesar de los esfuerzos de muchos matemáticos, la conjetura permanece abierta. 
+
+Gracias a cálculos computacionales se sabe que la conjetura es verdadera para
+números menores que $4\times 10^{17}$. En 1937 Vinogradov demostró que todo
+número impar suficientemente grande es suma de tres números primos. En 1948
+Rényi demostró que existe un entero $M$ tal que cada número impar $n$
+suficientemente grande es suma de un primo y otro número que tiene a lo sumo
+$M$ factores primos. Si alguien pudiera demostrar que $M=1$, se tendría
+entonces la veracidad de la conjetura de Goldbach. En 1966 Jing-Run demostró
+que $M\leq 2$. 
+
+Recientemente pudo demostrarse una versión débil de la conjetura de Goldbach:
+Todo número impar mayor que cinco puede expresarse como suma de tres números
+primos.  Esta conjetura es la \textbf{conjetura débil de Goldbach}. Es fácil
+demostrar que la veracidad de la conjetura de Goldbach implicaría la veracidad
+de la versión débil de la conjetura.  La conjetura débil apareció publicada sin
+demostración por primera vez en 1770 en el tratado \emph{Meditationes
+algebraicae}, escrito por el matemático inglés Edward Waring. Fue demostrada
+por el matemático peruano Harald Helfgott en 2013. 
+
+\section*{La infinitud de los primos gemelos}
+
+Dos números primos $p$ y $q$ son números \textbf{primos gemelos} si $|p-q|=2$.
+Los primeros ejemplos son
+\[
+	(3, 5), (5, 7), (11, 13), (17, 19), (29, 31), (41, 43),\dots
+\]
+La sucesión de primos gemelos es \verb+A077800+.  
+En 2009 se demostró que los números 
+\[
+	65516468355\times 2^{333333}+1,
+	\quad
+	65516468355\times 2^{333333}-1,
+\]
+son primos gemelos; cada uno de estos números tiene 100355 dígitos.  Hasta
+ahora no se descubrieron primos gemelos mayores. Este par de primos se encontró
+dentro del proyecto de cálculo distribuido PrimeGrid, desarrollado por Rytis
+Slatkevi\v{c}ius.  Se tardó más de dos años en encontrar este par de primos y
+en esta tarea colaboraron 18661 personas. Según el reporte oficial, una única
+computadora de escritorio hubiera tardado cerca de dos siglos en encontrar
+estos números.
+
+Desde hace mucho tiempo se conjetura que existen infinitos primos gemelos. 
+
+En 1919 Brun demostró que la serie
+\[
+	\sum\left(\frac1p+\frac1{p+2}\right)=\left(\frac13+\frac15\right)+\left(\frac15+\frac17\right)+\left(\frac1{11}+\frac1{13}\right)+\cdots,
+\]
+donde la suma se toma sobre todos los primos $p$ tales que $p+2$ es también un
+número primo, es convergente. En 1994, mediante el cálculo de los primos
+gemelos menores que $10^{14}$ el matemático estadounidense Thomas Nicely
+determinó que la serie converge a 
+\[
+1,9021605777\dots,
+\]
+número que hoy se conoce
+como la \textbf{constante de Brun}. Fue durante este cálculo que Nicely
+descubrió un problema en los procesadores Pentium, hoy conocido como el
+``Pentium FDIV bug''. La prestigiosa revista Science publicó un artículo en
+1995 que describe la importancia de los problemas de teoría de números para
+descubrir problemas como el que encontró Nicely.  Después del incidente Intel,
+acabó cooperando con Nicely para testear los nuevos microprocesadores.
+
+En 2013 Zhang demostró que existe un entero $N$ tal que existen infinitos pares
+de primos cuya diferencia es $N$; el entero $N$ es aproximadamente igual a
+$70\times10^6$.  Este trabajo tuvo gran repercusión, ya que no se conocían
+resultados de este tipo desde tiempos de Euclides.  Después de la publicación
+del trabajo de Zhang, Terence Tao propuso trabajar en conjunto dentro un
+proyecto Polymath para intentar optimizar la cota de setenta millones
+encontrada por Zhang. En 2014 un grupo de matemáticos logró reducir la cota a
+246. Tao y Maynard, independientemente, lograron reducir estas cotas
+notablemente si ciertas conjeturas de la teoría de números fueran verdaderas. 
+
+¿Qué es un proyecto Polymath? Es un proyecto de colaboración entre matemáticos
+con la objetivo de resolver algún problema difícil. La idea nació en 2009 en el
+blog del matemático inglés Timothy Gowers, donde se preguntó si era posible
+trabajar masiva y colaborativamente en matemática.
+
+En general, los trabajos realizados bajo esta modalidad se firman con el
+seudónimo D. H. J. Polymath. Sin embargo, el cuatro proyecto Polymath fue
+firmado por Tao, Croot y Helfgott, porque los editories de la revista
+\emph{Mathematics of Computation} pidieron que en la versión final del trabajo
+figuraran los nombres reales de los autores. 
+
+
+

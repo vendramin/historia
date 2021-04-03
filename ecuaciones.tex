@@ -1,0 +1,284 @@
+\chapter{Ecuaciones algebraicas}
+
+En este capítulo nos concentraremos en algunos aspectos, elegidos más o menos
+caprichosamente, sobre la teoría de ecuaciones algebraicas.  Empezaremos con
+las ecuaciones lineales. En la antigua matemática china nos encontraremos con
+un método para resolver sistemas ecuaciones lineales que hoy con nuestra
+notación escribimos como
+\begin{equation}
+\label{eq:sistema_lineal}
+\begin{aligned}
+	&a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n=b_1,\\
+	&a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n=b_2,\\
+	&\phantom{a_{11}x_1}\vdots\\
+	&a_{n1}x_1+a_{n2}x_2+\cdots+a_{nn}x_n=b_n.
+\end{aligned}
+\end{equation}
+
+Sorprendentemente, en el famoso libro \framebox{?}, nos encontraremos con un
+método esencialmente igual al que hoy conocemos como el \emph{método de
+eliminación de Gauss}, que nos permite reescribir el
+sistema~\eqref{eq:sistema_lineal} como
+\begin{equation*}
+\begin{aligned}
+	&a'_{11}x_1+a'_{12}x_2+\cdots+a'_{1n}x_n=b'_1,\\
+	&\phantom{a'_{21}x_1+}a'_{22}x_2+\cdots+a'_{2n}x_n=b'_2,\\
+	&\phantom{a'_{11}x_1+a'_{22}x_2+\cdots+a'_{2n}x_n}\vdots\\
+	&\phantom{a'_{n1}x_1+a_{n2}x_2+\cdots+}a'_{nn}x_n=b'_n.
+\end{aligned}
+\end{equation*}
+para poder despejar $x_n$ de la $n$-ésima ecuación, después despejar 
+$x_{n-1}$ de la ecuación $(n-1)$-ésima, y así sucesivamente hasta 
+despejar $x_1$ de la primera ecuación. 
+
+En el siglo XII se descubrió que este método podía adaptarse para
+resolver algunos sistemas polinomiales en dos o más variables. 
+
+\begin{example}
+	Supongamos que nos interesa resolver
+	el sistema polinomial
+	\begin{align*}
+		 x^2+xy+y^2&=1\\
+		 4x^2+3xy+2y^2&=3.
+	\end{align*}
+	Si multiplicamos la segunda ecuación por dos y restamos\dots
+\end{example}
+
+
+\section*{La ecuación cuadrática}
+
+Cerca del año 2000 a. C. 
+los babilónicos sabían cómo resolver 
+el siguiente sistema de ecuaciones
+\begin{align*}
+	x+y&=p,\\
+	xy&=q
+\end{align*}
+que podemos reescribir como $x^2+q=px$. Las soluciones son 
+\[
+	x=\frac{p}{2}+\sqrt{(p/2)^2-q},\quad
+	y=\frac{p}{2}-\sqrt{(p/2)^2-q},
+\]
+siempre que ambos sean números positivos\footnote{Recordemos que los
+babilónicos no admitían números negativos.}.  Veamos un ejemplo concreto que
+nos muestre cómo funciona aquel método concebido en tiempos de los babilónicos. Es interesante remarcar
+que el método tal como lo presentaban los babilónicos era apenas ilustrado con
+números, pues en aquellos tiempos no existía el álgebra, y no había indicaciones que 
+explicaran por qué aquel procedimiento funcionaba correctamente.
+
+
+\begin{example}
+	Queremos resolver el sistema 
+	\begin{align*}
+		x+y&=13/2,\\
+		xy&=15/2.
+	\end{align*}
+	El método para resolver este sistema es el siguiente. Primero formamos el número $(x+y)/2=13/4$ y 
+	después calculamos el número 
+	\[
+		\left(\frac{x+y}{2}\right)^2=169/16.
+	\]
+	Como entonces
+	\[
+		\left(\frac{x+y}{2}\right)^2-xy=49/16,
+	\]
+	calculamos
+%	\[
+%		\sqrt{\left(\frac{x+y}{2}\right)^2-xy}. 
+%	\]
+%	Como sabemos que 
+	\[
+		\frac{x-y}{2}=\sqrt{\left(\frac{x+y}{2}\right)^2-xy}=7/4.
+	\]
+	Esto permite resolver la ecuación ya que 
+	\begin{align*}
+		x&=\frac{x+y}{2}+\frac{x-y}{2}, && %=\frac{13}{4}+\frac{7}{4}=5,\\
+		y=\frac{x+y}{2}-\frac{x-y}{2}.%=\frac{13}{4}-\frac{7}{4}=\frac{3}{2}.
+	\end{align*}
+	En efecto, un simple cálculo con fracciones nos muestra que la solución 
+	es 
+	\[
+		(x,y)=(5,3/2).
+	\]
+	
+	Este ejemplo fue tomado del libro~\cite{MR1094813} de Boyer sobre historia
+	de la matemática y está basado en el contenido de una tabla de barro
+	babilónica que se conserva en Yale.  Debemos mencionar que los babilónicos
+	escribían sus números en base sesenta, así que el sistema de ecuaciones que
+	resolvimos bien podríamos haberlo presentado como 
+	\begin{align*}
+	x+y&=6|30,\\
+	xy&=7|30,
+\end{align*}
+donde el símbolo $6|30$ denota al número $6+30\cdot 60^{-1}=13/2$ y el símbolo
+$7|30$ al número $7+30\cdot 60^{-1}=15/2$. Obviamente esta no es la notación
+que usaban los babilónicos.
+\end{example}
+
+Brahmagupta dio un método para resolver la ecuación cuadrático. Como no
+disponía del álgebra, se vio obligado a explicar aquel método con palabras. El
+método muestra que 
+\[
+x=\frac{\sqrt{4ac+b^2}-b}{2s}
+\]
+es la solución de la ecuación cuadrática 
+\[
+	ax^2+bx=c.
+\]
+Dio además otra fórmula para las raíces:
+\[
+	x=\frac{\sqrt{ac+(b/2)^2}-(b/2}{a}.
+\]
+Hoy en día, nuestra habilidad para manipular expresiones algebraicas nos
+permite demostrar muy fácilmente que las dos expresiones encontradas por
+Brahmagupta son equivalentes.
+
+Heath observó que la proposición 28 del libro VI de Euclides también propone un
+método para resolver la ecuación cuadrática y ese método es demostrado
+rigurosamente.
+
+%\begin{example}
+%	% metodo de aljarismi
+%	$x^2+10x=39$. 
+%\end{example}
+
+
+La palabra ``álgebra'' viene del árabe. La introdujo el matemático Al-Juarismi
+en el año 830 en un libro sobre la teoría de ecuaciones.  En este libro mostró
+cómo resolver ecuaciones de grado dos en una variable, algo que era conocido ya
+por los babilonios.  Si bien el matemático Brahmagupta llegó mucho más lejos en
+sus estudios sobre algebraicos (en la notación y en la introducción de los
+números negarivos, por ejemplo), el trabajo de Al-Juarismi tuvo mucha
+repercusión. 
+
+\section*{Las ecuaciones de grado superior}
+
+La solución de la ecuación cúbica, siglo XVI, fue quizá el avance más
+importante que vio la matemática en occidente después de los resultados
+obtenidos por la matemática griega. Sobre cómo fue que se llegó a resolver la
+ecuación cúbica sabemos poco, y gran parte de lo que sabemos viene de la voz de
+Cardano. Debemos recordar que durante la primera mitad del siglo XVI muchos matemáticos
+mantenían sus descubrimientos en secreto para resaltar sobre sus adversarios en
+los torneos y disputas donde se planteaban problemas científicos.
+
+Aparentemente Scipione del Ferro, profesor en Bolonia, fue el primero en
+resolver la ecuación cúbica de la forma $x^3+px=q$, según Tartaglia esto
+sucedió en 1506 y según Cardano, en 1515. No sabemos qué método utilizó del
+Ferro. 
+
+A principio de siglo aparecieron varios problemas matemáticos donde la solución
+requería resolver una ecuación cúbica. En este contexto fue que Tartaglia,
+según su propia versión, encontró una regla para resolver la cúbica en 1534,
+independientemente del trabajo de del Ferro. En 1535 se produjo un desafío
+entre Fior, un discípulo de del Ferro, y Tartaglia.  Según sabemos, Tartaglia
+resolvió en unas dos horas los treinta problemas planteados por Fior, mientras
+que Fior no pudo resolver ninguno de los problemas planteados por Tartaglia.
+Cardano, profesor en Milán, supo entonces acerca de Tartaglia y su notable
+reputación y, en particular, intentó aprender el método con el que Tartaglia
+podía resolver la ecuación cúbica. Tartaglia se resistió durante un tiempo,
+hasta que en 1539 cedió ante los pedidos de Cardano: le comunicó su forma de
+resolver la cúbica y le hizo jurar que no publicaría el método para resolver la
+cúbica antes de que Tartaglia lo hiciera en un libro en el que estaba
+trabajando desde hacía algún tiempo. En 1545 Cardano traicionó su juramento y
+publicó una edición de \emph{Ars Magna} que incluye aquellos secretos que
+Tartaglia le había contado.  Esto desata una gran pelea entre ambos que incluso
+involucra a otros matemáticos de la época. Cardano en su libro  
+agradece cierta inspiración obtenida a partir de los trabajos de Tartaglia y la
+colaboración de Ferrari, que tiempo atrás había sido su estudiante. 
+
+% nombrar a Tartagia y a Ferrari, quizá alguien más
+Como podemos imaginarnos, para evitar números negativos, Cardano también se vio
+obligado a estudiar varios casos distintos de la ecuación cúbica. Veamos uno en
+particular para entender cómo funciona el método. Nos interesa resolver la
+ecuación cúbica
+\[
+x^2+ax^2+bx+c=0.
+\]
+Vamos a realizar la sustitución $x=y-a/3$ y vamos a elegir $a$ para transformar
+nuestra ecuación cúbica en una ecuación de la forma
+\[
+	y^3=py+q.
+\]
+
+Si ahora $y=u+v$, entonces
+\[
+	y^3=(u+v)^3=(u^3+v^3)+3uv(u+v).
+\]
+
+Si $y^3=py+q$, entonces 
+\begin{align*}
+	&3uv = p,\\
+	&u^3+v^3=q.
+\end{align*}
+Después de eliminar la variable $v$ nos quedamos con la ecuación
+\[
+	u^3+\left(\frac{p}{3u}\right)^3=q,
+\]
+que es una ecuación cuadrática en $u^3$, con raíces
+\[
+	\frac{q}{2}\pm\sqrt{(q/2)^2-(p/3)^3}.
+\]
+
+%\begin{example}
+%	Usamos la fórmula de Cardano para resolver $y^3=2$. 
+%\end{example}
+
+\begin{exercise}
+	Resuelva la ecuación $y^3=6y+6$.	
+\end{exercise}
+
+%\section*{La ecuación de grado cuatro}
+
+Un estudiante de Cardano de apellido Ferrari fue el que logró resolver la
+ecuación de grado cuatro de la forma
+\[
+	x^4+ax^3+bx^2+cx+d=0
+\]
+mediante el uso de expresiones similares a las que Cardano encontró para
+resolver la ecuación cúbica. Son expresiones que involucran raíces cuadradas y
+cúbicas de funciones racionales en los coeficientes. 
+
+El descubrimiento de Ferrari hizo que la comunidad matemática intentara
+resolver la ecuación de grado cinco mediante el uso de fórmulas similares, aunque
+prácticamente nada interesante fue posible obtenerse. 
+Quizá uno de los mejores resultados fue el que obtuvo Bring en 1786 al lograr 
+reducir la ecuación general de grado cinco a una expresión de la forma
+\[
+	x^5-x-A=0.
+\]
+Como el resultado de Bring fue publicado en una revista bastante desconocida,
+los matemáticos tardaron unos cincuenta años en encontrar aquel resultado.
+Quizá hoy reconozcamos esto como un golpe de suerte ya que, de otra forma, el
+resultado de Bring posiblemente hubiera sido interpretado como una fuerte
+indicación de que la ecuación de grado cinco también iba a poder resolverse
+mediante el uso de expresiones que involucraran raíces de funciones racionales
+en los coeficientes.
+
+En 1799 Ruffini demostró, aunque su demostración no era correcta, que no era
+posible resolver la ecuación general de grado cinco mediante el uso de fórmulas
+que involucraran raíces de funciones racionales de los coeficientes. Sí, la
+demostración presentada por Ruffini tenía algunos problemas y es por eso que el
+crédito de aquel sorprendente resultado se lo quedó Abel en 1826.  En 1831
+Galois llevó estas ideas muy lejos y logró demostrar que si en general no puede
+resolverse mediante radicales. En el camino, concibió una importantísima rama
+de la matemática: la teoría de grupos.
+
+Es importante destacar que no significa que la ecuación general de grado cinco
+no pueda resolverse. Lo que Ruffini, Abel y Galois demostraron es que nunca
+vamos a poder encontrar expresiones por radicales para la solución, es decir
+que no existen fórmulas para la solución en términos de raíces de funciones
+racionales de los coeficientes. ¡Hay otras formas de resolver esta ecuación!
+En 1858 Hermite resolvió la ecuación general de grado cinco mediante el uso de
+funciones trascendentes, similar a lo que Viéta había hecho con la ecuación
+cúbica y las funciones trigonométricas. 
+
+Es conveniente hacer aquí una pequeña digresión y contar que Decartes hizo
+algunos aportes a la teoría de ecuaciones polinomiales de una variable. De
+hecho, a él debemos la notación 
+\[
+	x^3,x^4,x^5,\dots
+\]
+para representar las potencias de la variable $x$. Es curioso que Decartes
+utilizara esta notación solamente a partir de las potencias cúbicas y siguiera
+utilizando $xx$ para representar al cuadrado de la variable $x$. 
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 0 530 560" width="397.5" height="420">
+
+<style type="text/css"><![CDATA[
+line, path, polygon {
+	stroke: black;
+	fill: none;
+}
+
+text {
+	font-family: arial, helvetica, sans-serif;
+	font-style: italic;
+	font-size: 15pt;
+}
+]]></style>
+
+<!-- Original triangle -->
+<polygon points="200 300 450 300 360 180"/>
+
+<!-- Side squares -->
+<polygon style="fill: #ffcccc" points="200 300 360 180 240 20 80 140"/>
+<polygon style="fill: #ccccff" points="450 300 360 180 480 90 570 210"/>
+
+<!-- Perpendicular and hypotenuse square -->
+<line x1="360" y1="180" x2="360" y2="300"/>
+<polygon style="fill: #ffcccc" points="200 300 360 300 360 550 200 550"/>
+<polygon style="fill: #ccccff" points="450 300 360 300 360 550 450 550"/>
+
+<!-- Congruent triangles on right-hand side -->
+<polygon style="fill-opacity: 0.25; fill: #999999" points="200 300 450 300 80 140"/>
+<polygon style="fill-opacity: 0.25; fill: #999999" points="200 300 200 550 360 180"/>
+<polygon style="stroke: green" points="200 300 450 300 80 140"/>
+<polygon style="stroke: green" points="200 300 200 550 360 180"/>
+
+<!-- Vertex labels -->
+<text x="193" y="313" style="text-anchor: end">A</text>
+<text x="456" y="313" style="text-anchor: start">B</text>
+<text x="361" y="168" style="text-anchor: middle">C</text>
+<text x="455" y="560" style="text-anchor: start">D</text>
+<text x="193" y="560" style="text-anchor: end">E</text>
+<text x="240" y="14" style="text-anchor: middle">F</text>
+<text x="75" y="145" style="text-anchor: end">G</text>
+<text x="480" y="84" style="text-anchor: middle">H</text>
+<text x="574" y="216" style="text-anchor: start">J</text>
+
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 3 300 235">
+<defs>
+	<marker id="L" viewBox="0 0 20 20" refX="0" refY="10" markerUnits="strokeWidth" stroke-width="2" markerWidth="6" markerHeight="6">
+		<polyline points="17,18 0,10 0,20 0,0 0,10 17,2" stroke="black"/>
+	</marker>
+	<marker id="R" viewBox="0 0 20 20" refX="20" refY="10" markerUnits="strokeWidth" stroke-width="2" markerWidth="6" markerHeight="6">
+		<polyline points="3,18 20,10 20,20 20,0 20,10 3,2" stroke="black"/>
+	</marker>
+</defs>
+<title>Stewart's theorem</title>
+<desc>Geometry for the proof of Stewart's theorem.</desc>
+<g stroke-width="2" stroke="black" fill="none">
+	<path d="M200,10 L100,190 M10,190 200,10 290,190 10,190"/>
+	<path d="M10,230 L290,230" marker-start="url(#L)" marker-end="url(#R)"/>
+</g>
+<g fill="black">
+	<circle cx="10" cy="190" r="4"/><circle cx="200" cy="10" r="4"/>
+	<circle cx="290" cy="190" r="4"/><circle cx="100" cy="190" r="4"/>
+	<text font-size="20" font-family="Times">
+		<tspan x="150" y="228">a</tspan><tspan x="80" y="100">b</tspan>
+		<tspan x="250" y="100">c</tspan><tspan x="150" y="125">d</tspan>
+		<tspan x="50" y="210">n</tspan><tspan x="210" y="210">m</tspan>
+		<tspan x="115" y="185">θ</tspan>
+		<tspan x="85" y="185">θ</tspan><tspan dx="0" dy="-5">'</tspan>
+	</text>
+</g>
+</svg>
