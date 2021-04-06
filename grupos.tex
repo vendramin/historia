@@ -187,6 +187,19 @@ clasificación de los grupos simples finitos. Repasaremos un poco de la historia
 básica de este notable teorema. El lector interesado en obtener información más
 detallada puede consultar los artículos de Solomon~\cite{MR1824893,MR3854074}. 
 
+La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
+importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
+libro posee una modesta lista con infinitos grupos simples. En un trabajo
+publicado en 1892, H\"older remarcó que sería de gran interés disponer de la
+clasificación de grupos simples, ya que estos grupos funcionan como pilares básicos de la teoría de grupos. 
+Eso hizo que poco tiempo después Cole determinara todos los grupos simples de tamaño $\leq600$, y en particular
+demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
+igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
+Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
+el famoso principio del palomar, 
+extendieron estos trabajos y lograron construir todos los grupos
+simples de orden $\leq2001$. 
+
 Los grupos simples más fáciles de describir son los cíclicos con un número
 primo de elementos. Por ejemplo
 \[
@@ -194,27 +207,37 @@ primo de elementos. Por ejemplo
 	\Z/3=\{0,1,2\},\quad
 	\Z/5=\{0,1,2,3,4\}\dots
 \]
-Están también los grupos simples alternados. El menor de estos grupos suele
+Están también los grupos simples alternados (no abelianos). El menor de estos grupos suele
 denotarse $\Alt_5$, tiene orden 60 y fue descubierto por Galois en sus trabajos
-sobre la resolubilidad por radicales. Tenemos además grupos simples análogos
-finitos a ciertos grupos geométricos que aparecen en la teoría de Lie. Algunos
-de estos grupos eran ya conocidos por Galois y por Jordan. Hay además cinco
-grupos descubiertos por Mathieu en 1861 y 1873 que resultan ser los grupos de
-las simetrías de ciertas geometrías finitas que ahora nos resultaría un poco
-complicado explicar. 
+sobre la resolubilidad por radicales. Tenemos además grupos simples 
+finitos análogos a grupos geométricos que aparecen en la teoría de Lie. Algunos
+de estos grupos eran ya conocidos por Galois y por Jordan. 
 
 Gran parte de los análogos finitos de grupos de Lie fueron descubiertos en el
 siglo XX, primero por Dickson en algunos casos particulares y luego por
-Chevalley, Steinberg, Suzuki y Ree en forma más sistemática. Tenemos entonces,
+Chevalley, Steinberg, Suzuki y Ree en forma más sistemática. 
+
+Hay además cinco grupos ``esporádicos'' descubiertos por Mathieu en 1861 y 1873 que resultan ser los grupos de
+las simetrías de ciertas configuraciones finitas que ahora nos resultaría un poco
+complicado explicar. Los grupos de Mathieu no pertenecen a la familia de análogos finitos de los grupos que
+aparecen en geometría y teoría de Lie. 
+
+Tenemos entonces,
 digámoslo vagamente, una lista de grupos simples finitos: a) los grupos
 cíclicos de orden primo, b) los grupos alternados de grado $\geq 5$, c) los
 grupos de tipo Lie, y por último d) los grupos de Mathieu. 
 
-En 1963 Feit y Thompson demostraron que todo grupo de orden impar es resoluble,
-resultado que había sido conjeturado por Burnside en 1906. La demostración un
+En 1955 Brauer y Fowler demostraron un teorema que permitió a los investigadores
+pensar en un posible plan de acción para clasificar grupos simples. El método 
+se basaría en clasificar grupos simples sabiendo de antemano algo sobre sus 
+involuciones.  
+En 1963 Feit y Thompson demostraron que todo grupo simple no abeliano tiene orden par, 
+un resultado que había sido conjeturado por Burnside en 1906. La demostración un
 volumen completo de la revista \emph{Pacific Journal of Mathematics} de casi
-trescientas páginas. A partir de este resultado y de las técnicas desarrolladas
-por Feit y Thompson, fue posible construir nuevos grupos simples, grupos que en
+trescientas páginas. A partir de estos resultados y de las técnicas desarrolladas
+por Feit y Thompson, y gracias a un trabajo bastante más experimental 
+que el que se vio en otras etapas de la matemática, 
+fue posible construir nuevos grupos simples, grupos que en
 general hoy llevan el nombre de sus descubridores: Janko, Highman, Sims,
 MacLaughlin, Suzuki, Conway, Held, Fischer, Lyons, O'Nan, Rudavalis. En muchos
 casos, para demostrar la existencia de tales grupos fue necesario recurrir a
@@ -224,8 +247,14 @@ simple, esta vez mostruosamente grande, de orden
 \[
 	2^{46}\times 3^{20}\times 5^9\times 7^6\times 11^2\times 13^3\times 17\times 19\times 23\times 29\times 31\times 41\times 47\times 59\times 71. 
 \]
-Es fácil entender por qué a este grupo se lo conoce como ``el monstruo''.  A
-diferencia de lo que había pasado con los grupos mencionados en el párrafo
+Es fácil entender por qué a este grupo se lo conoce como ``el monstruo'' o el 
+``gigante amistoso''. Este grupo tiene orden 
+\[
+808\,017\,424\,794\,512\,875\,886\,459\,904\,961\,710\,757\,005\,754\,368\,000\,000\,000,
+\]
+es decir, el grupo tiene aproximadamente $8\times 10^{53}$ elementos.
+
+A diferencia de lo que había pasado con los grupos mencionados en el párrafo
 anterior, semejante cantidad de elementos hacía imposible siquiera pensar en
 utilizar una computadora para demostrar la existencia. En 1982 Griess demostró
 la existencia del monstruo al observar que podía verse como el grupo de
@@ -237,12 +266,12 @@ anteriormente. Entre estas excepciones está el monstruo.  En 1972 Gorenstein
 propuso un programa para demostrar esta clasificación. 
 
 Para algunos, la clasificación estaba completa en 1974. No para toda la
-comunidad matemática, sin embargo. En 1976, por ejemplo, Brauer menciona que
+comunidad matemática, sin embargo. En 1976, por ejemplo, Brauer mencionó que
 muchos matemáticos creen que tener completa la clasificación depende únicamente
-del tiempo, y para fundamentar su comentario cita a Alperin y pone énfasis en
-que quizá se necesiten unos cinco años en completar los detalles que falen,
+del tiempo y pone énfasis en
+que quizá se necesiten unos cinco años en completar los detalles que falten,
 aunque luego sean necesarios muchos años más para poder ordenar y escribir
-prolija y precisamente cado uno de los pasos necesarios de aquella demostración. 
+prolija y precisamente cada uno de los pasos necesarios de aquella demostración. 
 
 Gracias a los trabajos de varios matemáticos tales como Aschbacher, Mason y
 Griess, donde casos difíciles eran tratados exitosamente, Gorenstein declaró en
@@ -254,7 +283,7 @@ sin resolverse. En 1992 Aschbacher anunció que había logrado completar con
 éxito los detalles faltantes en el trabajo de Mason, aunque esto tampoco fue
 publicado. En 1996 Aschbacher y Smith comenzaron a trabajar en la demostración 
 estos resultados, esto fue publicado en dos volúmenes en 2004. Gracias
-de este resultado, la comunidad matemática acepta a la clasificación de los
+de este resultado, la comunidad matemática aceptó finalmente la clasificación de los
 grupos simples. 
 
 %Sin embargo, hasta el día de la fecha, cada trabajo donde se
@@ -276,67 +305,67 @@ matemáticos a lo largo de más de cien años y más de diez mil páginas de
 revistas científicas. 
 
 
-La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
-importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
-libro posee una modesta lista con infinitos grupos simples. En un trabajo
-publicado en 1892, H\"older remarca que sería de gran interés disponer de la
-clasificación de grupos simples. Eso hizo que poco tiempo después Cole
-determinara todos los grupos simples de tamaño $\leq600$, y en particular
-demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
-igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
-Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
-el famoso principio del palomar, 
-extendieron estos trabajos y lograron construir todos los grupos
-simples de orden $\leq2001$. 
+% La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
+% importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
+% libro posee una modesta lista con infinitos grupos simples. En un trabajo
+% publicado en 1892, H\"older remarcó que sería de gran interés disponer de la
+% clasificación de grupos simples, ya qu estos grupos funcionan como pilares básicos de la teoría de grupos. 
+% Eso hizo que poco tiempo después Cole determinara todos los grupos simples de tamaño $\leq600$, y en particular
+% demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
+% igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
+% Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
+% el famoso principio del palomar, 
+% extendieron estos trabajos y lograron construir todos los grupos
+% simples de orden $\leq2001$. 
 
-En 1895 Burnside y Frobenius demostraron independientemente que
-los únicos grupos simples no abelianos cuyos órdenes poseen a lo sumo cinco factores primos
-son los grupos $\PSL_2(p)$ para $p\in\{5,7,11,13\}$. 
+% En 1895 Burnside y Frobenius demostraron independientemente que
+% los únicos grupos simples no abelianos cuyos órdenes poseen a lo sumo cinco factores primos
+% son los grupos $\PSL_2(p)$ para $p\in\{5,7,11,13\}$. 
 
-En 1900 Burnside demostró que si $G$ es un grupo no abeliano y simple de orden
-impar, entonces el orden de $G$ es producto de al menos siete primos. 
+% En 1900 Burnside demostró que si $G$ es un grupo no abeliano y simple de orden
+% impar, entonces el orden de $G$ es producto de al menos siete primos. 
 
-En 1893 Frobenius demostró que un grupo simple de orden libre de cuadrados
-resulta ser cíclico de orden primo. Dos años después Burnside extendió el
-resultado de Frobenius.
+% En 1893 Frobenius demostró que un grupo simple de orden libre de cuadrados
+% resulta ser cíclico de orden primo. Dos años después Burnside extendió el
+% resultado de Frobenius.
 
-En 1896 Dedekind le escribió una carta a Frobenius donde le proponía el
-problema de factorizar el determinante de una cierta matriz cuyos coeficientes
-dependían de un grupo simple. Un año después Frobenius encontró no solamente la
-solución al problema de Dedekind sino que lo hizo gracias al desarrollo de la
-teoría de caracteres. 
+% En 1896 Dedekind le escribió una carta a Frobenius donde le proponía el
+% problema de factorizar el determinante de una cierta matriz cuyos coeficientes
+% dependían de un grupo simple. Un año después Frobenius encontró no solamente la
+% solución al problema de Dedekind sino que lo hizo gracias al desarrollo de la
+% teoría de caracteres. 
 
-En 1900 Burnside utilizó las ideas de Frobenius y pudo demostrar varios
-resultados que sugieren la no existencia de grupos simples no abelianos con una
-cantidad impar de elementos, conjetura que escribió formalmente en 1911. En
-1904 demostró que todo grupo de orden $p^aq^b$ es resoluble. 
+% En 1900 Burnside utilizó las ideas de Frobenius y pudo demostrar varios
+% resultados que sugieren la no existencia de grupos simples no abelianos con una
+% cantidad impar de elementos, conjetura que escribió formalmente en 1911. En
+% 1904 demostró que todo grupo de orden $p^aq^b$ es resoluble. 
 
-En 1900 Dickson encontró nuevas familias de grupos simples y lo hizo inspirado en
-las teorías de Killing y Cartan sobre grupos de Lie. 
+% En 1900 Dickson encontró nuevas familias de grupos simples y lo hizo inspirado en
+% las teorías de Killing y Cartan sobre grupos de Lie. 
 
-Curiosamente Dickson declaró en 1920 que la teoría de grupos finitos había muerto. 
+% Curiosamente Dickson declaró en 1920 que la teoría de grupos finitos había muerto. 
 
-La teoría de grupos finitos avanzó mucho durante el siglo XX gracias a los
-trabajos de muchos matemáticos. Por la relevancia que estos trabajos tienen en
-la clasificación de los grupos simples mencionaremos a Schur, Hall, Zassenhaus,
-Fitting.
+% La teoría de grupos finitos avanzó mucho durante el siglo XX gracias a los
+% trabajos de muchos matemáticos. Por la relevancia que estos trabajos tienen en
+% la clasificación de los grupos simples mencionaremos a Schur, Hall, Zassenhaus,
+% Fitting.
 
-Después de la segunda guerra mundial algunos algebristas comenzaron a mostrar gran interés por el problema de la clasificación de grupos simples. Zassenhaus, por ejemplo, 
-lo consideró el problema más importante. Zassenhaus creía posible atacar esta problema utilizando los métodos geométricos de Killing y Cartan pertenecientes a la teoría de Lie. La idea
-era buena: de esa forma Chevalley construyó nuevos grupos simples. Steinberg y Ree también construyeron familias de grupos simples basados en la teoría de Lie. 
+% Después de la segunda guerra mundial algunos algebristas comenzaron a mostrar gran interés por el problema de la clasificación de grupos simples. Zassenhaus, por ejemplo, 
+% lo consideró el problema más importante. Zassenhaus creía posible atacar esta problema utilizando los métodos geométricos de Killing y Cartan pertenecientes a la teoría de Lie. La idea
+% era buena: de esa forma Chevalley construyó nuevos grupos simples. Steinberg y Ree también construyeron familias de grupos simples basados en la teoría de Lie. 
 
-Se habían construido varias familias de grupos simples, pero 
-se estaba lejos de una clasificación. Ni siquiera existía una estrategia posible para obtener la clasificación. 
+% Se habían construido varias familias de grupos simples, pero 
+% se estaba lejos de una clasificación. Ni siquiera existía una estrategia posible para obtener la clasificación. 
 
-En su tesis de doctorado Thompson demostró una conjetura de Frobenius.
+% En su tesis de doctorado Thompson demostró una conjetura de Frobenius.
 
-Los resultados sobre la estructura de grupos finitos ocpaban más de mil quinientas páginas de publicaciones científicas. En 1971 Gorenstein propuso un programa para la clasificación de los grupos simples. 
-Ese programa fue refinado en 1972 y consistía en atacar 16 pasos. La comunidad no creía que la clasificación fuera posible.
+% Los resultados sobre la estructura de grupos finitos ocpaban más de mil quinientas páginas de publicaciones científicas. En 1971 Gorenstein propuso un programa para la clasificación de los grupos simples. 
+% Ese programa fue refinado en 1972 y consistía en atacar 16 pasos. La comunidad no creía que la clasificación fuera posible.
 
-El teorema de Feit--Thompson fue publicado en 1963 y afirma que todo grupo de orden impar es resoluble. Si bien es un enunciado muy fácil de reproducir, la demostración es muy difícil y ocupa casi trescientas páginas. 
-El primer teorema donde se clasifica una familia infinita de grupos simples 
-es de Burnside y fue publicado en 1899. El último teorema necesario en la demostración rigurosa de la clasificación de grupos simples fue publicado en 2004 
-y fue demostrado por Aschbacher y Smith; son dos volúmenes que ocupan más de mil páginas. 
+% El teorema de Feit--Thompson fue publicado en 1963 y afirma que todo grupo de orden impar es resoluble. Si bien es un enunciado muy fácil de reproducir, la demostración es muy difícil y ocupa casi trescientas páginas. 
+% El primer teorema donde se clasifica una familia infinita de grupos simples 
+% es de Burnside y fue publicado en 1899. El último teorema necesario en la demostración rigurosa de la clasificación de grupos simples fue publicado en 2004 
+% y fue demostrado por Aschbacher y Smith; son dos volúmenes que ocupan más de mil páginas. 
 
 
 \section*{Formalización}
