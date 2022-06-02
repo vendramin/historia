@@ -120,12 +120,18 @@ mediante fórmulas que involucraran radicales.
 %encontrar una solución para la ecuación\dots
 
 Lagrange entendió que era importante estudiar el grupo generado por las
-permutaciones de las raíces. Así surgieron los grupos de permutaciones.
+permutaciones de las raíces. Así surgieron los primeros 
+grupos de permutaciones. 
+El trabajo de Lagrange motivó los trabajos de Ruffini, Abel y Galois. 
 
-Gauss sin saberlo había considerado grupos\dots?
+La palabra
+\emph{grupo} fue concebida por Galois. Para él, un \emph{grupo} era un
+conjunto de permutaciones cerrada por multiplicación. 
 
-Cauchy, Jordan, Abel, Cayley, Klein, Lie, Dyck\dots
+Euler y Gauss sin saberlo habían considerado grupos conmutativos 
+al estudiar propiedades de los enteros módulo $n$. 
 
+Expliquemos qué es un grupo de permutaciones. 
 Las funciones biyectivas forman otro ejemplo muy importante de grupos. Hagamos un caso sencillo, el de las funciones 
 $\{1,2,3\}\to\{1,2,3\}$ que son biyectivas. El conjunto $\Sym_3$ de funciones
 biyectivas $\{1,2,3\}\to\{1,2,3\}$ forma un grupo con la composición de funciones. Podemos escribir
@@ -133,6 +139,8 @@ a los elementos de $\Sym_3$ como
 \[
 	\Sym_3=\{\id,(12),(13),(23),(123),(132)\}
 \]
+
+El símbolo $(12)$ representa a la función tal que $1\mapsto 2$, $2\mapsto 1$ y $3\mapsto 3$. Similarmente, $(123)$ es la función tal que $1\mapsto 2$, $2\mapsto 3$ y $3\mapsto 1$. 
 
 Escribir como matrices de $3\times 3$. 
 Por ejemplo
@@ -148,19 +156,51 @@ Luego $P(x,y,z)=\dots$.
 
 El signo de una permutación puede verse como el determinante de esta matriz de permutación. 
 
-Calcular subgrupos de $\Sym_3$.
-
-El teorema de Lagrange afirma que si $H$ es un subgrupo de un grupo finito $G$,
-entonces $|H|$ divide a $|G|$. 
+Un \emph{subgrupo} de un grupo de permutaciones es subconjunto de permutaciones 
+cerrado por multiplicación y 
+que contiene a la identidad. Como ejemplo, vamos a calcular los subgrupos de $\Sym_3$.
 
 \begin{example}
-	En el caso del grupo simétrico $\Sym_3$, que tiene orden seis, vimos que los subgrupos
-	pueden tener $1$, $2$, $3$ o $6$ elementos, tal como predice el teorema de Lagrange.
+\label{exa:S3}
+    Sabemos que 
+    \[
+	\Sym_3=\{\id,(12),(13),(23),(123),(132)\}
+    \]
+    Si $S$ es un subgrupo, entonces $\id\in S$. Dejamso como ejercicio
+    verificar que los únicos subgrupos de $\Sym_3$ son
+    \[
+    \{\id\},\{\id,(12)\},\{\id,(13)\},\{\id,(23)\},\{\id,(!23),(132)\},\Sym_3.
+    \]
 \end{example}
 
+En el ejemplo anterior muestra un fenómeno interesante. Tenemos un grupo con seis
+elementos y si $S$ es un subgrupo entonces $|S|$ divide a seis. Esto no es un accidente:  
+el teorema de Lagrange afirma que si $H$ es un subgrupo de un grupo finito $G$,
+entonces $|H|$ divide a $|G|$. 
+
+Los primeros estudios sistemáticos sobre grupos de permutaciones se deben a Cauchy, que publicó varios trabajos entre 1815 y 1844 donde aparecen muchos resultados 
+que hoy vemos en cursos de teoría de grupos. Por ejemplo, Cauchy calculó 
+los subgrupos de $\Sym_3$ que vimos en el ejemplo \ref{exa:S3}. 
+
+Los grupos abstractos fueron concebidos por Cayley en 1954, que parece se
+inspiró en los trabajos abstractos de Boole. Si bien la idea de Cayley 
+resultó fundamental, no tuvo impacto en aquel momento. Cayley volvió a trabajar
+con grupos abstractos varios años más tarde, en 1878, esta vez con mucho éxito. 
+Otra definición abstracta de grupo 
+también apareció en en 1858, en las clases de Dedekind sobre teoría de Galois. Para conectar
+la definición abstracta de grupo con los grupos de permutaciones concretos con los que 
+se trabajaba, 
 Cayley demostró que si $G$ es un grupo finito, entonces
 $G$ es esencialmente un subgrupo de algún $\Sym_n$. 
 
+En 1882 Von Dyck estudió grupos abstractos (no necesariamente finitos) y muchas de sus propiedades. En 1883 publicó trabajos donde estudió aplicaciones de la teoría de
+grupos en otras áreas de la matemática: geometría, teoría de números, simetrías y geometría, grupos de permutaciones. Pueden entenderse estos trabajos como el primer anuncio
+acerca de la importancia que iban a tener los grupos en el desarrollo de la matemática.  
+
+Resultados sobre grupos concretos son en realidad resultados generales (el teorema de Lagrange es un claro ejemplo de este fenómeno). Hay otro ejemplo que es digno de mencionar. En 1872 Sylow
+publicó una serie de teoremas sobre grupos de permutaciones, hoy los conocemos como
+los \emph{teoremas de Sylow}. En 1887 Frobenius observó que, como todo grupo abstracto es un grupo de permutaciones, los teoremas de Sylow también valen para grupos abstractos. Sin embargo, fue más lejos. Publicó una demostración de los teoremas de Sylow para grupos abstractos, aunque en principio no fuera necesario. La abstracción juega acá un papel importante, esas ideas resultaron fundamentales 
+para el desarrollo de la teoría de grupos. 
 
 No podemos hacer un estudio exhaustivo de la historia de la teoría de los
 grupos finitos, pero sí debemos mencionar algunos resultados muy importantes
@@ -175,10 +215,6 @@ difícil y ocupa un volumen completo del Pacific Journal of Mathematics.  Este
 teorema es uno de los pasos fundamentales hacia una clasificación de los grupos
 simples finitos.  Recientemente este teorema fue verificado formalmente
 por\dots en Coq\dots
-
-\section*{Representaciones}
-
-
 
 \section*{La clasificación de grupos simples finitos}
 
@@ -371,3 +407,72 @@ revistas científicas.
 \section*{Formalización}
 
 hablar de Coq o equivalentes y mencionar qué teoremas fueron demostrados y cuáles son los objetivos
+
+\section*{La abstracción en la matemática}
+
+Las digresiones que hicimos sobre teoría de grupos ilustran la importancia de la abstracción en la matemática. Veamos otro ejemplo. La igualdad $(-1)(-1)=1$ se conoce
+desde la antigüedad. Sin embargo, en cierto momento la gente empezó a cuestionarse
+ese tipo de identidades. En 1830 Peacock tuvo una idea muy avanzada: consideró dos tipos de manipulación algebraica y una forma de conectar esos distintos tipo de manipulación. La idea de Peacock es la siguiente: Tenemos a) el álgebra aritmética (la que todos conocemos, la que vale para números positivos), b) el álgebra simbólica y c) el \emph{principio de permanencia de formas equivalentes}, que establece que las leyes del álgebra simbólica son las del álgebra aritmética.  Veamos cómo funciona esa idea en un ejemplo concreto. La fórmula
+\[
+a-(b-c)=a-b+c
+\]
+es una ley aritmética, vale si $b>c$ y $a>b-c$. De acá se deduce que
+$(-a)(-b)=ab$ sin restricciones. Para eso, 
+primero observamos que 
+\[
+(a-b)(c-d)=ac+bd-ad-bc
+\]
+es una ley aritmética, vale si $a>b$ y $c>d$. Esa ley aritmética
+se transforma en una ley del álgebra simbólica gracias al 
+\emph{principio de permanencia de formas equivalentes}. Por eso, 
+ahora tenemos la validez de la identidad 
+\[
+(a-b)(c-d)=ac+bd-ad-bc
+\]
+sin restricción. Evaluamos entonces esta ley simbólica en $a=0$ y $c=0$ 
+para obtener la identidad
+\[
+(-b)(-d)=bd.
+\]
+
+Es importante remarcar que en los trabajos de Peacock, las reglas aritméticas
+no estaban explícitamente establecidas: eso vino mucho después, con los axiomas
+que definen a los anillos y a los cuerpos.  
+
+Hoy vemos en cursos de álgebra definiciones axiomáticas de anillos
+y cuerpos. La primera definición abstracta de anillo 
+es de 1914, se debe a Fraenkel y es básicamente la misma que usamos
+ahora. 
+
+Todos sabemos la importancia que tiene el álgebra lineal 
+dentro de la matemática moderna. Muchos resultados del álgebra
+lineal ya se conocían en 1880, aunque en forma desordenada y algo caótica. 
+El problema: no se conocían los espacios vectoriales. Fue Peano
+que los introdujo en 1888, un trabajo que en su momento 
+fue ignorado. 
+
+Hoy en día los cursos de álgebra lineal comienzan con la resolución de sistemas lineales. 
+Alrededor del año 200 a. C. en China se resolvían sistemas lineales de $3\times 3$ 
+usando únicamente números y no incógnitas, idea precursora de la teoría de matrices. El estudio
+moderno de los sistemas lineales comenzó mucho después, con Leibniz en 1693. Curiosamente,
+en aquel momento, el estudio estaba basado en los determinantes. Sí, en la historia de la matemática primero aparecen  
+los determinantes y tiempo después las matrices. En 1750 Cramer publicó fórmulas
+para resolver sistemas lineales mediante el uso de determinantes. Se escribieron varios tratados sobre determinantes. Los primeros fueron escritos por Maclaurin y Vandermonde en 1772. En 1815 Cauchy  
+estableció las bases de la teoría de determinantes más o menos como la conocemos hoy. Por ejemplo, demostró que 
+\[
+\det(AB)=(\det A)(\det B).
+\]
+La definición abstracta o axiomática de determinante apareció alrededor de 1860 y 
+se debe a Weierstrass 
+y Kronecker. En aquellos tiempos los determinantes estaban muy de moda. En el siglo XX 
+dejaron de considerarse esenciales, ya que no eran necesarios para demostrar
+resultados del álgebra lineal. 
+
+Las matrices, como dijimos, concretamente, aparecieron después. Vimos que el germen 
+de la idea aparece en el año 200 a. C. También la idea aparece implícitamente en los trabajos de Gauss. De hecho, en 1811 Gauss presentó tu método de eliminación, 
+lo hizo para calcular la órbita de un asteroide. Sin embargo, el método
+tampoco usaba matrices. Entre 1850 y 1858 Cayley estudió sistemáticamente las
+matrices rectangulares. La terminología se debe a Sylvester (1850). Cayley 
+demostró en 1858 el resultado que hoy conocemos como teorema de Cayley--Hamilton, lo hizo 
+para matrices de $2\times 2$ y $3\times 3$. Hamilton lo hizo para $n=4$.
+
