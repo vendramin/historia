@@ -73,7 +73,7 @@ demostrar que
 \end{exercise}
 
 Uno de los resultados más interesantes sobre números poligonales es el teorema
-de Lagrange. Este teorema tiene sus orígenes en los trabajos del matemástico
+de Lagrange. Este teorema tiene sus orígenes en los trabajos del matemático
 griego Diofanto. Esto motivó a que en 1621 el francés Bachet mientras trabajaba
 en una traducción de uno de los libros de Diofanto, conjeturara (o afirmara)
 que todo número puede escribirse como suma de a lo sumo cuatro cuadrados. La
@@ -95,7 +95,7 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 			=(a_1 b_1 &- a_2 b_2 - a_3 b_3 - a_4 b_4)^2\\
 			&+(a_1 b_2 + a_2 b_1 + a_3 b_4 - a_4 b_3)^2\\
 			&+(a_1 b_3 - a_2 b_4 + a_3 b_1 + a_4 b_2)^2\\
-			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 + a_4 b_1)^2.
+			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 + a_4 b_1)^2
 		\end{aligned}
 	\end{equation}
 	implica que solamente necesitamos demostrar el teorema para los números
@@ -195,7 +195,7 @@ siguiente fórmula:
 		x_1 & x_2 & x_3 & x_4\\
 		-x_2 & x_1 & -x_4 & x_3\\
 		-x_3 & x_4 & x_1 & -x_2\\
-		-x_4 & -x_3 & x_2 & x_1
+		-x_4 & -x_3 & x_2 & x_1.
 	\end{pmatrix}.
 \]
 Alrededor de 1840 Graves y Cayley descubieron independientemente una identidad
@@ -215,16 +215,23 @@ cuadrados:
 \]
 
 \index{Suma!de tres cuadrados}
-\index{Teorema!de Legendre}
 No todo número puede representarse como suma de tres cuadrados.  Los primeros
 numeros que pueden representarse como suma de exactamente cuatro cuadrados son 
 \[
 	7, 15, 23, 28, 31, 39, 47, 55, 60, 63, 71\dots
 \]
 La sucesión de tales números lleva el código \verb+A004215+.  En 1798 Legendre
-demostró que un entero positivo $n$ puede representarse como suma de tres
-cuadrados si y sólo si no es de la forma $n=4^a(8b+7)$. Este resultado de
-Legendre puede utilizarse para demostrar el teorema de Lagrange: Si $n$ es un
+demostró el siguiente resultado:
+
+\begin{theorem}[Legendre]
+\index{Teorema!de Legendre}
+Un entero positivo $n$ puede representarse como suma de tres
+cuadrados si y sólo si no es de la forma $n=4^a(8b+7)$. 
+\end{theorem}
+
+No vamos a demostrar el teorema de Legendre. Sin embargo, conviene destacar 
+que el teorema de Legendre puede utilizarse para 
+demostrar el teorema de Lagrange: Si $n$ es un
 entero positivo, escribimos $n=4^{\alpha}m$, donde $m$ es un entero no
 divisible por $4$. Si $m\equiv k\bmod 8$ para algún $k\in\{1,2,3,5,6\}$,
 entonces $m$ es suma de tres cuadrados y el resultado queda demostrado. En caso
