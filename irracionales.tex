@@ -91,7 +91,7 @@ obtenemos entonces
 \[
 	17(4l^2+4l+1)=4k^2+4k+1,
 \]
-que al simplificarse queda $17l(l+1))+4=k(k+1)$. ¡Aquí no hay contradicción!
+que al simplificarse queda $17l(l+1)+4=k(k+1)$. ¡Aquí no hay contradicción!
 
 Tal como se afirma en~\cite{MR0416824}, muy probablemente esta sea la razón por
 la que Teodoro detuvo su análisis en 17. No nos olvidemos que los griegos
@@ -175,6 +175,7 @@ en ideas de Dedekind de 1858:
 \index{Teorema!fundamental de la aritmética}
 Los griegos no disponían del teorema fundamental de la aritmética, aunque conocían resultados casi equivalentes. Este teorema
 fue enunciado y demostrado tal como lo conocemos por Gauss, ver por ejemplo~\cite{MR1277244,MR1849798,MR1163928,MR497463}. 
+
 Si sabemos que todo número admite una única
 factorización como producto de números primos, podemos demostrar fácilmente la
 irracionalidad de muchos números. Como ejemplo demostremos que $\sqrt{17}$ es
@@ -257,7 +258,7 @@ menos dos de aquellos objetos.
 	palomar de Dirichlet nos dice que algún subintervalo contendrá al menos dos
 	de esos números, digamos $p_k-k\alpha$ y $p_l-l\alpha$. Como la distancia
 	entre estos dos números es entonces menor a $1/Q$, si definimos $p=p_k-p_l$
-	y $q=k+l$, tenemos 
+	y $q=k-l$, tenemos 
 	\[
 		|p-q\alpha|=|(p_k-p_l)-(k-l)\alpha|=|(p_k-k\alpha)-(p_l-l\alpha)|<\frac1{Q}.\qedhere
 	\]
@@ -277,7 +278,7 @@ la geometría de los números o bien mediante el uso de sucesiones de Farey.
 
 \begin{proof}
 	Sea $\alpha$ un número irracional.  
-	El teorema de Dirichlet con nos dice que existe un racional $p_1/q_1$, donde 
+	El teorema de Dirichlet nos dice que existe un racional $p_1/q_1$, donde 
 	$1\leq q_1$, tal que 
 	\[
 		\left|\alpha-\frac{p_1}{q_1}\right|<\frac{1}{q_1^2},
@@ -292,13 +293,13 @@ la geometría de los números o bien mediante el uso de sucesiones de Farey.
 	\]
 	Aquí es conveniente remarcar que este mínimo es un número positivo pues
 	$\alpha$ es un número irracional. Por el teorema de Dirichlet, sabemos que
-	existe entonces un racional $p/q$, con $1\leq q<Q$ tal que 
+	existe entonces un racional $p/q$, con $1\leq q\leq Q$ tal que 
 	\[
 		\left|\alpha-\frac{p}{q}\right|<\frac{1}{qQ}\leq\frac{1}{q^2}.
 	\]
 	Pero además 
 	\[
-		\left|\alpha-\frac{p}{q}\right|<\frac{1}{qQ}\leq\frac{1}{Q}<\min_{1\leq i\leq k}\left|\alpha-\frac{p}{q}\right|
+		\left|\alpha-\frac{p}{q}\right|<\frac{1}{qQ}\leq\frac{1}{Q}<\min_{1\leq i\leq k}\left|\alpha-\frac{p_i}{q_i}\right|
 	\]
 	y luego $p/q\not\in\{p_1/q_1,\dots,p_k/q_k\}$. Esto nos permite agregar el
 	número racional $p/q$ a nuestra lista de racionales $\{p_i/q_i:1\leq i\leq
@@ -462,17 +463,21 @@ Es natural preguntarse qué pasa con algunas de las constantes más famosas.
 Comencemos con el número $e$, la base de los logaritmos.  Como bien sabemos $e$
 se define como
 \[
-	e=1+\frac{1}{2!}+\frac{1}{3!}+\cdots+\frac{1}{n!}+\cdots
+	e=1+\frac{1}{1!}+\frac{1}{2!}+\frac{1}{3!}+\cdots+\frac{1}{n!}+\cdots
 \]
 
 La historia del número $e$ es bastante curiosa ya que durante muchos años se
 utilizó esta constante solamente de forma implícita~\cite{MR38289}. Esta constante fue
 considerada por primera vez en 1618 en un apéndice al trabajo de Napier 
 sobre logaritmos; el apéndice contiene los valores de logaritmos de varios
-números y se cree que fue escrito por Oughtred. En 1624 Briggs dio una
+números y se cree que fue escrito por Oughtred. 
+
+En 1624 Briggs dio una
 aproximación numérica para $\log_{10}e$ pero sin hacer referencia explícita al
 número $e$. Por varios años el número $e$ aparece implícitamente en trabajos de
-autores como Saint--Vincent, Huygens y Mercator.  El descubrimiento del número
+autores como Saint--Vincent, Huygens y Mercator.  
+
+El descubrimiento del número
 $e$ bien puede atribuírsele a Jacob Bernoulli ya que en 1683 demostró que el
 límite 
 \[
@@ -486,8 +491,11 @@ reconocer al logaritmo como la función inversa de la exponencial. Esta relació
 aparece explícitamente en 1684 en un trabajo de Gregory.
 
 El número $e$ aparece explícitamente por primera vez en una carta de Leibniz a
-Huygens de 1690. El estudio de propiedades de las funciones exponenciales fue
+Huygens de 1690. 
+
+El estudio de propiedades de las funciones exponenciales fue
 hecho por Johann Bernoulli en 1697. 
+
 El número $e$ aparece en los trabajos de Euler 
 alrededor de 1727 en un trabajo no publicado y 
 en una carta a Goldbach de 1731. Euler publicó muchas de las propiedades del
@@ -551,11 +559,8 @@ descubierta por Fourier en 1815.
 	demuestre que $e^{-1}\not\in\Q$.
 \end{exercise}
 
-%No sabemos si números como 
-%$\pi+e$,$\pi-e$,$\pi e$,$\pi/e$,$2^e$,$\pi^e$,$\pi^{\sqrt{2}}$,$\log\pi$ 
-%son irracionales. 
 Para más información sobre la historia de esta constante y de los logaritmos
-referimos a los
+referimos a los 
 artículos~\cite{MR1517859,MR1517841,MR1517806,MR1517796,MR1517770,MR1517761}.
 
 \section*{El número $\pi$}
@@ -565,7 +570,7 @@ de cualquier círculo, algo que en nuestra notación escribiríamos como
 \[
 	\pi=\frac{C}{D},
 \]
-donde $C$ es la circunsferencia y $D$ es el diámetro. 
+donde $C$ es la circunferencia y $D$ es el diámetro. 
 
 Repasaremos un poco la historia del número $\pi$. Basaremos el capítulo
 principalmente en el libro~\cite{MR0449960}. 
@@ -665,8 +670,10 @@ siguiente expansión para la tangente:
 \[
 	\tan(x)=\dfrac{x}{1-\dfrac{x^2}{3-\dfrac{x^2}{5-\dfrac{x^2}{7-\cdots}}}}
 \]
+
 Hermite dio otra demostración de la irracionalidad de $\pi$ en 1873, y esta
 demostración es mucho más sencilla que aquella encontrada por Lambert. 
+
 En 1941 Niven encontró una demostración muy breve y sencilla, que bien podría
 darse en cualquier curso de cálculo. Esta demostración utiliza ingeniosamente
 algunas de las ideas de Hermite. Veamos la demostración de la irracionalidad de
@@ -787,7 +794,7 @@ De hecho, en el caso particular de la serie
 \[
 	1-\sin x=1-x+\frac{x^3}{3!}-\frac{x^5}{5!}+\frac{x^7}{7!}-\cdots
 \]
-tenemos que, como la función $x\mapsto x-\sin x$ tiene todos ceros en 
+tenemos que, como la función $x\mapsto 1-\sin x$ tiene ceros en 
 \[
 	\frac{\pi}{2},\frac{\pi}{2},-\frac{3\pi}{2},-\frac{3\pi}{2},\frac{5\pi}{2},-\frac{7\pi}{2},-\frac{7\pi}{2},\dots
 \]
@@ -795,7 +802,9 @@ la fórmula para $\alpha_1$ que vimos antes implica que
 \[
 	\frac{4}{\pi}\left(1-\frac13+\frac15-\cdots\right)=1,
 \]
-de donde inmediatamente se obtiene la fórmula de Gregory--Leibniz.  Si utilizamos la
+de donde inmediatamente se obtiene la fórmula de Gregory--Leibniz.  
+
+Si utilizamos la
 fórmula para $\alpha_1^2-2\alpha_2$ obtenemos además 
 \[
 	\frac{8}{\pi^2}\left(1-\frac13+\frac15-\cdots\right)=1.
@@ -805,7 +814,6 @@ Luego
 	\sum_{n=1}^\infty\frac{1}{n^2} &= \sum_{n=1}^\infty\frac{1}{(2n)^2}+\sum_{n=0}^\infty\frac{1}{(2n+1)^2}=\frac14\sum_{n=1}^\infty\frac{1}{n^2}+\frac{\pi^2}{8},
 \end{align*}
 de donde se deduce inmediatamente la fórmula~\eqref{eq:pi^2/6}.
-
 Esta fórmula nos permite entender por qué algunas civilizaciones aproximaban a
 $\pi$ con el número $\sqrt{10}$. Primero, observemos que 
 \[
