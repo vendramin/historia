@@ -40,9 +40,10 @@ Los libros de Euclides comienzan con definiciones (que para nosotros quizá no
 siempre resultan del todo precisas). Por ejemplo, el \emph{punto} se define
 como lo que no tiene partes; esta es la primera definición. La segunda
 definición dice que una \emph{línea} es una longitud sin anchura. La tercera,
-que los extremos de una línea son puntos. Hay que aclarar que estas
+que los extremos de una línea son puntos. (Hay que aclarar que estas
 definiciones fueron tomadas de la traducción de los elementos hecha por Puertas
-Castaño. Figuran además las definiciones de círculo, ángulos rectos y agudos,
+Castaño.) Figuran en los libros de Euclides 
+además las definiciones de círculo, ángulos rectos y agudos,
 etc.
 
 Después de las definiciones, se presentan los postulados. El primero de los
@@ -208,7 +209,9 @@ de Fermat conocidos son los siguientes:
 \]
 Y se conjetura que esos son los únicos primos de Fermat que existen. Para más
 información acerca de los primos de Fermat referimos a
-las sucesiones \verb+A000215+ y \verb+A019434+.
+las sucesiones 
+\href{https://oeis.org/A000215}{A000215}.
+y \href{https://oeis.org/A019434}{A019434}.
 
 \index{Problema!de la trisección del ángulo}
 \index{Problema!de la cuadratura del círculo}
@@ -219,7 +222,7 @@ $\sqrt{2}$ e incluso cómo construir $\sqrt{n}$ para cualquier $n$. Sin embargo,
 no sabían cómo construir $\sqrt[3]{2}$; este problema se conoce como el
 \textbf{problema de la duplicación del cubo}, ya que el problema consiste en
 duplicar el volumen de un cubo dado). Otros problemas similares que mucho
-interesaban a los griegos y no pudieron resolver son los siguientes: el
+interesaban a los griegos son los siguientes: el
 \textbf{problema de la trisección de un ángulo} y el \textbf{problema de la
 cuadratura del círculo} (en este problema se pide construir un cuadrado de área
 igual al área de un círculo dado, o bien, equivalentemente, construir $\pi$).
@@ -249,15 +252,15 @@ Hipócrates}
 \index{Lúnulas de Hipócrates}
 Hipócrates probó que las áreas
 sombreadas que vemos en la figura~\ref{fig:lunula} coinciden. La demostración del
-resultado sobre lúnulas de Hipócrates es más o menos así: Sabemos que D es el
-centro del círculo que incluye el arco AEB, y es también el punto medio entre A
-y B, que es la hipotenusa del triángulo ABO. Como ABO es rectángulo e
-isósceles, el diámetro AC del círculo grande es $\sqrt{2}$ veces el tamaño del
-diámetro del círculo que incluye al arco AEB. Como el área del círculo que
-incluye al arco ABC es la mitad del área del círculo que incluye al arco AEB,
-entonces el área del cuarto de círculo AFBOA es igual al área del semicírculo
-AEBDA. Esto implica que las áreas sombreadas coinciden ya que ambas se obtienen
-al restar el AFBDA de regiones con la misma área. 
+resultado sobre lúnulas de Hipócrates es más o menos así: Sabemos que $D$ es el
+centro del círculo que incluye el arco $AEB$, y es también el punto medio entre $A$
+y $B$, que es la hipotenusa del triángulo $ABO$. Como $ABO$ es rectángulo e
+isósceles, el diámetro $AC$ del círculo grande es $\sqrt{2}$ veces el tamaño del
+diámetro del círculo que incluye al arco $AEB$. Como el área del círculo que
+incluye al arco $ABC$ es la mitad del área del círculo que incluye al arco $AEB$,
+entonces el área del cuarto de círculo $AFBOA$ es igual al área del semicírculo
+$AEBDA$. Esto implica que las áreas sombreadas coinciden ya que ambas se obtienen
+al restar el $AFBDA$ de regiones con la misma área. 
 
 %Lamentablemente, el libro de Hipócrates se perdió, pero muy posiblemente haya
 %servido de modelo para los Elementos de Euclides.
@@ -268,9 +271,26 @@ al restar el AFBDA de regiones con la misma área.
 
 \index{Cuadratiz de Hipias}
 Hipias logró resolver el problema de la trisección de un ángulo si se admite el
-uso de una curva especial, que más tarde se demostró que también permitirá
+uso de una curva especial, que, tal como se demostró muchos años después, 
+también permite
 resolver el problema de la cuadtratura del círculo. Esta curva hoy se conoce
-como la \emph{cuadratiz de Hipias}.
+como la \emph{cuadratiz de Hipias} y puede describirse por la siguiente
+función
+\[
+x\mapsto x\cot\left(\frac{\pi}{2a}x\right).
+\]
+Una representación gráfica en el caso $a=1$ puede verse en 
+la figura \ref{fig:cuadratiz}.
+
+\begin{figure}
+   \centering
+   \includegraphics[scale=0.3]{images/cuadratiz}
+   \caption{La cuadratiz de Hipias.}
+   \label{fig:cuadratiz}
+\end{figure}
+
+
+% Agregar las ecuaciones y el svg de la página de wikipedia
 
 \begin{exercise}
 	¿Cómo puede construirse el número $\sqrt{n}$ con regla y compás?
@@ -280,11 +300,15 @@ como la \emph{cuadratiz de Hipias}.
 \index{Número!algebraico}
 \index{Número!construible}
 Hoy sabemos que ninguno de estos tres problemas clásicos de la matemática
-griega tiene solución. El problema de la duplicación del cubo y de la
+griega tiene solución. 
+
+El problema de la duplicación del cubo y de la
 trisección de un ángulo fue resuelto en 1837 por un matemático francés llamado
 Pierre Wantzel. Poca gente hoy sabe que Wantzel fue el primer matemático que
 fue capaz de resolver esos famosos problemas, quizá porque los métodos de
-Wantzel fueron opacados por las ideas provenientes de la teoría de Galois.  El
+Wantzel fueron opacados por las ideas provenientes de la teoría de Galois.  
+
+El
 problema de la cuadratura del círculo fue resuelto por Lindelmann en 1882 al
 demostrar que el número $\pi$ es trascendente. Un número se dice
 \textbf{trascentente} si no es un número algebraico, es decir si no es raíz de
@@ -414,7 +438,9 @@ como el límite
 \[
 	\varphi=\lim_{n\to\infty}\frac{F_n}{F_{n-1}},
 \]
-donde $F_n$ es el $n$-ésimo término de la sucesión \verb+A000045+ de Fibonacci. 
+donde $F_n$ es el $n$-ésimo término de la sucesión 
+\href{https://oeis.org/A000045}{A000045}.
+de Fibonacci. 
 Otra curiosa expresión para el número $\varphi$ es 
 \[
 	\varphi=\sqrt{1+\sqrt{1+\sqrt{1+\cdots}}}.
