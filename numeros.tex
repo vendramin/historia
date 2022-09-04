@@ -14,6 +14,7 @@ pues se representa con el siguiente objeto geométrico:
 	\textcolor{red}{\bullet} & \textcolor{blue}{\bullet} & \textcolor{green}{\bullet}    & \textcolor{orange}{\bullet} & \bullet
 \end{array}
 \]
+
 Al observar los colores que usamos en los puntos que forman nuestro cuadrado,
 vemos además que podemos escribir al $25$ como $25=1+3+5+7+9$. Esta observación
 es un hecho general: la suma de los primeros impares consecutivos siempre será
@@ -68,7 +69,7 @@ demostrar que
 	T_n=\frac{n(n+1)}{2}.
 \]
 
-Uno de los resultados más interesantes sobre números poligonales es el teorema
+Uno de los resultados más interesantes sobre (ciertos) números poligonales es el teorema
 de Lagrange. Este teorema tiene sus orígenes en los trabajos del matemático
 griego Diofanto. Esto motivó a que en 1621 el francés Bachet mientras trabajaba
 en una traducción de uno de los libros de Diofanto, conjeturara (o afirmara)
@@ -78,6 +79,7 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 \begin{theorem}[Lagrange]
 	\index{Teorema!de Lagrange}
 	\index{Teorema!de los cuatro cuadrados}
+	\label{thm:Lagrange}
 	Todo número entero positivo es suma de (a lo sumo) cuatro cuadrados.	
 \end{theorem}
 
@@ -268,10 +270,20 @@ teorema de Gauss:
 \end{proof}
 
 Este teorema aparece en los diarios de Gauss con fecha del 10 de julio de 1796
-y su demostración fue publicada en \emph{Disquisitiones Arithmeticae}.  Este
-teorema de Gauss y el teorema de Lagrange sobre suma de cuatro cuadrados son
+y su demostración fue publicada en \emph{Disquisitiones Arithmeticae}.  
+
+El Gauss y el teorema de Lagrange sobre suma de cuatro cuadrados son
 casos particulares de un resultado más general, conjeturado por Fermat en 1638
-y demostrado por Cauchy en 1813.  Puede demostrarse que los números
+y demostrado por Cauchy en 1813. 
+
+\begin{theorem}[Cauchy]
+\index{Teorema de Cauchy}
+\label{thm:Cauchy}
+    Sea $m\geq3$. Todo entero positivo puede
+    expresarse como una suma de $m+2$ números $(m+2)$-poligonales.
+\end{theorem}
+
+Puede demostrarse que los números
 $(m+2)$-poligonales se definen mediante la fórmula
 \[
 	p_m(k)=\frac{mk(k-1)}{2}+k.
@@ -292,25 +304,18 @@ p_2(k)=k(k-1)+k=k^2
 	$\displaystyle{\frac{3k^2-k}{3}}$. 
 \end{exercise}
 
-Cauchy demostró en 1813 que para todo $m\geq3$ todo entero positivo puede
-expresarse como una suma de $m+2$ números $(m+2)$-poligonales. Una demostración
+Una demostración
 breve y sencilla del teorema de Cauchy fue descubierta por Nathanson en
 1987~\cite{MR866422}.
 
-Otro resultado interesante sobre números poligonales es teorema de Euler sobre
-números pentagonales. En 1750 Euler demostró que
+Otro resultado interesante sobre números poligonales es teorema de Euler. 
+En 1750 Euler demostró que
 \[
 	\prod_{n=1}^\infty(1-x^n)=1+\sum_{k=1}^\infty (-1)^k\left(x^{(3k^2-k)/2}+x^{(3k^2+k)/2}\right).
 \]
 El teorema de Lagrange sobre cuatro cuadrados y esta fórmula de Euler son ahora
-parte de la teoría de funciones theta que desarrolló Jacobi en 1830. 
-
-%\begin{theorem}[Cauchy]
-%	\index{Teorema!de Cauchy}
-%	Todo entero positivo puede escribirse como suma de $n$ números
-%	$n$-poligonales.
-%\end{theorem}
-%
+parte de una rama de la teoría de números conocida como
+\emph{la teoría de funciones theta}, rama que desarrolló Jacobi en 1830. 
 
 \section*{El problema de Waring}
 
