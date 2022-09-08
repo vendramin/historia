@@ -90,10 +90,10 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 		\begin{aligned}
 			\label{eq:Euler}
 			(a_1^2+a_2^2+a_3^2+a_4^2)(b_1^2&+b_2^2+b_3^2+b_4^2)\\
-			=(a_1 b_1 &- a_2 b_2 - a_3 b_3 - a_4 b_4)^2\\
-			&+(a_1 b_2 + a_2 b_1 + a_3 b_4 - a_4 b_3)^2\\
-			&+(a_1 b_3 - a_2 b_4 + a_3 b_1 + a_4 b_2)^2\\
-			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 + a_4 b_1)^2
+			=(a_1 b_1 &+ a_2 b_2 + a_3 b_3 + a_4 b_4)^2\\
+			&+(a_1 b_2 - a_2 b_1 + a_3 b_4 - a_4 b_3)^2\\
+			&+(a_1 b_3 - a_2 b_4 - a_3 b_1 + a_4 b_2)^2\\
+			&+(a_1 b_4 + a_2 b_3 - a_3 b_2 - a_4 b_1)^2
 		\end{aligned}
 	\end{equation}
 	implica que solamente necesitamos demostrar el teorema para los números
@@ -127,7 +127,12 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 		mp=x_1^2+x_2^2+x_3^2+x_4^2.
 	\]
 	Entonces $1\leq m\leq n<p$. En efecto, si $n\geq p$, como $a$ y $b$ son
-	$\leq(p-1)/2$, entonces $(p+1)^2\leq 2$, una contradicción. 
+	$\leq(p-1)/2$, entonces 
+	\[
+	p^2\leq np=a^2+b^2+1=2\left(\frac{p-1}{2}\right)^2+1=\frac12(p^2-2p+1)+1,
+	\]
+	lo que implica que
+	$p^2\leq -2p+2$, una contradicción.
 
 	Queremos demostrar que $m=1$. Supongamos
 	entonces que $1<m<p$. Si $m$ es par, el número 
@@ -175,7 +180,7 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 	Como $x_i\equiv y_i\bmod m$ para todo $i\in\{1,\dots,4\}$, entonces 
 	$z_i\equiv 0\bmod m$ para todo $i\in\{1,\dots,4\}$. Por ejemplo,
 	\[
-	z_1=x_1y_1-x_2y_2-x_3y_3-x_4y_4\equiv x_1^2-x_2^2-x_3^2-x_4^2\equiv 0\bmod m.
+	z_1=x_1y_1+x_2y_2+x_3y_3+x_4y_4\equiv x_1^2+x_2^2+x_3^2+x_4^2\equiv 0\bmod m.
 	\]
 	Similarmente, $z_i\equiv0\bmod m$ para todo $i\in\{2,3,4\}$. 
 	
@@ -188,10 +193,15 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 \end{proof}
 
 La identidad~\eqref{eq:Euler} fue descubierta por Euler; figura en una carta
-que le escribió a Goldbach el 4 de mayo de 1748. Puede demostrarse la
-identidad~\eqref{eq:Euler} con a un cálculo directo. La identidad fue
+que le escribió a Goldbach el 4 de mayo de 1748.
+
+\begin{exercise}
+    Demuestre la identidad \eqref{eq:Euler}. 
+\end{exercise}
+
+La identidad \eqref{eq:Euler} fue
 redescubierta por Hamilton en 1843 en sus trabajos sobre cuaterniones. Una
-manera sencilla y elegante de demostrar esta identidad se basa en que el
+manera sencilla y elegante de demostrar esta identidad (u otra más o menos similar) se basa en que el
 determinante es una multiplicación multiplicativa y que vale además la
 siguiente fórmula:
 \[
@@ -202,7 +212,7 @@ siguiente fórmula:
 		-x_4 & -x_3 & x_2 & x_1.
 	\end{pmatrix}.
 \]
-Alrededor de 1840 Graves y Cayley descubieron independientemente una identidad
+Alrededor de 1840 Graves y Cayley descubrieron independientemente una identidad
 similar que involucra suma de ocho cuadrados. 
 
 \begin{exercise}
