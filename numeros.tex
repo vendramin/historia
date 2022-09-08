@@ -112,14 +112,14 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 	\end{align*}
 	Como los elementos de $A$ son todos distintos módulo $p$ y los elementos de
 	$B$ son también todos distintos módulo $p$, tenemos que $|A|=|B|=(p+1)/2$.
-	En consecuencia, $A\cap B=\emptyset$. Existen entonces $a\in A$ y $b\in B$
+	En consecuencia, $A\cap B\ne\emptyset$. Existen entonces $a\in A$ y $b\in B$
 	tales que $0\leq a,b\leq (p-1)/2$ y $a^2=-1-b^2\bmod p$.
 
 	\medskip
 	Gracias a la afirmación anterior, sabemos que existe un entero $n\geq1$ tal
 	que $a^2+b^2+1=np$. Entonces
 	\[
-		p\leq np=a^2+b^2+1=a^2+b^2+1^2+0^2.
+		np=a^2+b^2+1=a^2+b^2+1^2+0^2.
 	\]
 	es suma de cuatro cuadrados. Sea $m$ el menor entero positivo tal que $mp$
 	es suma de cuatro cuadrados, digamos
@@ -144,7 +144,7 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 	\[
 		y_1^2+\cdots+y_4^2\equiv x_1^2+\cdots x_4^2= mp\equiv 0\bmod m,
 	\]
-	existe un entero $r\geq1$ tal que $mr=y_1^2+\cdots+y_4^2$. 
+	existe un entero $r\geq0$ tal que $mr=y_1^2+\cdots+y_4^2$. 
 	
 	\begin{claim}
 		$r\in\{1,\dots,m-1\}$. 
@@ -155,7 +155,7 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 	\[
 		m^2\mid x_1^2+\cdots+x_4^2=mp,
 	\]
-	una contradicción pues $m\nmid p$. Como entonces $r\geq 1$, 
+	una contradicción pues $m\nmid p$ y $m\ne1$. Como entonces $r\geq 1$, 
 	\[
 		mr=y_1^2+\cdots+y_4^2\leq 4\left(\frac{m}{2}\right)^2=m^2
 	\]
@@ -168,12 +168,18 @@ primera demostración de este teorema fue dada por Lagrange en 1770.
 	$y_1=y_2=y_3=y_4=m/2$. En particular, $m$ es un número par, una contradicción. 
 
 	\medskip
-	La identidad de Euler nos permite escribir
+	La identidad \ref{eq:Euler} nos permite escribir
 	\[
 		m^2rp=(mp)(mr)=(x_1^2+\cdots+x_4^2)(y_1^2+\cdots+y_4^2)=z_1^2+\cdots+z_4^2.
 	\]
 	Como $x_i\equiv y_i\bmod m$ para todo $i\in\{1,\dots,4\}$, entonces 
-	$z_i\equiv 0\bmod m$ para todo $i\in\{1,\dots,4\}$. Para cada $i\in\{1,\dots,4\}$ sea
+	$z_i\equiv 0\bmod m$ para todo $i\in\{1,\dots,4\}$. Por ejemplo,
+	\[
+	z_1=x_1y_1-x_2y_2-x_3y_3-x_4y_4\equiv x_1^2-x_2^2-x_3^2-x_4^2\equiv 0\bmod m.
+	\]
+	Similarmente, $z_i\equiv0\bmod m$ para todo $i\in\{2,3,4\}$. 
+	
+	Para cada $i\in\{1,\dots,4\}$ sea
 	$w_i=z_i/m\in\Z$. Entonces 
 	\[
 		rp=w_1^2+w_2^2+w_3^2+w_4^2,
@@ -201,7 +207,7 @@ similar que involucra suma de ocho cuadrados.
 
 \begin{exercise}
 	Demuestre que todo número $n>169$ puede escribirse como suma de exactamente
-	cinco cuadrados.
+	cinco cuadrados positivos.
 \end{exercise}
 
 \index{Fórmula!de Jacobi}
@@ -301,7 +307,7 @@ p_2(k)=k(k-1)+k=k^2
 
 \begin{exercise}
 	Demuestre que los números pentagonales son de la forma
-	$\displaystyle{\frac{3k^2-k}{3}}$. 
+	$\displaystyle{\frac{3k^2-k}{2}}$. 
 \end{exercise}
 
 Una demostración
@@ -377,9 +383,11 @@ conjeturó que $g(k)=I(k)$ para todo $k\geq2$.
 
 Entre 1909 y 1912 Wieferich y Kempner demostraron que $g(3)=I(3)=9$.  La
 primera demostración de este resultado fue de Wieferich, pero contenía algunos
-errores que posteriormente fueron reparados por Kempner. En 1940 Pillai
+errores que posteriormente fueron reparados por Kempner.    
+En 1940 Pillai
 demostró que $g(6)=I(6)=73$ y en 1964 Jing--Jung Chen demostró que
-$g(5)=I(5)=37$.  El caso de los bicuadrados es bastante más difícil: entre 1986
+$g(5)=I(5)=37$.  
+El caso de los bicuadrados es bastante más difícil: entre 1986
 y 1992 Balasubramanian, Deshouillers y Dress demostraron que $g(4)=I(4)=19$.
 Entre 1936 y 1990 varios matemáticos contribuyeron a calcular el valor exacto
 de $g(k)$ para $7\leq k\leq 471000000$. En todos estos casos, $g(k)=I(k)$.
@@ -389,21 +397,8 @@ Veamos algunos de estos valores:
 	&&g(8)=I(8)=279,
 	&&g(9)=I(9)=548.
 \end{align*}
-Otros valores de $g(k)$ pueden encontrarse en la sucesión \verb+A002804+.
-%
-%
-%\begin{center}
-%\begin{table}
-%	\begin{tabular}{|c|ccccccccc|}
-%		\hline
-%		$k$ & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\tabularnewline
-%		\hline
-%		$g(k)$ & 4 & 9 & 19 & 37 & 73 & 143 & 279 & 548 & 1079\tabularnewline
-%		\hline
-%	\end{tabular}
-%	\caption{Algunos valores para $g(k)$.}
-%\end{table}
-%\end{center}
+Otros valores de $g(k)$ pueden encontrarse en la sucesión
+\href{https://oeis.org/A002804}{A002804}.
 
 En general es muy difícil calcular con exactitud el valor de $g(k)$. Nos
 contentaremos con mostrar algunas cotas en ciertos casos particulares, que en
@@ -620,7 +615,7 @@ elemento $a_j$, entonces los $p_j$ serán todos distintos.
 
 Recordemos que los números de Fermat son los enteros de la forma
 \[
-	F_n=s^{2^n}+1.
+	F_n=2^{2^n}+1.
 \]
 En un una carta que Goldbach le escribió a Euler en julio de 1730, se demuestra
 que los números de Fermat son coprimos dos a dos. Este resultado da entonces
@@ -819,8 +814,10 @@ $\zeta(s)$.
 
 El teorema del número primo fue demostrado independiente por de la Valle
 Poussin y por Hadamard en 1896; en ambos casos, la demostración se basa en el
-estudio de propiedades analíticias de la función de variable compleja
-$\zeta(s)=\sum_{n\geq1}1/n^{s}$. En 1949, Selberg e Erd\"os encontraron,
+estudio de propiedades analíticas de la función de variable compleja
+$\zeta(s)=\sum_{n\geq1}1/n^{s}$. 
+
+En 1949, Selberg e Erd\"os encontraron,
 independientemente, una demostración elemental del teorema del número primo.
 Esta demostración elemental generó mucho revuelo en la comunidad matemática y
 muchas discusiones entre Erd\"os y Selberg, ya que ambos, de alguna forma,
@@ -854,7 +851,9 @@ asintóticamente igual a
 En la teoría de los números primos podemos encontranos con muchos resultados
 que son consecuencia de propiedades matemáticas muy profundas, y
 simultáneamente podemos también encontrarnos que resultados que difícilmente
-puedan interpretarse como algo más que una curiosidad.  En la correspondencia
+puedan interpretarse como algo más que una curiosidad.  
+
+En la correspondencia
 entre Euler y Goldbach podemos encontrarnos con el siguiente hecho notable: El
 polinomio 
 \[
@@ -864,7 +863,9 @@ da un número primo para todo $x\in\{0,\dots,40\}$. Similarmente, el polinomio
 \[
 	x^2-79x+1601
 \]
-da un número primo para todo $x\in\{0,\dots,79\}$. En 1752 Goldbach demostró,
+da un número primo para todo $x\in\{0,\dots,79\}$. 
+
+En 1752 Goldbach demostró,
 aunque con algunas deficiencias fácilmente reparables, el siguiente resultado:
 
 \begin{theorem}[Goldbach]
@@ -1091,7 +1092,9 @@ En 1919 Brun demostró que la serie
 	\sum\left(\frac1p+\frac1{p+2}\right)=\left(\frac13+\frac15\right)+\left(\frac15+\frac17\right)+\left(\frac1{11}+\frac1{13}\right)+\cdots,
 \]
 donde la suma se toma sobre todos los primos $p$ tales que $p+2$ es también un
-número primo, es convergente. En 1994, mediante el cálculo de los primos
+número primo, es convergente. 
+
+En 1994, mediante el cálculo de los primos
 gemelos menores que $10^{14}$ el matemático estadounidense Thomas Nicely
 determinó que la serie converge a 
 \[
