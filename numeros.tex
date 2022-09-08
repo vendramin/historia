@@ -71,7 +71,8 @@ demostrar que
 
 Uno de los resultados más interesantes sobre (ciertos) números poligonales es el teorema
 de Lagrange. Este teorema tiene sus orígenes en los trabajos del matemático
-griego Diofanto. Esto motivó a que en 1621 el francés Bachet mientras trabajaba
+griego Diofanto. Esto motivó a que Bachet, en 1621, 
+mientras trabajaba
 en una traducción de uno de los libros de Diofanto, conjeturara (o afirmara)
 que todo número puede escribirse como suma de a lo sumo cuatro cuadrados. La
 primera demostración de este teorema fue dada por Lagrange en 1770.
@@ -276,8 +277,8 @@ teorema de Gauss:
 	como suma de tres cuadrados, digamos $8n+3=a_1^2+a_2^2+a_3^2$. Como los
 	cuadrados módulo ocho son 0, 1 y 4, cada $a_i$ es un número impar. Como 
 	\begin{align*}
-		8n+3&=(2x+1)^2+(2y+1)^2+(2z+1)^2
-		=4(x(x+1)+y(y+1)+z(z+1))+3,
+		8n+3&=(2x+1)^2+(2y+1)^2+(2z+1)^2\\
+		&=4(x(x+1)+y(y+1)+z(z+1))+3,
 	\end{align*}
 	entonces tenemos que 
 	\[
@@ -919,7 +920,8 @@ conociera este resultado, pero nunca lo publicó.
 	\[
 		n\mapsto \left\lfloor\frac{n!\bmod (n+1)}{n}\right\rfloor (n-1)+2.
 	\]
-	genera todos los números primos. 
+	genera todos los números primos, donde
+	$\lfloor x\rfloor$ denota la parte entera de $x$. 
 \end{exercise}
 
 Estos dos ejercicios nos muestran que existen fórmulas para encontrar números
@@ -1091,7 +1093,7 @@ estos números.
 	Utilice el teorema de Wilson y 
 	demuestre que los enteros $n$ y $n+2$ son primos gemelos si y sólo si
 	\[
-		4( (n-1)!+1)\equiv -n\bmod{n(n+1)}.
+		4( (n-1)!+1)\equiv -n\bmod{n(n+2)}.
 	\]
 \end{exercise}
 
@@ -1122,25 +1124,30 @@ En 2013 Zhang demostró que existe un entero $N$ tal que existen infinitos pares
 de primos cuya diferencia es $N$; el entero $N$ es aproximadamente igual a
 $70\times10^6$.  Este trabajo tuvo gran repercusión, ya que no se conocían
 resultados de este tipo desde tiempos de Euclides.  Después de la publicación
-del trabajo de Zhang, Terence Tao propuso trabajar en conjunto dentro un
-proyecto Polymath para intentar optimizar la cota de setenta millones
-encontrada por Zhang. En 2014 un grupo de matemáticos logró reducir la cota a
-246. Tao y Maynard, independientemente, lograron reducir estas cotas
-notablemente si ciertas conjeturas de la teoría de números fueran verdaderas. 
+del trabajo de Zhang, 
+%Terence Tao propuso trabajar en conjunto dentro un
+%proyecto Polymath para intentar optimizar la cota de setenta millones
+%encontrada por Zhang. 
+en 2014, un grupo de matemáticos logró reducir la cota a
+246. 
+%Tao y Maynard, independientemente, lograron reducir estas cotas
+%notablemente si ciertas conjeturas de la teoría de números fueran verdaderas. 
 
 \subsection*{Is massively collaborative mathematics possible?}
 
-En 2009 el matemático inglés Tim Gowers anunció en su blog que llevaría acabo
+En 2009 el matemático inglés Tim Gowers anunció en su \href{https://gowers.wordpress.com/}{blog} 
+que llevaría acabo
 un experimento que hasta ese momento no existía en matemática. Inspirado en
 muchos de los proyectos abiertos que existen en internet, sugirió que se
 trabajara en conjunto para intentar resolver algún problema muy difícil de la
-matemática. El blog de Gowers es: \verb+https://gowers.wordpress.com/+ 
+matemática. 
+%El blog de Gowers es: \verb+https://gowers.wordpress.com/+ 
 
 Gowers eligió un problema que fuera acorde para ser atacado con esta idea
 colaborativa. El experimento fue un éxito: pocas semanas después del anuncio
 del experimento, la comunidad matemática supo que el problema que se había
 elegido estaba esencialmente resuelto. Proyectos como este son conocidos como
-\textbf{proyectos Polymath}. Un proyecto Polymat es entonces un cierto tipo de
+\textbf{proyectos Polymath}. Un proyecto Polymath es entonces un cierto tipo de
 colaboración entre matemáticos con la objetivo de resolver algún problema
 difícil. 
 
