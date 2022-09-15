@@ -344,14 +344,14 @@ $k$ y no del número que se está representando. Waring no tenía una demostraci
 sino que hizo esas afirmaciones únicamente basado en limitada evidencia
 numérica. 
 
-Si existe $s\in\N$ tal que todo número es suma de $\leq s$ potencias
+Si existe $s\in\Z_{\geq1}$ tal que todo número es suma de $\leq s$ potencias
 $k$-ésimas, entonces también valdrá que todo número es suma de $\leq t$
 potencias $k$-ésimas para todo $t\geq s$. Tiene sentido entonces definir $g(k)$
-como el menor $s\in\N$ tal que 
+como el menor $s\in\Z_{\geq1}$ tal que 
 \[
 	x_1^k+\cdots+x_s^k=n
 \]
-admite solución en los enteros positivos para todo $n\in\N$. El siguiente
+admite solución en los enteros positivos para todo $n$. El siguiente
 resultado fue demostrado en 1772 por Johannes Euler, hijo del famoso
 matemático: 
 
@@ -427,7 +427,7 @@ particular del problema de Waring.
 		\label{eq:Lucas}
 		6(x_1^2+x_2^2+x_3^2+x_4^2)^2=\sum_{1\leq i<j\leq 4}(x_i+x_j)^4+\sum_{1\leq i<j\leq 4}(x_i-x_j)^4
 	\end{equation}
-	Dado $n\in\N$ escribimos $n=6q+r$ con $0\leq r\leq 5$. Por el teorema de Lagrange podemos
+	Dado $n\in\Z_{\geq1}$ escribimos $n=6q+r$ con $0\leq r\leq 5$. Por el teorema de Lagrange podemos
 	escribir a $q$ como suma de cuatro cuadrados:
 	\[
 		n=6(x_1^2+x_2^2+x_3^2+x_4^2)+r=6x_1^2+6x_2^2+6x_3^2+6x_4^2+r.
@@ -471,7 +471,7 @@ de la forma
 \[
 	p(x_1^2+\cdots+x_4^2)^k=\sum_{i=1}^N p_i(a_{1i}x_1+a_{2i}x_2+a_{3i}x_3+a_{4i}x_4)^{2k}
 \]
-donde $p,p_1,p_2,p_3,p_4\in\N$ y $(a_{ij})\in\Z^{N\times 4}$, permite
+donde $p,p_1,p_2,p_3,p_4\in\Z_{\geq1}$ y $(a_{ij})\in\Z^{N\times 4}$, permite
 demostrar que 
 \[
 	g(2k)\leq g(k)(p_1+\cdots+p_N)+p-1,

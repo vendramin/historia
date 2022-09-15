@@ -74,7 +74,7 @@ La fracción continua que representa al racional $840/611$ es entonces:
 %diofánticas\dots
 
 \begin{exercise}
-	Resuelva $840+611y=76$. 
+	Resuelva $840x+611y=76$. 
 \end{exercise}
 
 \begin{exercise}
@@ -170,7 +170,7 @@ Más generalmente, si $n=3m+2$, siempre se tiene al menos una solución pues
 
 Gracias al uso de computadoras se sabe que la conjetura es verdadera para todo
 $n\leq10^{17}$.  La cantidad de soluciones para cada $n$ puede verse en la
-sucesión \verb+A073101+. Al observar esta sucesión vemos que incluso si $n$ es
+sucesión \href{https://oeis.org/A073101}{A073101}. Al observar esta sucesión vemos que incluso si $n$ es
 grande, la cantidad de soluciones es un número relativamente pequeño.  Al día
 de hoy la conjetura está aún abierta. En 2013, Elsholtz y Tao obtuvieron un
 avance importante en la conjetura de Erd\"os--Straus al lograr dar cotas para
@@ -224,6 +224,7 @@ fórmula aproximada
 	\label{eq:egipcio_circle}
 	\left(\frac89d\right)^2.
 \end{equation}
+
 No sabemos con exactitud cómo es que los egipcios consiguieron tal buena
 aproximación, se cree que fue mediante la técnica de suscribir algún polígono
 dentro del círculo.  Los papiros incluyen además cálculos exactos o aproximados
@@ -405,22 +406,16 @@ demostración del caso $n=3$ puede repararse y eso se hace utilizando ciertas
 técnicas que aparecen en los trabajos de Euler. Por esa razón, no está del todo
 mal afirmar que Euler fue el que logró demostrar el caso $n=3$. 
 
-%\begin{example}
-%	Los números\dots son irreducibles y entonces\dots 
-%	pero\dots
-%\end{example}
-
 Después de esos primeros resultados no hubo grandes avances sino hasta que
 apareció Sophie Germain. Ella observó que los primos $p$ tales que $2p+1$ es
 también un número primo eran relevantes para desarrollar una estrategia que
 permitiera atacar el problema de Fermat.  Hizo varias contribuciones en esta
-dirección que luego fueron extendidas por Legendre. Para más información sobre
-los trabajos de Germain sobre el teorema de Fermat referimos a los
-artículos~\cite{MR2415091,MR2735899}.
+dirección que luego fueron extendidas por Legendre. 
 
 \index{Primos!de Germain}
 Los números primos $p$ tales que $2p+1$ es también un número primo hoy son
-conocidos como los \textbf{primos de Germain}. Los primeros primos de Germain
+conocidos como los \textbf{primos de Germain}. 
+Los primeros primos de Germain
 son
 \[
 	2, 3, 5, 11, 23, 29, 41, 53, 83, 89, 113, 131, 173, 179, 191, 233, 239,
@@ -429,9 +424,7 @@ son
 y podemos verlos en la sucesión 
 \href{https://oeis.org/A005384}{A005384}.
 Hoy en día estos números primos
-tienen aplicaciones en criprografía. Se con
-
-jetura que existen infinitos primos
+tienen aplicaciones en criptografía. Se conjetura que existen infinitos primos
 de Germain; el mayor primo de Germain conocido es 
 \[
 	2618163402417\times 2^{1290000} - 1,
@@ -453,7 +446,7 @@ factores lineales sobre los números complejos,
 \[
 	x^n+y^n=(x+y)(x+\zeta y)(x+\zeta^2y)\cdots (x+\zeta^{n-1}y),
 \]
-donde $\zeta$ es una raíz $n$-ésima primitiva de la unidad, para luego realizar. 
+donde $\zeta$ es una raíz $n$-ésima primitiva de la unidad. 
 Según Lamé, la idea basada en aquella 
 factorización viene de Liouville. Sin embargo, fue Liouville uno de los
 primeros en observar que para que el argumento de Lamé funcionara correctamente
@@ -483,17 +476,25 @@ primos regulares impares son
 \[
     3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 41, 43, 47, 53, 61, 71, 73\dots
 \]
-y aparecen en la sucesión \verb+A007703+. No se sabe si hay infinitos primos
-regulares. En 1915 Jensen demostró que hay infinitos primos irregulares (es
-decir, no regulares).  En 1965 Siegel conjeturó que hay infinitos primos
+y aparecen en la sucesión \href{https://oeis.org/A007703}{A007703}. No se sabe si hay infinitos primos
+regulares. 
+
+En 1915 Jensen demostró que hay infinitos primos irregulares (es
+decir, no regulares).  
+
+En 1965 Siegel conjeturó que hay infinitos primos
 regulares y que representan aproximadamente el 60\% del total de los primos.
 
 A mediados del siglo XX la matemática comenzó a transitar ciertos caminos que
 unos cincuenta años más tarde permitirían resolver con total generalidad el
-problema de Fermat. En 1983 Faltings demostró que para cada $n$ existen a lo
+problema de Fermat. 
+
+En 1983 Faltings demostró que para cada $n$ existen a lo
 sumo finitas soluciones de la ecuación $x^n+y^n=z^n$, obtuvo esto como
 consecuencia de haber demostrado una conjetura hecha por Mordell en 1922 sobre
-la existencia de puntos racionales en curvas. En 1986 Frey observó que la
+la existencia de puntos racionales en curvas. 
+
+En 1986 Frey observó que la
 existencia de una terna $(a,b,c)$ de enteros positivos tales que $a^n+b^n=c^n$
 podría implicar un fenómeno muy particular, conocido como \emph{no
 modularidad}, para la curva
@@ -503,7 +504,7 @@ modularidad}, para la curva
 donde $\alpha$ y $\beta$ son ciertos enteros que dependen de $a$ y $b$. 
 Ese fenómeno de no modularidad construido a partir de posibles
 contraejemplos fue luego demostrado por Ribet en 1990. La no modularidad es, en
-realidad, imposible, resultado demostrado por Wiles en 1995.  Este resultado da
+realidad, imposible. Este resultado, demostrado por Wiles en 1995, da 
 entonces una solución completa del problema de Fermat.
 La demostración es extremadamente difícil y utiliza
 técnicas sofisticadas pertenecientes a distintas áreas de la matemática.  
@@ -918,7 +919,7 @@ Pell. El enunciado, según Wikipedia, es más o menos así:
 	moteados es igual a la sexta más la séptima parte de los blancos más los
 	amarillos.  El número de vacas blancas es igual a un tercio más un cuarto
 	de la suma de los toros negros y las vacas negras.  El número de vacas
-	negras es igual a la cuarta parte más la quinta aparte de la suma de los
+	negras es igual a la cuarta parte más la quinta parte de la suma de los
 	toros moteados más las vacas moteadas.  El número de vacas moteadas es
 	igual a la quinta más la sexta parte de la suma de los toros amarillos más
 	las vacas amarillas.  El número de vacas amarillas es igual a la sexta más
@@ -937,8 +938,7 @@ involucre a la ecuación de Pell.  Hoy en día este problema se conoce como el
 La primera solución al problema fue encontrada por Amthor en 1880. Amthor no
 pudo calcular con exactitud estos números sino apenas conocer algunos de sus
 dígitos. Estos números fueron encontrados en 1965 gracias al uso de
-computadoras. Para más información sobre este interesante problema referimos a
-los artículos~\cite{MR1513794,MR1875156,MR1238181,MR1614879,MR1344311}.
+computadoras. 
 
 %Hoy en día, para resolver la ecuación de Pell $x^2-Ny^2=1$, se considera
 %el cuerpo $\Q(\sqrt{N})$, es decir el conjunto
