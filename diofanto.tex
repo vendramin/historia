@@ -533,7 +533,7 @@ Podemos encontrarnos a la ecuación de Pell o ecuaciones similares en India y
 Grecia, donde se logró conseguir aproximaciones racionales para ciertas raíces
 cuadradas gracias a soluciones de la ecuación de Pell. 
 Cerca del año 400 a.C., el matemático
-indio Baudh\=ayana consigue aproximar al número $\sqrt{2}$ con las fracciones
+indio Baudh\=ayana consiguió aproximar al número $\sqrt{2}$ con las fracciones
 $17/12$ y $577/408$. Observemos que 
 \[
 %	\frac{17}{12}+\frac{-1}{2\times 12\times 17}=\frac{577}{408},\quad
@@ -557,8 +557,12 @@ soluciones de esta famosa ecuación.
 Se cree que Fermat tenía una demostración de que la ecuación de Pell siempre
 tiene solución en los enteros positivos; de hecho, en una carta desafió a otros
 matemáticos a que intentaran al menos resolver las ecuaciones de Pell con
-$N=61$ y $N=109$.  Euler se interesó en la ecuación de Pell al preguntarse qué
-relaciones podían existir entre distintos números poligonales.  Entre 1766 y
+$N=61$ y $N=109$.  
+
+Euler se interesó en la ecuación de Pell al preguntarse qué
+relaciones podían existir entre distintos números poligonales.  
+
+Entre 1766 y
 1769 Lagrange trabajó con esta ecuación y fue el primero en demostrar que la
 ecuación de Pell tiene soluciones no triviales siempre que $N$ no sea un
 cuadrado perfecto. 
@@ -721,14 +725,15 @@ infinita del \emph{principio del palomar}: si infinitos elementos se
 distribuyen en un número finito de cajas, entonces alguna caja contendrá
 infinitos elementos.
 
-\begin{lemma}
+\begin{theorem}[Dirichlet]
+\index{Teorema!de Dirichlet}
 	Sea $N$ un entero que no es un cuadrado.  Existe entonces un entero $k$ con
 	$|k|<2\sqrt{N}+1$ tal que la ecuación 
 	\[
 		x^2-Ny^2=k
 	\]
 	admite infinitas soluciones enteras. 
-\end{lemma}
+\end{theorem}
 
 \begin{proof}
 	Como $\alpha=\sqrt{N}$ es un número irracional, el teorema de Dirichlet nos
@@ -786,7 +791,7 @@ de Brahmagupta~\eqref{eq:brahmagupta}.
 \end{theorem}
 
 \begin{proof}
-	Gracias al lema anterior sabemos que existe $k$ tal que la ecuación
+	Gracias al teorema anterior sabemos que existe $k$ tal que la ecuación
 	$x^2-Ny^2=k$ tiene infinitas soluciones. Sean $(x_1,y_1)$ y $(x_2,y_2)$ dos
 	soluciones distintas de esta ecuación. Podemos suponer sin perder generalidad que
 	$x_1\equiv x_2\bmod{|k|}$ y que $y_1\equiv y_2\bmod{|k|}$ (pues existen
@@ -795,7 +800,7 @@ de Brahmagupta~\eqref{eq:brahmagupta}.
 	\[
 		\alpha_i=x_i+\sqrt{N}y_i.
 	\]
-	Sea $\beta=\alpha_1\alpha_2^{-1}$. Calculamos 
+	Sea $\beta=\alpha_1\alpha_2^{-1}=u+\sqrt{N}v$. Calculamos 
 	\[
 		u^2-Nv^2=N(\beta)=N(\alpha_1\alpha_2^{-1})=N(\alpha_1)N(\alpha_2)^{-1}=1 
 	\]
@@ -831,7 +836,7 @@ siguiente resultado, obtenido por Lagrange. Ya vimos que la ecuación de Pell
 siempre admite al menos una solución no trivial. Definimos
 entonces a la \textbf{solución fundamental} de la ecuación de Pell como aquella
 solución $(r,s)$ donde $s$ es el menor entero positivo posible, es
-decir que vale $0<s<v$ para toda solución $(u,v)$ de enteros
+decir que vale $0<s\leq v$ para toda solución $(u,v)$ de enteros
 positivos de la ecuación de Pell.
 
 \begin{theorem}[Lagrange]
@@ -857,7 +862,7 @@ positivos de la ecuación de Pell.
 	\]
 	y esto nos permite reescribir la desigualdad anterior como
 	\[
-		1<(a+b\sqrt{N})(r+s\sqrt{N})^{-k}<r+s\sqrt{N}.
+		1<(a+b\sqrt{N})(r-s\sqrt{N})^{k}<r+s\sqrt{N}.
 	\]
 	Sea $\alpha=u+v\sqrt{N}=(a+b\sqrt{N})(r+s\sqrt{N})^{-k}$. Entonces
 	$(u,v)$ es una solución de la ecuación de Pell
@@ -983,10 +988,13 @@ presente de la forma en la que hoy la conocemos. Por ejemplo, en los trabajos
 de Fermat aparece bajo una técnica que hoy conocemos como ``método del descenso''. 
 %la técnica de Fermat consiste básicamente
 %en asumir que si una cierta propiedad es válida para $n$, entonces será válida para $n-n_1$ y luego para $n-n_1-n_2$
+
 Un proceso similar al descenso de Fermat había sido usado por Campanus en su
 demostración de la irracionalidad del número $\frac{1+\sqrt{5}}{2}$ en su
-edición de los elementos de Euclides del año 1260. Ninguno de los matemáticos
-que utilzaron técnicas de demostración similares a la inducción consideraron
+edición de los elementos de Euclides del año 1260. 
+
+Ninguno de los matemáticos
+que utilizaron técnicas de demostración similares a la inducción consideraron
 necesario asignarle un nombre especial. Wallis es uno de los primeros
 matemáticos en utilizar oraciones como ``proceder por inducción'', aunque usaba
 una inducción incompleta. Por ejemplo, en su libro de 1656, para demostrar que
@@ -994,14 +1002,22 @@ una inducción incompleta. Por ejemplo, en su libro de 1656, para demostrar que
 	\frac{1+4+9+\cdots+n^2}{(n+1)n^2}>\frac13
 \]
 calcula los primeros seis casos y afirma que esos casos son suficiententes para
-entender qué pasa para otros valores de $n$. Jakob Bernoulli intenta en 1686
+entender qué pasa para otros valores de $n$. 
+
+Jakob Bernoulli intenta en 1686
 mejorar la técnica de Wallis y considera necesario agregar el argumento que
-permite pasar del caso $n$ al caso $n+1$. Bernoulli no consideró necesario
+permite pasar del caso $n$ al caso $n+1$. 
+
+Bernoulli no consideró necesario
 asignarle un nombre especial a este procedimiento. En un libro póstumo
 publicado en 1713 demuestra el teorema del binomio por inducción y lo hace con
-las mejoras que introdujo anteriormente. Durante muchos de los años siguientes
+las mejoras que introdujo anteriormente. 
+
+Durante muchos de los años siguientes
 los matemáticos utilizaron las técnicas de inducción de Wallis y de Bernoulli
-indistintamente. A principios del siglo XVII varios diccionarios hablan de la
+indistintamente. 
+
+A principios del siglo XVII varios diccionarios hablan de la
 inducción en matemática y mencionan el teorema del binomio como un ejemplo de
 aplicación.  En un diccionario matemático publicado en 1814 Barlow da una
 definición formal del proceso de inducción:
@@ -1014,7 +1030,9 @@ definición formal del proceso de inducción:
 En 1830, el matemático inglés Peacock considera la inducción tal como fue
 concebida por Bernoulli y la llama ``inducción demostrativa''. A partir de ese
 momento la comunidad matemática poco a poco comienza a aceptar la noción de
-inducción dada Bernoulli y olvida la inducción incompleta de Wallis.  En 1838,
+inducción dada Bernoulli y olvida la inducción incompleta de Wallis.  
+
+En 1838,
 De Morgan publicó un artículo sobre la inducción y la denominó ``inducción
 matemática''. Muchos autores de libros de texto popularizaron estos nombres.
 El famoso tratado sobre álgebra de Chrystal, por ejemplo, utiliza ``inducción
