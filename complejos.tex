@@ -74,7 +74,7 @@ donde $a$ y $b$ son números positivos, que ilustraremos a continuación.
 	\[
 		u^6-24u^3-27=0. 
 	\]
-	De aquí obtenemos $u^3=12+\sqrt{171}$, $v^3=12-\sqrt{171}$. En
+	De aquí obtenemos $u^3=12+\sqrt{171}$, $v^3=-12+\sqrt{171}$. En
 	consecuencia, 
 	\[
 		x=u-v=\sqrt[3]{12+\sqrt{171}}-\sqrt[3]{12-\sqrt{171}}.
@@ -221,7 +221,7 @@ incorrectamente atribuida a de Moivre:
 \end{equation}
 
 Ya vimos que muchos descubrimientos matemáticos llevan el nombre incorrecto. La
-fórmula~\ref{eq:deMoivre} no es una excepción, ya que este matemático nunca
+fórmula~\eqref{eq:deMoivre} no es una excepción, ya que este matemático nunca
 escribió aquella fórmula sino que encontró una fórmula bastante similar:
 alrededor de 1730 dio una fórmula para calcular $(\cos\phi+i\sin\phi)^{1/n}$.
 De hecho, 
@@ -382,7 +382,7 @@ coordenada.
 Hamilton, Peacock, De Morgan y Graves intentaron extender el concepto de
 número. Todos tenían en mente las inclusiones
 \[
-	\N\subseteq\Q\subseteq\R\subseteq\C
+	\N\subseteq\Z\subseteq\Q\subseteq\R\subseteq\C
 \]
 y ciertas condiciones que los sistemas numéricos debían verificar:
 asociatividad, conmutatividad, propiedades distributivas, etcétera. Estas
@@ -442,10 +442,16 @@ números complejos.
 Naturalmente estos descubrimientos tentaron a muchos matemáticos a buscar
 $n$-uplas de números reales que junto con la suma usual de $\R^n$, una
 multiplicación distributiva y una norma multiplicativa, dieran lugar a nuevos
-sistemas numéricos. En 1884 Weiestrass demostró que los números complejos
-resultan ser el único sistema numérico con multiplicación conmutativa.  En 1878
-Frobenius demostró que los únicos sistemas numéricos cuya multplicación es
-asociativa son los números reales, los complejos o los cuaterniones.  En 1898
+sistemas numéricos. 
+
+En 1884 Weiestrass demostró que los números complejos
+resultan ser el único sistema numérico con multiplicación conmutativa.  
+
+En 1878
+Frobenius demostró que los únicos sistemas numéricos cuya multiplicación es
+asociativa son los números reales, los complejos o los cuaterniones.  
+
+En 1898
 Hurwitz demostró que si se tiene una identidad de la forma
 \[
 	(a_1^2+a_2^2+\cdots+a_n^2)(b_1^2+b_2^2+\cdots+b_n^2)
@@ -453,6 +459,7 @@ Hurwitz demostró que si se tiene una identidad de la forma
 \]
 donde las $c_i$ son funciones bilineales en las $a_j$ y las $b_k$, entonces
 $n\in\{1,2,4,8\}$. 
+
 El teorema de Hurwitz tiene una linda aplicación: 
 
 \begin{quote}
@@ -463,7 +470,7 @@ y además
 \[
 	\|v\times w\|^2=\|v\|^2\|w\|^2-\langle v,w\rangle^2,
 \]
-donde $\|v\|^2=\langle v,\rangle$. Entonces $n\in\{3,7\}$. 
+donde $\|v\|^2=\langle v,v\rangle$. Entonces $n\in\{3,7\}$. 
 \end{quote}
 
 La demostración de este resultado es bastante sencilla si disponemos del
