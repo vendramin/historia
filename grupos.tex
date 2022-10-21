@@ -199,19 +199,19 @@ publicó una serie de teoremas sobre grupos de permutaciones, hoy los conocemos 
 los \emph{teoremas de Sylow}. En 1887 Frobenius observó que, como todo grupo abstracto es un grupo de permutaciones, los teoremas de Sylow también valen para grupos abstractos. Sin embargo, fue más lejos. Publicó una demostración de los teoremas de Sylow para grupos abstractos, aunque en principio no fuera necesario. La abstracción juega acá un papel importante, esas ideas resultaron fundamentales 
 para el desarrollo de la teoría de grupos. 
 
-No podemos hacer un estudio exhaustivo de la historia de la teoría de los
-grupos finitos, pero sí debemos mencionar algunos resultados muy importantes
-dentro del desarrollo de la matemática del siglo XX.  Mencionamos que la noción
-de resolubilidad es aquella que nos permite estudiar soluciones por radicales
-de ecuaciones. De hecho, sabemos que en general no podremos encontrar una
-fórmula para resolver la ecuación de grado $5$ por radicales pues el grupo
-$\Sym_5$ no es resoluble.  En \dots Burnside demostró que todo grupo de orden
-$p^a q^b$ es resoluble y conjeturó que todo grupo de orden impar es resoluble.
-Esto fue demostrado en \dots por Feit y Thompson. La demostración es muy
-difícil y ocupa un volumen completo del Pacific Journal of Mathematics.  Este
-teorema es uno de los pasos fundamentales hacia una clasificación de los grupos
-simples finitos.  Recientemente este teorema fue verificado formalmente
-por\dots en Coq\dots
+%No podemos hacer un estudio exhaustivo de la historia de la teoría de los
+%grupos finitos, pero sí debemos mencionar algunos resultados muy importantes
+%dentro del desarrollo de la matemática del siglo XX.  Mencionamos que la noción
+%de resolubilidad es aquella que nos permite estudiar soluciones por radicales
+%de ecuaciones. De hecho, sabemos que en general no podremos encontrar una
+%fórmula para resolver la ecuación de grado $5$ por radicales pues el grupo
+%$\Sym_5$ no es resoluble.  En \dots Burnside demostró que todo grupo de orden
+%$p^a q^b$ es resoluble y conjeturó que todo grupo de orden impar es resoluble.
+%Esto fue demostrado en \dots por Feit y Thompson. La demostración es muy
+%difícil y ocupa un volumen completo del Pacific Journal of Mathematics.  Este
+%teorema es uno de los pasos fundamentales hacia una clasificación de los grupos
+%simples finitos.  Recientemente este teorema fue verificado formalmente
+%por\dots en Coq\dots
 
 \section*{La clasificación de grupos simples finitos}
 
@@ -265,8 +265,8 @@ pensar en un posible plan de acción para clasificar grupos simples. El método
 se basaría en clasificar grupos simples sabiendo de antemano algo sobre sus 
 involuciones.  
 En 1963 Feit y Thompson demostraron que todo grupo simple no abeliano tiene orden par, 
-un resultado que había sido conjeturado por Burnside en 1906. La demostración un
-volumen completo de la revista \emph{Pacific Journal of Mathematics} de casi
+un resultado que había sido conjeturado por Burnside en 1906. La demostración ocupa
+un volumen completo de la revista \emph{Pacific Journal of Mathematics} de casi
 trescientas páginas. A partir de estos resultados y de las técnicas desarrolladas
 por Feit y Thompson, y gracias a un trabajo bastante más experimental 
 que el que se vio en otras etapas de la matemática, 
@@ -276,7 +276,7 @@ MacLaughlin, Suzuki, Conway, Held, Fischer, Lyons, O'Nan, Rudavalis. En muchos
 casos, para demostrar la existencia de tales grupos fue necesario recurrir a
 complicados cálculos computacionales. En algún momento los especialistas en
 teoría de grupos encontraron evidencia de la existencia de un nuevo grupo
-simple, esta vez mostruosamente grande, de orden 
+simple, esta vez monstruosamente grande, de orden 
 \[
 	2^{46}\times 3^{20}\times 5^9\times 7^6\times 11^2\times 13^3\times 17\times 19\times 23\times 29\times 31\times 41\times 47\times 59\times 71. 
 \]
@@ -295,7 +295,7 @@ simetrías de un cierto espacio de dimensión 196883.
 
 El enunciado del teorema de la clasificación de grupos simples estaba ahí y
 solo era necesario agregar 26 excepciones a las familias que mencionamos
-anteriormente. Entre estas excepciones está el monstruo.  En 1972 Gorenstein
+anteriormente. Entre estas excepciones está el monstruo. En 1972 Gorenstein
 propuso un programa para demostrar esta clasificación. 
 
 Para algunos, la clasificación estaba completa en 1974. No para toda la
@@ -309,51 +309,24 @@ prolija y precisamente cada uno de los pasos necesarios de aquella demostración
 Gracias a los trabajos de varios matemáticos tales como Aschbacher, Mason y
 Griess, donde casos difíciles eran tratados exitosamente, Gorenstein declaró en
 1981 que la clasificación de los grupos simples estaba completa. Los trabajos
-de Aschbacher y Griess fueron sometidos a referato y luego publicados, pero no
-así el de Mason, que ocupaba unas ochocientas páginas.  En 1989, Aschbacher
-observó que aquel trabajo estaba incompleto y que quedaban allí varios casos
+de Aschbacher y Griess fueron sometidos a revisión y luego publicados, pero no
+así el de Mason, que ocupaba unas ochocientas páginas.  En 1989 Aschbacher
+observó que el trabajo de Mason estaba incompleto y que quedaban allí varios casos
 sin resolverse. En 1992 Aschbacher anunció que había logrado completar con
 éxito los detalles faltantes en el trabajo de Mason, aunque esto tampoco fue
 publicado. En 1996 Aschbacher y Smith comenzaron a trabajar en la demostración 
-estos resultados, esto fue publicado en dos volúmenes en 2004. Gracias
-de este resultado, la comunidad matemática aceptó finalmente la clasificación de los
+de estos resultados; esto finalmente fue publicado en dos volúmenes en 2004. Gracias
+de estos dos volúmenes, 
+la comunidad matemática aceptó finalmente la clasificación de los
 grupos simples. 
 
-%Sin embargo, hasta el día de la fecha, cada trabajo donde se
-%demuestra un teorema que depende de la clasificación contiene alguna fuerte
-%indicación de que el resultado depende de la clasificación de los grupos
-%simples.
-
-
-
-Las primeras constribuciones a la clasificación de grupos simples son los
-trabajos de Galois de 1830, el tratado de Jordan de 1870 y un teorema de
-Burnside de 1899 donde se clasifica una familia infinita de grupos simples. El
-último resultado necesario para la clasificación de grupos simples fue
-el que publicaron Aschbacher y Smith en 2004. Hoy en día, la
-comunidad matemática considera que el teorema de clasificación de los grupos
-simples es un hecho demostrado, aunque no haya quizá nadie que conozca todos
-los pasos de la demostración, que involucra el trabajo de cientos de
+Hoy en día, la comunidad matemática considera que el 
+teorema de clasificación de los grupos
+simples es un hecho demostrado, aunque quizá no haya alguien que conozca todos
+los pasos de la demostración. Como ya mencionamos, la demostración 
+de la clasificación de grupos simples finitos involucra el trabajo de cientos de
 matemáticos a lo largo de más de cien años y más de diez mil páginas de
 revistas científicas. 
-
-
-% La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
-% importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
-% libro posee una modesta lista con infinitos grupos simples. En un trabajo
-% publicado en 1892, H\"older remarcó que sería de gran interés disponer de la
-% clasificación de grupos simples, ya qu estos grupos funcionan como pilares básicos de la teoría de grupos. 
-% Eso hizo que poco tiempo después Cole determinara todos los grupos simples de tamaño $\leq600$, y en particular
-% demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
-% igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
-% Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
-% el famoso principio del palomar, 
-% extendieron estos trabajos y lograron construir todos los grupos
-% simples de orden $\leq2001$. 
-
-% En 1895 Burnside y Frobenius demostraron independientemente que
-% los únicos grupos simples no abelianos cuyos órdenes poseen a lo sumo cinco factores primos
-% son los grupos $\PSL_2(p)$ para $p\in\{5,7,11,13\}$. 
 
 % En 1900 Burnside demostró que si $G$ es un grupo no abeliano y simple de orden
 % impar, entonces el orden de $G$ es producto de al menos siete primos. 
@@ -403,7 +376,33 @@ revistas científicas.
 
 \section*{Formalización}
 
-hablar de Coq o equivalentes y mencionar qué teoremas fueron demostrados y cuáles son los objetivos
+El teorema de clasificación de los grupos simples finitos y las dificultad
+evidente de chequear la demostración es otro punto que sugiere nuevas presentaciones
+del rigor en la matemática. 
+
+En la matemática actual las computadores resultan una herramienta fundamental. Una razón 
+simple de reconocer es la potencia de cálculo que tienen los ordenadores actuales. 
+
+Existe una corriente que trabaja incansablemente en el desarrollo de software  
+que permita verificar demostraciones matemáticas. Algunos ejemplos son 
+\href{https://coq.inria.fr/}{Coq}, \href{https://hol-theorem-prover.org/}{HOL}, 
+\href{https://isabelle.in.tum.de/}{Isabelle} 
+y \href{https://leanprover.github.io/}{Lean}. 
+
+Hay cierta controversia con las demostraciones hechas con computadoras. Las objeciones
+son variadas. Una, por ejemplo, es la 
+falta de belleza matemática en demostraciones formales hechas por computadora. Otra
+objeción está basada en que una demostración formal por computadora requiere muchísimos pasos
+y es, por lo tanto, muy larga e imposible de ser verificada o leída por humanos. 
+
+Por otro lado, una verificación formal por computadora de una demostración complicada
+podría ser de gran ayuda, en particular en casos como el de la clasificación de grupos
+simples. En este sentido, se hicieron muchos avances. Por ejemplo, 
+en se verificó formalmente el teorema de Feit--Thompson, ese que ocupa un volumen
+completo de trescientas páginas. Muy posiblemente, en unos años 
+se anunciará la verificación formal de la clasificación de grupos simples. El tiempo 
+dirá si las verificaciones formales de teoremas pasarán a ser parte de una nueva concepción
+del rigor en la matemática. 
 
 \section*{La abstracción en la matemática}
 

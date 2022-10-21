@@ -1,10 +1,9 @@
 \chapter{Ecuaciones algebraicas}
 
-En este capítulo nos concentraremos en algunos aspectos, elegidos más o menos
-caprichosamente, sobre la teoría de ecuaciones algebraicas.  Empezaremos con
+En este capítulo nos concentraremos en algunos aspectos 
+sobre la teoría de ecuaciones algebraicas. Empezaremos con
 las ecuaciones lineales. En la antigua matemática china nos encontraremos con
-un método para resolver sistemas ecuaciones lineales que hoy con nuestra
-notación escribimos como
+un método para resolver sistemas ecuaciones lineales tipo 
 \begin{equation}
 \label{eq:sistema_lineal}
 \begin{aligned}
@@ -15,16 +14,18 @@ notación escribimos como
 \end{aligned}
 \end{equation}
 
-Sorprendentemente, en el famoso libro \framebox{?}, nos encontraremos con un
-método esencialmente igual al que hoy conocemos como el \emph{método de
-eliminación de Gauss}, que nos permite reescribir el
+Sorprendentemente, el método que se describe en los textos que se conservan 
+de aquella época nos muestra un método de resolución 
+esencialmente igual al que hoy conocemos como el \emph{método de
+eliminación de Gauss}. Recordemos que este método 
+nos permite reescribir el
 sistema~\eqref{eq:sistema_lineal} como
 \begin{equation*}
 \begin{aligned}
 	&a'_{11}x_1+a'_{12}x_2+\cdots+a'_{1n}x_n=b'_1,\\
 	&\phantom{a'_{21}x_1+}a'_{22}x_2+\cdots+a'_{2n}x_n=b'_2,\\
 	&\phantom{a'_{11}x_1+a'_{22}x_2+\cdots+a'_{2n}x_n}\vdots\\
-	&\phantom{a'_{n1}x_1+a_{n2}x_2+\cdots+}a'_{nn}x_n=b'_n.
+	&\phantom{a'_{n1}x_1+a_{n2}x_2+\cdots+}a'_{nn}x_n=b'_n,
 \end{aligned}
 \end{equation*}
 para poder despejar $x_n$ de la $n$-ésima ecuación, después despejar 
@@ -32,35 +33,40 @@ $x_{n-1}$ de la ecuación $(n-1)$-ésima, y así sucesivamente hasta
 despejar $x_1$ de la primera ecuación. 
 
 En el siglo XII se descubrió que este método podía adaptarse para
-resolver algunos sistemas polinomiales en dos o más variables. 
+resolver algunos sistemas polinomiales en dos o más variables. Veamos
+un ejemplo concreto en el siguiente ejercicio:  
 
-\begin{example}
-	Supongamos que nos interesa resolver
+\begin{exercise}
+	Resuelva 
 	el sistema polinomial
 	\begin{align*}
 		 x^2+xy+y^2&=1\\
 		 4x^2+3xy+2y^2&=3.
 	\end{align*}
-	Si multiplicamos la segunda ecuación por dos y restamos\dots
-\end{example}
+\end{exercise}
 
+El problema presentado en el ejercicio anterior requiere
+saber resolver ecuaciones cuadráticas. 
 
 \section*{La ecuación cuadrática}
 
 Cerca del año 2000 a. C. 
 los babilónicos sabían cómo resolver 
-el siguiente sistema de ecuaciones
+sistema de ecuaciones de la forma 
 \begin{align*}
 	x+y&=p,\\
-	xy&=q
+	xy&=q.
 \end{align*}
-que podemos reescribir como $x^2+q=px$. Las soluciones son 
+De hecho, podemos reescribir al sistema 
+como $x^2+q=px$. Las soluciones son entonces 
 \[
 	x=\frac{p}{2}+\sqrt{(p/2)^2-q},\quad
 	y=\frac{p}{2}-\sqrt{(p/2)^2-q},
 \]
 siempre que ambos sean números positivos\footnote{Recordemos que los
-babilónicos no admitían números negativos.}.  Veamos un ejemplo concreto que
+babilónicos no admitían números negativos.}.  
+
+Veamos un ejemplo concreto que
 nos muestre cómo funciona aquel método concebido en tiempos de los babilónicos. Es interesante remarcar
 que el método tal como lo presentaban los babilónicos era apenas ilustrado con
 números, pues en aquellos tiempos no existía el álgebra, y no había indicaciones que 
@@ -102,8 +108,10 @@ explicaran por qué aquel procedimiento funcionaba correctamente.
 	\]
 	
 	Este ejemplo fue tomado del libro~\cite{MR1094813} de Boyer sobre historia
-	de la matemática y está basado en el contenido de una tabla de barro
-	babilónica que se conserva en Yale.  Debemos mencionar que los babilónicos
+	de la matemática y está basado en el contenido de una tabla de arcilla 
+	babilónica que se conserva en la universidad de Yale.  
+	
+	Debemos mencionar que los babilónicos
 	escribían sus números en base sesenta, así que el sistema de ecuaciones que
 	resolvimos bien podríamos haberlo presentado como 
 	\begin{align*}
@@ -115,8 +123,9 @@ $7|30$ al número $7+30\cdot 60^{-1}=15/2$. Obviamente esta no es la notación
 que usaban los babilónicos.
 \end{example}
 
-Brahmagupta dio un método para resolver la ecuación cuadrático. Como no
-disponía del álgebra, se vio obligado a explicar aquel método con palabras. El
+Brahmagupta dio un método para resolver la ecuación cuadrática. Como no
+disponía del álgebra, se vio obligado a explicar 
+aquel método con palabras. El
 método muestra que 
 \[
 x=\frac{\sqrt{4ac+b^2}-b}{2s}
@@ -125,16 +134,17 @@ es la solución de la ecuación cuadrática
 \[
 	ax^2+bx=c.
 \]
-Dio además otra fórmula para las raíces:
+Brahmagupta dio además otra fórmula para las raíces:
 \[
-	x=\frac{\sqrt{ac+(b/2)^2}-(b/2}{a}.
+	x=\frac{\sqrt{ac+(b/2)^2}-b/2}{a}.
 \]
 Hoy en día, nuestra habilidad para manipular expresiones algebraicas nos
 permite demostrar muy fácilmente que las dos expresiones encontradas por
 Brahmagupta son equivalentes.
 
 Heath observó que la proposición 28 del libro VI de Euclides también propone un
-método para resolver la ecuación cuadrática y ese método es demostrado
+método para resolver la ecuación cuadrática. En los libros de Euclides, 
+ese método es demostrado
 rigurosamente.
 
 %\begin{example}
@@ -142,14 +152,16 @@ rigurosamente.
 %	$x^2+10x=39$. 
 %\end{example}
 
-
 La palabra ``álgebra'' viene del árabe. La introdujo el matemático Al-Juarismi
-en el año 830 en un libro sobre la teoría de ecuaciones.  En este libro mostró
+\footnote{La palabra ``algoritmo" proviene de una versión latinizada del nombre 
+Al-Juarismi.} en el año 830 en un libro sobre la teoría de ecuaciones. 
+En este libro mostró
 cómo resolver ecuaciones de grado dos en una variable, algo que era conocido ya
-por los babilonios.  Si bien el matemático Brahmagupta llegó mucho más lejos en
-sus estudios sobre algebraicos (en la notación y en la introducción de los
-números negarivos, por ejemplo), el trabajo de Al-Juarismi tuvo mucha
-repercusión. 
+por los babilonios.  Si bien Brahmagupta llegó mucho más lejos en
+sus estudios algebraicos (en la notación y en la introducción de los
+números negaritos, por ejemplo), el trabajo de Al-Juarismi tuvo mucha
+repercusión. De hecho, Al-Juarismi es considerado uno de los 
+fundadores del álgebra. 
 
 \section*{Las ecuaciones de grado superior}
 
@@ -192,7 +204,7 @@ obligado a estudiar varios casos distintos de la ecuación cúbica. Veamos uno e
 particular para entender cómo funciona el método. Nos interesa resolver la
 ecuación cúbica
 \[
-x^2+ax^2+bx+c=0.
+x^3+ax^2+bx+c=0.
 \]
 Vamos a realizar la sustitución $x=y-a/3$ y vamos a elegir $a$ para transformar
 nuestra ecuación cúbica en una ecuación de la forma
@@ -227,9 +239,7 @@ que es una ecuación cuadrática en $u^3$, con raíces
 	Resuelva la ecuación $y^3=6y+6$.	
 \end{exercise}
 
-%\section*{La ecuación de grado cuatro}
-
-Un estudiante de Cardano de apellido Ferrari fue el que logró resolver la
+Ferrari, un estudiante de Cardano, fue el que logró resolver la
 ecuación de grado cuatro de la forma
 \[
 	x^4+ax^3+bx^2+cx+d=0
@@ -241,6 +251,7 @@ cúbicas de funciones racionales en los coeficientes.
 El descubrimiento de Ferrari hizo que la comunidad matemática intentara
 resolver la ecuación de grado cinco mediante el uso de fórmulas similares, aunque
 prácticamente nada interesante fue posible obtenerse. 
+
 Quizá uno de los mejores resultados fue el que obtuvo Bring en 1786 al lograr 
 reducir la ecuación general de grado cinco a una expresión de la forma
 \[
@@ -259,8 +270,9 @@ posible resolver la ecuación general de grado cinco mediante el uso de fórmula
 que involucraran raíces de funciones racionales de los coeficientes. Sí, la
 demostración presentada por Ruffini tenía algunos problemas y es por eso que el
 crédito de aquel sorprendente resultado se lo quedó Abel en 1826.  En 1831
-Galois llevó estas ideas muy lejos y logró demostrar que si en general no puede
-resolverse mediante radicales. En el camino, concibió una importantísima rama
+Galois llevó estas ideas muy lejos y logró demostrar que, en general, no puede
+resolverse mediante expresiones que involucren las operaciones usuales y 
+radicales. En el camino, Galois concibió una importantísima rama
 de la matemática: la teoría de grupos.
 
 Es importante destacar que no significa que la ecuación general de grado cinco
@@ -268,6 +280,7 @@ no pueda resolverse. Lo que Ruffini, Abel y Galois demostraron es que nunca
 vamos a poder encontrar expresiones por radicales para la solución, es decir
 que no existen fórmulas para la solución en términos de raíces de funciones
 racionales de los coeficientes. ¡Hay otras formas de resolver esta ecuación!
+
 En 1858 Hermite resolvió la ecuación general de grado cinco mediante el uso de
 funciones trascendentes, similar a lo que Viéta había hecho con la ecuación
 cúbica y las funciones trigonométricas. 
