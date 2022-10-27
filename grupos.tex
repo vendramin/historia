@@ -4,7 +4,9 @@
 
 \index{Teorema!de Fermat}
 \index{Teorema!del binomio}
-El pequeño teorema de Fermat afirma que si $p$ es un número primo y $a\in\Z$ es
+El pequeño teorema de Fermat afirma que si $p$ es un número primo y $a\in\Z$ 
+entonces $a^p\equiv a\bmod p$. Nótese que si $a$ 
+es
 coprimo con $p$, entonces $a^{p-1}\equiv 1\bmod p$. No sabemos bien cuál fue la
 demostración que encontró Fermat, pero Weil sugiere que fue la siguiente.
 Primero se demuestra el resultado el en caso en que $a=2$ de la siguiente
@@ -46,7 +48,7 @@ y que esta fórmula alcanza para demostrar lo que se necesita.
 
 \begin{exercise}
 	\index{Teorema!multinomial}
-	Enuncie y demuestre el teorema multinomial. Una demostración
+	Enuncie el teorema multinomial. Una demostración
 	probabilística puede verse en \cite{MR3453544}.
 \end{exercise}
 
@@ -85,7 +87,7 @@ el caso $n=5$. La tabla de multiplicación viene dada por
 	  \hline
 	1 & 1 & 2 & 3 & 4 \\
 	2 & 2 & 4 & 1 & 3 \\
-	3 & 1 & 1 & 4 & 2 \\
+	3 & 3 & 1 & 4 & 2 \\
 	4 & 4 & 3 & 2 & 1
 \end{tabular}
 \end{center}
@@ -128,7 +130,8 @@ al estudiar propiedades de los enteros módulo $n$.
 
 La palabra
 \emph{grupo} fue concebida por Galois. Para él, un \emph{grupo} era un
-conjunto de permutaciones cerrado por multiplicación. 
+conjunto de permutaciones (o biyecciones) cerrado por composición. 
+
 Expliquemos qué es un \emph{grupo de permutaciones}. Hagamos un caso sencillo, el de las funciones 
 $\{1,2,3\}\to\{1,2,3\}$ que son biyectivas. El conjunto $\Sym_3$ de funciones
 biyectivas $\{1,2,3\}\to\{1,2,3\}$ forma un grupo con la composición de funciones. Podemos escribir
@@ -163,10 +166,10 @@ que contiene a la identidad. Como ejemplo, vamos a calcular los subgrupos de $\S
     \[
 	\Sym_3=\{\id,(12),(13),(23),(123),(132)\}
     \]
-    Si $S$ es un subgrupo, entonces $\id\in S$. Dejamso como ejercicio
+    Si $S$ es un subgrupo, entonces $\id\in S$. Dejamos como ejercicio
     verificar que los únicos subgrupos de $\Sym_3$ son
     \[
-    \{\id\},\{\id,(12)\},\{\id,(13)\},\{\id,(23)\},\{\id,(!23),(132)\},\Sym_3.
+    \{\id\},\{\id,(12)\},\{\id,(13)\},\{\id,(23)\},\{\id,(123),(132)\},\Sym_3.
     \]
 \end{example}
 
@@ -179,8 +182,11 @@ Los primeros estudios sistemáticos sobre grupos de permutaciones se deben a Cau
 que hoy vemos en cursos de teoría de grupos. Por ejemplo, Cauchy calculó 
 los subgrupos de $\Sym_3$ que vimos en el ejemplo \ref{exa:S3}. 
 
-Los grupos abstractos fueron concebidos por Cayley en 1954, que parece se
-inspiró en los trabajos abstractos de Boole. Si bien la idea de Cayley 
+Los grupos abstractos fueron concebidos por Cayley en 1854, que parece se
+inspiró en los trabajos abstractos de Boole. Un grupo abstracto es un conjunto
+$G$ con una operación $G\times G\to G$, $(x,y)\mapsto xy$, que satisface
+ciertas propiedades (asociatividad, existencia del elemento neutro 
+y existencia de inverso). Si bien la idea de Cayley 
 resultó fundamental, no tuvo impacto en aquel momento. Cayley volvió a trabajar
 con grupos abstractos varios años más tarde, en 1878, esta vez con mucho éxito. 
 Otra definición abstracta de grupo 
@@ -191,7 +197,7 @@ Cayley demostró que si $G$ es un grupo finito, entonces
 $G$ es esencialmente un subgrupo de algún $\Sym_n$. 
 
 En 1882 Von Dyck estudió grupos abstractos (no necesariamente finitos) y muchas de sus propiedades. En 1883 publicó trabajos donde estudió aplicaciones de la teoría de
-grupos en otras áreas de la matemática: geometría, teoría de números, simetrías y geometría, grupos de permutaciones. Pueden entenderse estos trabajos como el primer anuncio
+grupos en otras áreas de la matemática: teoría de números, simetrías y geometría, grupos de permutaciones. Pueden entenderse estos trabajos como el primer anuncio
 acerca de la importancia que iban a tener los grupos en el desarrollo de la matemática.  
 
 Resultados sobre grupos concretos son en realidad resultados generales (el teorema de Lagrange es un claro ejemplo de este fenómeno). Hay otro ejemplo que es digno de mencionar. En 1872 Sylow
@@ -226,7 +232,7 @@ libro posee una modesta lista con infinitos grupos simples. En un trabajo
 publicado en 1892, H\"older remarcó que sería de gran interés disponer de la
 clasificación de grupos simples, ya que estos grupos funcionan como pilares básicos de la teoría de grupos. 
 Eso hizo que poco tiempo después Cole determinara todos los grupos simples de tamaño $\leq600$, y en particular
-demostrara que $\SL_2(2)$, el grupo de matrices de $2\times 2$ con determinante
+demostrara que $\SL_3(2)$, el grupo de matrices de $2\times 2$ con determinante
 igual a uno y coeficientes en el cuerpo de dos elementos, es un grupo simple. En 1900 
 Miller y Ling, casi sin herramientas, apenas utilizando los teoremas de Sylow y 
 el famoso principio del palomar, 
@@ -264,10 +270,13 @@ En 1955 Brauer y Fowler demostraron un teorema que permitió a los investigadore
 pensar en un posible plan de acción para clasificar grupos simples. El método 
 se basaría en clasificar grupos simples sabiendo de antemano algo sobre sus 
 involuciones.  
+
 En 1963 Feit y Thompson demostraron que todo grupo simple no abeliano tiene orden par, 
 un resultado que había sido conjeturado por Burnside en 1906. La demostración ocupa
 un volumen completo de la revista \emph{Pacific Journal of Mathematics} de casi
-trescientas páginas. A partir de estos resultados y de las técnicas desarrolladas
+trescientas páginas. 
+
+A partir de estos resultados y de las técnicas desarrolladas
 por Feit y Thompson, y gracias a un trabajo bastante más experimental 
 que el que se vio en otras etapas de la matemática, 
 fue posible construir nuevos grupos simples, grupos que en
