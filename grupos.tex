@@ -132,7 +132,8 @@ La palabra
 \emph{grupo} fue concebida por Galois. Para él, un \emph{grupo} era un
 conjunto de permutaciones (o biyecciones) cerrado por composición. 
 
-Expliquemos qué es un \emph{grupo de permutaciones}. Hagamos un caso sencillo, el de las funciones 
+Expliquemos qué es un \emph{grupo de permutaciones}. 
+Hagamos un caso sencillo, el de las funciones 
 $\{1,2,3\}\to\{1,2,3\}$ que son biyectivas. El conjunto $\Sym_3$ de funciones
 biyectivas $\{1,2,3\}\to\{1,2,3\}$ forma un grupo con la composición de funciones. Podemos escribir
 a los elementos de $\Sym_3$ como
@@ -142,23 +143,11 @@ a los elementos de $\Sym_3$ como
 
 El símbolo $(12)$ representa a la función tal que $1\mapsto 2$, $2\mapsto 1$ y $3\mapsto 3$. Similarmente, $(123)$ es la función tal que $1\mapsto 2$, $2\mapsto 3$ y $3\mapsto 1$. 
 
-% Escribir como matrices de $3\times 3$. 
-% Por ejemplo
-% $(123)$ puede representarse por la matriz
-% \[
-% 	P=\begin{pmatrix}
-% 		0 & 0 & 1\\
-% 		1 & 0 & 0\\
-% 		0 & 1 & 0
-% 	\end{pmatrix}
-% \]
-% Luego $P(x,y,z)=\dots$. 
 
-% El signo de una permutación puede verse como el determinante de esta matriz de permutación. 
-
-Un \emph{subgrupo} de un grupo de permutaciones es subconjunto de permutaciones 
-cerrado por multiplicación y 
-que contiene a la identidad. Como ejemplo, vamos a calcular los subgrupos de $\Sym_3$.
+Un \emph{subgrupo} de un grupo de permutaciones es subconjunto de biyecciones  
+cerrado por composición y 
+que contiene a la identidad. 
+Como ejemplo, vamos a calcular los subgrupos de $\Sym_3$.
 
 \begin{example}
 \label{exa:S3}
@@ -186,13 +175,19 @@ Los grupos abstractos fueron concebidos por Cayley en 1854, que parece se
 inspiró en los trabajos abstractos de Boole. Un grupo abstracto es un conjunto
 $G$ con una operación $G\times G\to G$, $(x,y)\mapsto xy$, que satisface
 ciertas propiedades (asociatividad, existencia del elemento neutro 
-y existencia de inverso). Si bien la idea de Cayley 
+y existencia de inverso). 
+
+Si bien la idea de Cayley 
 resultó fundamental, no tuvo impacto en aquel momento. Cayley volvió a trabajar
 con grupos abstractos varios años más tarde, en 1878, esta vez con mucho éxito. 
-Otra definición abstracta de grupo 
-también apareció en en 1858, en las clases de Dedekind sobre teoría de Galois. Para conectar
-la definición abstracta de grupo con los grupos de permutaciones concretos con los que 
-se trabajaba, 
+
+En 1858 apareció otra definición abstracta de grupo, esta vez 
+en las clases de Dedekind sobre teoría de Galois. 
+
+Para conectar
+la definición abstracta de grupo con los 
+grupos de permutaciones concretos con los que 
+se trabajaba en aquella época, 
 Cayley demostró que si $G$ es un grupo finito, entonces
 $G$ es esencialmente un subgrupo de algún $\Sym_n$. 
 
@@ -200,24 +195,12 @@ En 1882 Von Dyck estudió grupos abstractos (no necesariamente finitos) y muchas
 grupos en otras áreas de la matemática: teoría de números, simetrías y geometría, grupos de permutaciones. Pueden entenderse estos trabajos como el primer anuncio
 acerca de la importancia que iban a tener los grupos en el desarrollo de la matemática.  
 
-Resultados sobre grupos concretos son en realidad resultados generales (el teorema de Lagrange es un claro ejemplo de este fenómeno). Hay otro ejemplo que es digno de mencionar. En 1872 Sylow
+Resultados sobre grupos concretos son en realidad resultados generales (el teorema de Lagrange es un claro ejemplo de este fenómeno). 
+
+Hay otro ejemplo que es digno de mencionar. En 1872 Sylow
 publicó una serie de teoremas sobre grupos de permutaciones, hoy los conocemos como
 los \emph{teoremas de Sylow}. En 1887 Frobenius observó que, como todo grupo abstracto es un grupo de permutaciones, los teoremas de Sylow también valen para grupos abstractos. Sin embargo, fue más lejos. Publicó una demostración de los teoremas de Sylow para grupos abstractos, aunque en principio no fuera necesario. La abstracción juega acá un papel importante, esas ideas resultaron fundamentales 
 para el desarrollo de la teoría de grupos. 
-
-%No podemos hacer un estudio exhaustivo de la historia de la teoría de los
-%grupos finitos, pero sí debemos mencionar algunos resultados muy importantes
-%dentro del desarrollo de la matemática del siglo XX.  Mencionamos que la noción
-%de resolubilidad es aquella que nos permite estudiar soluciones por radicales
-%de ecuaciones. De hecho, sabemos que en general no podremos encontrar una
-%fórmula para resolver la ecuación de grado $5$ por radicales pues el grupo
-%$\Sym_5$ no es resoluble.  En \dots Burnside demostró que todo grupo de orden
-%$p^a q^b$ es resoluble y conjeturó que todo grupo de orden impar es resoluble.
-%Esto fue demostrado en \dots por Feit y Thompson. La demostración es muy
-%difícil y ocupa un volumen completo del Pacific Journal of Mathematics.  Este
-%teorema es uno de los pasos fundamentales hacia una clasificación de los grupos
-%simples finitos.  Recientemente este teorema fue verificado formalmente
-%por\dots en Coq\dots
 
 \section*{La clasificación de grupos simples finitos}
 
@@ -226,9 +209,17 @@ clasificación de los grupos simples finitos. Repasaremos un poco de la historia
 básica de este notable teorema. El lector interesado en obtener información más
 detallada puede consultar los artículos de Solomon~\cite{MR1824893,MR3854074}. 
 
-La noción de subgrupo normal fue introducida por Galois en 1832, noción cuya
-importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. Este
-libro posee una modesta lista con infinitos grupos simples. En un trabajo
+Los grupos simples fueron introducidos por Galois en 1832, noción cuya
+importancia fue reconocida por Jordan en su tratado sobre grupos de 1870. 
+¿Qué es un grupo
+simple? Sin perdernos en los detalles, podemos decir que los grupos
+simples son los ladrillos que componen la teoría de grupos, así como 
+los números primos son los ladrillos que componen a los números enteros. 
+
+En libro escrito por Jordan posee una modesta lista 
+con ciertos grupos simples. 
+
+En un trabajo
 publicado en 1892, H\"older remarcó que sería de gran interés disponer de la
 clasificación de grupos simples, ya que estos grupos funcionan como pilares básicos de la teoría de grupos. 
 Eso hizo que poco tiempo después Cole determinara todos los grupos simples de tamaño $\leq600$, y en particular
@@ -246,10 +237,15 @@ primo de elementos. Por ejemplo
 	\Z/3=\{0,1,2\},\quad
 	\Z/5=\{0,1,2,3,4\}\dots
 \]
-Están también los grupos simples alternados (no abelianos). El menor de estos grupos suele
-denotarse $\Alt_5$, tiene orden 60 y fue descubierto por Galois en sus trabajos
-sobre la resolubilidad por radicales. Tenemos además grupos simples 
-finitos análogos a grupos geométricos que aparecen en la teoría de Lie. Algunos
+
+Están también los grupos simples alternados $\Alt_n$ (no abelianos), que lamentablemente
+no son tan fáciles de escribir con los conocimientos que tenemos 
+en este curso. Nos quedaremos contentos
+con observar que los grupos alternados son subgrupos de orden $n!/2$ 
+del grupo simétrico $\Sym_n$. El menor grupo alternado simple es 
+escribirse como $\Alt_5$, tiene orden 60 y fue descubierto por Galois en sus trabajos
+sobre la resolubilidad por radicales de ecuaciones. Tenemos además grupos simples 
+finitos análogos a grupos geométricos que aparecen en la teoría de Lie (son grupos de matrices, tal como el que vimos que descubrió Cole). Algunos
 de estos grupos eran ya conocidos por Galois y por Jordan. 
 
 Gran parte de los análogos finitos de grupos de Lie fueron descubiertos en el
@@ -259,15 +255,16 @@ Chevalley, Steinberg, Suzuki y Ree en forma más sistemática.
 Hay además cinco grupos ``esporádicos'' descubiertos por Mathieu en 1861 y 1873 que resultan ser los grupos de
 las simetrías de ciertas configuraciones finitas que ahora nos resultaría un poco
 complicado explicar. Los grupos de Mathieu no pertenecen a la familia de análogos finitos de los grupos que
-aparecen en geometría y teoría de Lie. 
+aparecen en geometría y teoría de Lie, por eso se los llama \emph{grupos esporádicos}. 
 
 Tenemos entonces,
 digámoslo vagamente, una lista de grupos simples finitos: a) los grupos
 cíclicos de orden primo, b) los grupos alternados de grado $\geq 5$, c) los
-grupos de tipo Lie, y por último d) los grupos de Mathieu. 
+grupos de tipo Lie, y por último d) los grupos (esporádicos) de Mathieu. 
 
 En 1955 Brauer y Fowler demostraron un teorema que permitió a los investigadores
-pensar en un posible plan de acción para clasificar grupos simples. El método 
+pensar en un posible plan de acción para clasificar a los grupos simples, es
+decir dar la lista completa de grupos simples.  El método 
 se basaría en clasificar grupos simples sabiendo de antemano algo sobre sus 
 involuciones.  
 
@@ -457,16 +454,24 @@ que los introdujo en 1888, un trabajo que en su momento
 fue ignorado. 
 
 Hoy en día los cursos de álgebra lineal comienzan con la resolución de sistemas lineales. 
+
 Alrededor del año 200 a. C. en China se resolvían sistemas lineales de $3\times 3$ 
-usando únicamente números y no incógnitas, idea precursora de la teoría de matrices. El estudio
+usando únicamente números y no incógnitas, idea precursora de la teoría de matrices. 
+
+El estudio
 moderno de los sistemas lineales comenzó mucho después, con Leibniz en 1693. Curiosamente,
 en aquel momento, el estudio estaba basado en los determinantes. Sí, en la historia de la matemática primero aparecen  
-los determinantes y tiempo después las matrices. En 1750 Cramer publicó fórmulas
-para resolver sistemas lineales mediante el uso de determinantes. Se escribieron varios tratados sobre determinantes. Los primeros fueron escritos por Maclaurin y Vandermonde en 1772. En 1815 Cauchy  
+los determinantes y tiempo después las matrices. 
+
+En 1750 Cramer publicó fórmulas
+para resolver sistemas lineales mediante el uso de determinantes. Se escribieron varios tratados sobre determinantes. Los primeros fueron escritos por Maclaurin y Vandermonde en 1772. 
+
+En 1815 Cauchy  
 estableció las bases de la teoría de determinantes más o menos como la conocemos hoy. Por ejemplo, demostró que 
 \[
 \det(AB)=(\det A)(\det B).
 \]
+
 La definición abstracta o axiomática de determinante apareció alrededor de 1860 y 
 se debe a Weierstrass 
 y Kronecker. En aquellos tiempos los determinantes estaban muy de moda. En el siglo XX 
@@ -474,10 +479,17 @@ dejaron de considerarse esenciales, ya que no eran necesarios para demostrar
 resultados del álgebra lineal. 
 
 Las matrices, como dijimos, concretamente, aparecieron después. Vimos que el germen 
-de la idea aparece en el año 200 a. C. También la idea aparece implícitamente en los trabajos de Gauss. De hecho, en 1811 Gauss presentó tu método de eliminación, 
+de la idea aparece en el año 200 a. C. La idea de usar matrices también aparece implícitamente en los trabajos de Gauss. De hecho, en 1811 Gauss presentó tu método de eliminación, 
 lo hizo para calcular la órbita de un asteroide. Sin embargo, el método
-tampoco usaba matrices. Entre 1850 y 1858 Cayley estudió sistemáticamente las
-matrices rectangulares. La terminología se debe a Sylvester (1850). Cayley 
+tampoco usaba matrices. 
+
+Entre 1850 y 1858 Cayley estudió sistemáticamente las
+matrices rectangulares. 
+
+La palabra ``matriz" se debe a Sylvester (1850). 
+
+Cayley 
 demostró en 1858 el resultado que hoy conocemos como teorema de Cayley--Hamilton, lo hizo 
-para matrices de $2\times 2$ y $3\times 3$. Hamilton lo hizo para $n=4$.
+para matrices de $2\times 2$ y $3\times 3$. 
+Hamilton lo hizo para $n=4$.
 
